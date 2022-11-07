@@ -2,7 +2,7 @@
 layout: post
 title: Belajar Menulis Di Markdown
 description: "Belajar menulis di markdown"
-tags: [sample post]
+tags: [markdown]
 image:
   background: triangular.png
 ---
