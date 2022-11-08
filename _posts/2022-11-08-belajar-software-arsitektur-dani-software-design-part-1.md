@@ -25,6 +25,7 @@ Software architect adalah orang yang ahli dalam menciptakan desain high-level, m
  </div>
 
 Tradisional Vs Serverless ?
+
 Soon
 
 ## Why ?
