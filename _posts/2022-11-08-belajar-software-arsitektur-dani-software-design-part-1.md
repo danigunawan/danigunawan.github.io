@@ -34,6 +34,8 @@ Software Arsitektur Engineer ?
 Software architect engineer adalah orang yang ahli dalam menciptakan desain high-level, mengembangkan suatu software dan merekomendasikan software tersebut kepada customer atau perusahaan tempat seorang software architect bekerja.
 </div>
 
+Soon
+
 ## Why ?
 
 Soon
