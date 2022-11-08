@@ -26,7 +26,7 @@ Tradisional Vs Serverless ?
 
 Soon
 
-## Who 
+## Who ?
 
 <div style="text-align: justify">
 Software architect adalah orang yang ahli dalam menciptakan desain high-level, mengembangkan suatu software dan merekomendasikan software tersebut kepada customer atau perusahaan tempat seorang software architect bekerja.
@@ -36,6 +36,15 @@ Software architect adalah orang yang ahli dalam menciptakan desain high-level, m
 
 Soon
 
+## When ?
+
+Kapan harus dilibatkan software arsitek dan software design?
+
+Soon
+
+# Where ?
+
+Dimana software arsitek dan design bekerja?
 
 ## How?
 
