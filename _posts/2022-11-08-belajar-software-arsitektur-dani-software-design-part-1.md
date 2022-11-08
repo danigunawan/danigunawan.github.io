@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Belajar Software Arsitektur dan Software Design - Part 1 Pengenalan
+title: Belajar Software Arsitektur dan Software Design - Part 1
 description: "Belajar Software Arsitektur dan Software Design - Part 1"
 tags: [software architecture, software design]
 image:
