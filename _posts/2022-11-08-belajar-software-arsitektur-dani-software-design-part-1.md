@@ -28,8 +28,10 @@ Soon
 
 ## Who ?
 
+Software Arsitektur Engineer ?
+
 <div style="text-align: justify">
-Software architect adalah orang yang ahli dalam menciptakan desain high-level, mengembangkan suatu software dan merekomendasikan software tersebut kepada customer atau perusahaan tempat seorang software architect bekerja.
+Software architect engineer adalah orang yang ahli dalam menciptakan desain high-level, mengembangkan suatu software dan merekomendasikan software tersebut kepada customer atau perusahaan tempat seorang software architect bekerja.
 </div>
 
 ## Why ?
@@ -45,6 +47,8 @@ Soon
 # Where ?
 
 Dimana software arsitek dan design bekerja?
+
+Soon
 
 ## How?
 
