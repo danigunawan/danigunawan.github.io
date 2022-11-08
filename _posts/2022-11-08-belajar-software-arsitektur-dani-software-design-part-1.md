@@ -52,6 +52,6 @@ Dimana software arsitek dan design bekerja?
 
 Soon
 
-## How?
+## How ?
 
 Soon
