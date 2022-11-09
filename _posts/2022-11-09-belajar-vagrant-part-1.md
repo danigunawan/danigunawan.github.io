@@ -35,6 +35,8 @@ wget https://download.virtualbox.org/virtualbox/$VB_VERSION/Oracle_VM_VirtualBox
 
 sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
 
+vboxmanage list extpacks
+
 
 #Installing Vagrant
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -79,11 +81,122 @@ vagrant --version
 mkdir ~/test-vagrant
 cd ~/test-vagrant
 
-vagrant box add gusztavvargadr/boxes/windows-10 
-vagrant init centos/7
+vagrant box add gusztavvargadr/boxes/windows-10 --insecure
+or
+vagrant init gusztavvargadr/boxes/windows-10 
 vagrant up
 vagrant ssh
+vagrant rdp
 vagrant halt
 vagrant destroy
+
+# Uninstall Vagrant 
+rm -rf /opt/vagrant
+rm -f /usr/bin/vagrant
+
+
+## Install VirtualBox VirtualBox-5.1-5.1.38 + Vagrant 2.3.2 di CentOS 7
+
+# Install dependencies
+yum update --skip-broken
+yum -y install gcc make patch dkms qt libgomp epel-release yum-utils kernel-headers kernel-devel fontforge binutils glibc-headers glibc-devel
+
+# Install VirtualBox
+cd /etc/yum.repos.d
+wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+yum install VirtualBox-5.1
+
+sudo systemctl status vboxdrv
+
+# Check Versi VirtualBox
+vboxmanage --version
+5.1.38r122592
+
+#Installing VirtualBox Extension Pack
+VB_VERSION=5.1.38
+VB_VERSION_PACK=$(vboxmanage --version)
+wget https://download.virtualbox.org/virtualbox/$VB_VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack
+
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+
+vboxmanage list extpacks
+
+# Periksa apakah Anda memiliki sumber kernel yang diunduh untuk versi kernel Anda yang sedang berjalan (jika tidak cocok, Anda mungkin perlu memperbarui dan mem-boot ulang yum)
+ls /usr/src/kernels/
+uname -r
+
+# Bangun modul kernel VirtualBox
+export KERN_DIR=/usr/src/kernels/$(uname -r)
+/sbin/rcvboxdrv setup
+
+# Install Vagrant
+LTS : 
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install vagrant
+
+
+Versi Spesifik
+cek kernel arsitektur uname -r
+
+[x86_64]
+yum -y install https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm
+
+vagrant --version
+
+# Test Vagrant
+mkdir ~/test-vagrant
+cd ~/test-vagrant
+vagrant box add gusztavvargadr/boxes/windows-10 --insecure
+vagrant init ubuntu/xenial64 --insecure 
+vagrant init centos/7 --insecure
+vagrant up
+
+# Vagrant Windows 10 RDP 
+Vagrantfile :
+==> default: Forwarding ports...
+    default: 3389 (guest) => 3389 (host) (adapter 1)
+    default: 5985 (guest) => 55985 (host) (adapter 1)
+    default: 5986 (guest) => 55986 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/XXX/nng.NETCore
+
+Vagrant RDP Password : vagrant/vagrant 
+Vagrant SSH Password : menggunakan keys ssh atau direct cli vagrant ssh
+
+Other CLIs :  
+vagrant ssh
+vagrant rdp
+vagrant halt
+vagrant destroy
+vagrant box list
+
+# Uninstall Vagrant 
+sudo yum erase vagrant 
+rm -rf /opt/vagrant
+rm -f /usr/bin/vagrant
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "win10_ltsc_2019"
+    config.vm.guest = :windows
+    config.vm.communicator = "winrm"
+    # 3389 RDP
+    config.vm.network "forwarded_port", guest: 3389, host: 3389
+end
+
+# Jika Vagrant dan Vbox jalan via GUI Bukan Headless 
+$ vagrant rdp
+==> default: Detecting RDP info...
+    default: Address: 127.0.0.1:3389
+    default: Username: vagrant
+
+# Client Win 10 RDP (Headless)
+Karena win 10 jalan di via headless di Vbox tanpa GUI maka via Client RDP/RDP Viewer
+
+MacOSX :
+Microsoft Remote Desktop (ada di appstore) 
+- tinggal masukin host ip target rdp / server nya jika vagrant dan vbox jalan di laptop sendiri gunakan localhost 
+jika via SSH local port forward : ssh -N username@IP -p 22 -L localhost:3389:localhost:3389
 
 {% endhighlight %}
