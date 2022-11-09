@@ -2,7 +2,7 @@
 layout: post
 title: Belajar Vagrant - Part 1
 description: "Belajar Vagrant - Part 1"
-tags: [blog, jekyll hpstr, github pages]
+tags: [vagrant, hashicorp, virtualbox]
 image:
   background: triangular.png
 ---
@@ -205,7 +205,7 @@ vagrant rdp
     default: Username: vagrant
 
 # Client Win 10 RDP (Headless)
-Karena win 10 jalan di via headless di Vbox tanpa GUI maka via Client RDP/RDP Viewer
+Karena win 10 jalan via headless, headless disini Vbox berjalan tanpa GUI maka bisa menggunakan via Client RDP/RDP Viewer
 
 MacOSX :
 Microsoft Remote Desktop (ada di appstore) 
