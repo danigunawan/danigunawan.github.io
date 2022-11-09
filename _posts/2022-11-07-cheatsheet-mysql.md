@@ -8,7 +8,7 @@ image:
 ---
 
 
-## Useful MySQL Command
+## Cheatsheet MySQL
 
 {% highlight sql %} 
 Mengizinkan MySQL client untuk menghubungkan ke Remote Host
