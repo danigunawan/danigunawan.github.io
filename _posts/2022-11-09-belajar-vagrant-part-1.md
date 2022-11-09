@@ -12,14 +12,9 @@ OS & Tools :
 - VirtualBox
 - OS Ubuntu 18.04 Bionic atau LTS
 
-
 ## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di Ubuntu 18.04 Bionic
-
-
 {% highlight bash %} 
-
 #!/bin/bash
-
 # Membuat User Deploy
 sudo -s 
 sudo adduser deploy
