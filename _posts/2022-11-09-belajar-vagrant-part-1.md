@@ -20,7 +20,14 @@ OS & Tools :
 
 #!/bin/bash
 
-#Installing VirtualBox
+# Membuat User Deploy
+sudo -s 
+sudo adduser deploy
+sudo usermod -aG sudo deploy
+passwd deploy 
+su deploy
+
+# Installing VirtualBox
 sudo apt update
 sudo apt -y install build-essential dkms unzip wget libarchive-tools curl gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates
 echo "deb [arch=$(dpkg --print-architecture)] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee -a /etc/apt/sources.list
@@ -29,7 +36,7 @@ sudo apt update
 sudo apt -y install virtualbox-7.0
 sudo systemctl status vboxdrv
 
-#Installing VirtualBox Extension Pack
+# Installing VirtualBox Extension Pack
 VB_VERSION=$(dpkg-query --showformat='${Version}' --show virtualbox-7.0 | awk -F'-' '{print $1}')
 wget https://download.virtualbox.org/virtualbox/$VB_VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack
 
@@ -97,29 +104,36 @@ rm -f /usr/bin/vagrant
 
 ## Install VirtualBox VirtualBox-5.1-5.1.38 + Vagrant 2.3.2 di CentOS 7
 
+# Membuat User Deploy
+sudo -s 
+sudo adduser deploy
+sudo usermod -aG sudo deploy
+passwd deploy 
+su deploy
+
 # Install dependencies
-yum update --skip-broken
-yum -y install gcc make patch dkms qt libgomp epel-release yum-utils kernel-headers kernel-devel fontforge binutils glibc-headers glibc-devel
+sudo yum update --skip-broken
+sudo yum -y install gcc make patch dkms qt libgomp epel-release yum-utils kernel-headers kernel-devel fontforge binutils glibc-headers glibc-devel
 
 # Install VirtualBox
 cd /etc/yum.repos.d
-wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
-yum install VirtualBox-5.1
+sudo wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+sudo yum install VirtualBox-5.1
 
 sudo systemctl status vboxdrv
 
 # Check Versi VirtualBox
-vboxmanage --version
+sudo vboxmanage --version
 5.1.38r122592
 
 #Installing VirtualBox Extension Pack
 VB_VERSION=5.1.38
 VB_VERSION_PACK=$(vboxmanage --version)
-wget https://download.virtualbox.org/virtualbox/$VB_VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack
+sudo wget https://download.virtualbox.org/virtualbox/$VB_VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack
 
 sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
 
-vboxmanage list extpacks
+sudo vboxmanage list extpacks
 
 # Periksa apakah Anda memiliki sumber kernel yang diunduh untuk versi kernel Anda yang sedang berjalan (jika tidak cocok, Anda mungkin perlu memperbarui dan mem-boot ulang yum)
 ls /usr/src/kernels/
@@ -136,24 +150,36 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashi
 sudo yum -y install vagrant
 
 
-Versi Spesifik
-cek kernel arsitektur uname -r
+#Versi Spesifik
+#cek kernel arsitektur 
+uname -r
 
 [x86_64]
-yum -y install https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm
+sudo yum -y install https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm
 
 vagrant --version
 
 # Test Vagrant
-mkdir ~/test-vagrant
-cd ~/test-vagrant
-vagrant box add gusztavvargadr/boxes/windows-10 --insecure
-vagrant init ubuntu/xenial64 --insecure 
-vagrant init centos/7 --insecure
-vagrant up
+cd /home/deploy
+mkdir win10 
+cd win10
+sudo vagrant box add gusztavvargadr/boxes/windows-10 --insecure
+sudo vagrant box list # gusztavvargadr/windows-10
+sudo vagrant init gusztavvargadr/windows-10
 
 # Vagrant Windows 10 RDP 
 Vagrantfile :
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "win10_ltsc_2019"
+    config.vm.guest = :windows
+    config.vm.communicator = "winrm"
+    # 3389 RDP
+    config.vm.network "forwarded_port", guest: 3389, host: 3389
+end
+
+vagrant up
+
 ==> default: Forwarding ports...
     default: 3389 (guest) => 3389 (host) (adapter 1)
     default: 5985 (guest) => 55985 (host) (adapter 1)
@@ -163,9 +189,9 @@ Vagrantfile :
     default: /vagrant => /Users/XXX/nng.NETCore
 
 Vagrant RDP Password : vagrant/vagrant 
-Vagrant SSH Password : menggunakan keys ssh atau direct cli vagrant ssh
+Vagrant SSH Password : vagrant ssh atau menggunakan keys ssh yang di generate dengan ssh-keygen
 
-Other CLIs :  
+Perintah CLIs Lainnya :  
 vagrant ssh
 vagrant rdp
 vagrant halt
@@ -177,16 +203,8 @@ sudo yum erase vagrant
 rm -rf /opt/vagrant
 rm -f /usr/bin/vagrant
 
-Vagrant.configure("2") do |config|
-    config.vm.box = "win10_ltsc_2019"
-    config.vm.guest = :windows
-    config.vm.communicator = "winrm"
-    # 3389 RDP
-    config.vm.network "forwarded_port", guest: 3389, host: 3389
-end
-
 # Jika Vagrant dan Vbox jalan via GUI Bukan Headless 
-$ vagrant rdp
+vagrant rdp
 ==> default: Detecting RDP info...
     default: Address: 127.0.0.1:3389
     default: Username: vagrant
@@ -198,5 +216,8 @@ MacOSX :
 Microsoft Remote Desktop (ada di appstore) 
 - tinggal masukin host ip target rdp / server nya jika vagrant dan vbox jalan di laptop sendiri gunakan localhost 
 jika via SSH local port forward : ssh -N username@IP -p 22 -L localhost:3389:localhost:3389
+
+## Instal PHPVirtualBox untuk VirtualBox 5.1 CentOS 7
+
 
 {% endhighlight %}
