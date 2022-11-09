@@ -173,6 +173,15 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 3389, host: 3389
 end
 
+# Custom Path Vagrant Home 
+Refferensi Environment : https://www.vagrantup.com/docs/other/environmental-variables
+secara default vagrant home berada di ~/.vagrant.d namun bisa kita custom pathnya in case mungkin bisa membantu 
+jika partisi hardisk sudah mulai menipis bisa kita pindah atau pada awal kita set custom default pathnya ketempat direktori lain misalkan :
+cd /home/deploy/vagrant
+mkdir data 
+export VAGRANT_HOME=/home/deploy/vagrant/data atau via edit nano ~/.bashrc tambahkan export VAGRANT_HOME=/home/deploy/vagrant/data
+source ~/.bashrc 
+
 vagrant up
 
 ==> default: Forwarding ports...
@@ -211,6 +220,13 @@ MacOSX :
 Microsoft Remote Desktop (ada di appstore) 
 - tinggal masukin host ip target rdp / server nya jika vagrant dan vbox jalan di laptop sendiri gunakan localhost 
 jika via SSH local port forward : ssh -N username@IP -p 22 -L localhost:3389:localhost:3389
+
+
+# RDP Ke VM dengan xfreerdp dan sesuaikan resolusi layar sesuai kebutuhan:
+netstat -plnt|grep 3389
+tcp    0    0 0.0.0.0:33389    0.0.0.0:*    LISTEN    -
+
+xfreerdp /v:127.0.0.1:33389 /u:vagrant /p:vagrant /smart-sizing:2000x1500
 
 ## Instal PHPVirtualBox untuk VirtualBox 5.1 CentOS 7
 

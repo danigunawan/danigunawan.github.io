@@ -1,6 +1,5 @@
 # danigunawan.github.io
-Blog berbagi, mendukung beberapa bahasa sintaks yang ditulis dengan markdown list sintaks dibawah ini :
-
+Berikut daftar lengkap bahasa yang didukung mardown dibawah ini :
 - Cucumber ('*.feature')
 - abap ('*.abap')
 - ada ('*.adb', '*.ads', '*.ada')
