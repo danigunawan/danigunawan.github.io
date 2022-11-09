@@ -232,3 +232,14 @@ xfreerdp /v:127.0.0.1:33389 /u:vagrant /p:vagrant /smart-sizing:2000x1500
 
 
 {% endhighlight %}
+
+
+## ISU Dan Solusi
+
+1. Vagrant failed to initialize at a very early stage:
+The home directory you specified is not accessible. The home
+directory that Vagrant uses must be both readable and writable.
+
+Solusi : 
+sudo chown -R <user> <directory>
+sudo chown -R deploy /home/deploy/vagrant/data
