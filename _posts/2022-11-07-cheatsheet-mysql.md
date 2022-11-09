@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Kumpulan Cheatsheet mysql
-description: "Kumpulan Cheatsheet mysql"
+title: Kumpulan Cheatsheet Mysql
+description: "Kumpulan Cheatsheet Mysql"
 tags: [mysql, sql, cheatsheet, cheatsheet mysql]
 image:
   background: triangular.png
