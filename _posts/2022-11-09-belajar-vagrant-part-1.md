@@ -125,9 +125,9 @@ rm -f /usr/bin/vagrant
 
 {% endhighlight %}
 
-{% highlight bash %} 
 
 ## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di CentOS 7 (RHEL 7)
+{% highlight bash %} 
 
 # Membuat User Deploy
 sudo -s 
