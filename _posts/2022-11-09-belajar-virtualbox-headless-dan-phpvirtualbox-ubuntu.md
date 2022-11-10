@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Belajar VirtualBox dan PHPVirtualBox Headless Ubuntu/Mint
-description: "Belajar VirtualBox dan PHPVirtualBox Headless Ubuntu/Mint"
+title: Belajar VirtualBox Headless dan PHPVirtualBox Ubuntu/Mint
+description: "Belajar VirtualBox Headless dan PHPVirtualBox Ubuntu/Mint"
 tags: [virtualbox, phpvirtualbox, headless]
 image:
   background: triangular.png
