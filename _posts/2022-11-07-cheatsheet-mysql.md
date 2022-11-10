@@ -112,7 +112,7 @@ select host, user, password from mysql.user;
 
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 
-# Hal pertama yang harus dilakukan adalah memberi pengguna akses ke informasi yang mereka butuhkan.
+# Hal pertama yang harus dilakukan adalah memberi pengguna akses ke informasi yang di butuhkan.
 
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
@@ -125,19 +125,19 @@ FLUSH PRIVILEGES;
 # Berikut adalah daftar singkat dari pemberian izin umum MySQL lainnya yang dapat dinikmati oleh user MySQL.
 
 # ALL PRIVILEGES - seperti yang kita lihat sebelumnya, ini akan memungkinkan pengguna MySQL semua akses ke database yang ditunjuk (atau jika tidak ada database yang dipilih, di seluruh sistem)
-# CREATE - memungkinkan mereka untuk membuat tabel atau database baru
-# DROP - memungkinkan mereka untuk menghapus tabel atau database
-# DELETE - memungkinkan mereka untuk menghapus baris dari tabel
-# INSERT - memungkinkan mereka untuk memasukkan baris ke dalam tabel
-# SELECT - memungkinkan mereka untuk menggunakan perintah Select untuk membaca database
-# UPDATE - izinkan mereka memperbarui baris tabel
-# GRANT OPTION - memungkinkan mereka untuk memberikan atau menghapus hak istimewa pengguna lain
+# CREATE - memungkinkan untuk membuat tabel atau database baru
+# DROP - memungkinkan untuk menghapus tabel atau database
+# DELETE - memungkinkan untuk menghapus baris dari tabel
+# INSERT - memungkinkan untuk memasukkan baris ke dalam tabel
+# SELECT - memungkinkan untuk menggunakan perintah Select untuk membaca database
+# UPDATE - izinkan memperbarui baris tabel
+# GRANT OPTION - memungkinkan untuk memberikan atau menghapus hak istimewa pengguna lain
 
 # Untuk memberikan izin kepada pengguna tertentu, Anda dapat menggunakan kerangka kerja ini :
 
 GRANT [type of permission] ON [database name].[table name] TO ‘[username]’@'localhost’;
 
-# Jika Anda ingin memberi mereka akses ke database atau tabel apa pun, pastikan untuk meletakkan tanda bintang (*) di tempat nama database atau nama tabel. Setiap kali Anda memperbarui atau mengubah izin, pastikan untuk menggunakan perintah Flush Privileges.
+# Jika Anda ingin memberi akses ke database atau tabel apa pun, pastikan untuk meletakkan tanda bintang (*) di tempat nama database atau nama tabel. Setiap kali Anda memperbarui atau mengubah izin, pastikan untuk menggunakan perintah Flush Privileges.
 
 # Jika Anda perlu mencabut izin, strukturnya hampir sama dengan pemberiannya:
 
