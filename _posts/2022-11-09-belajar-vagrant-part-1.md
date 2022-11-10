@@ -96,9 +96,14 @@ vagrant --version
 mkdir ~/test-vagrant
 cd ~/test-vagrant
 
+vagrant box add gusztavvargadr/boxes/windows-10
+
+# Jika bermasalah karena sertifikat SSL
 vagrant box add gusztavvargadr/boxes/windows-10 --insecure
-or
-vagrant init gusztavvargadr/boxes/windows-10 
+
+# atau
+
+vagrant init gusztavvargadr/boxes/windows-10
 vagrant up
 vagrant ssh
 vagrant rdp
