@@ -278,7 +278,7 @@ xfreerdp /v:127.0.0.1:33389 /u:vagrant /p:vagrant /smart-sizing:2000x1500
 
 soon 
 
-{% highlight bash %} 
+{% endhighlight %}
 
 ## Troubleshooting
 
