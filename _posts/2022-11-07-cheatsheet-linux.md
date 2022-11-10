@@ -9,21 +9,21 @@ image:
 
 ## Kumpulan Cheatsheet Linux
 {% highlight bash %} 
-Learning Nano
+* Learning Nano
 
-* Find a text
+1. Find a text
 Ctrl + W
 
-* Find and Replace
+2. Find and Replace
 Ctrl + \
 
-* Find Help
+3. Find Help
 Ctrl + G
 
-* Cut a Line and Paste
+4. Cut a Line and Paste
 Ctrl + K and Ctrl + U
 
-* Copy some text and paste-
+5. Copy some text and paste-
 Copy beging Ctrl + ^ Copy end Ctrl + ^ For pasting Ctrol + U
 
 * Find files older than 60 days
