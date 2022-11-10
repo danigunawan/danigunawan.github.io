@@ -7,10 +7,11 @@ image:
   background: triangular.png
 ---
 
+<div style="text-align: justify">
+dalam melakukan akses login ke remote server dengan SSH biasanya kita memakai Password. Lebih amannya, Password dapat diganti dengan menggunakan Public Key. Public Key yang dibuat di komputer dicopy ke folder ~/.ssh/authorized_keys. Jika key yang ada di komputer tidak sama persis dengan key yang ada di server meskipun itu penambahan spasi, maka tidak akan bisa login dikarenakan terjadi kegagalan verifikasi key yang digunakan untuk akses login.
+</div>
 
 {% highlight sql %} 
-
-dalam melakukan akses login ke remote server dengan SSH biasanya kita memakai Password. Lebih amannya, Password dapat diganti dengan menggunakan Public Key. Public Key yang dibuat di komputer dicopy ke folder ~/.ssh/authorized_keys. Jika key yang ada di komputer tidak sama persis dengan key yang ada di server meskipun itu penambahan spasi, maka tidak akan bisa login dikarenakan terjadi kegagalan verifikasi key yang digunakan untuk akses login.
 
 # Generate key di Linux
 
