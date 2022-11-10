@@ -82,7 +82,7 @@ VBOXWEB_LOGFILE=/home/vboxadmin/.config/VirtualBox/vboxweb-service.log
 sudo nano /home/vboxadmin/vboxweb.sh
 
 #!/bin/bash
-/usr/bin/vboxwebsrv -H 10.48.102.238 > /dev/null 2>&1
+/usr/bin/vboxwebsrv -H 192.168.1.9 > /dev/null 2>&1
 
 # ubah vboxweb.sh menjadi agar bisa di eksekusi
 sudo chmod +x /home/vboxadmin/vboxweb.sh
@@ -123,8 +123,8 @@ Struktur Code :
 docker build --no-cache -f Dockerfile -t phpvirtualbox6x .
 
 # Jalankan PHPVirtualBox dengan Docker yang sudah dibuild
-docker run --name vbox_http --restart=always -p 8149:80 \
-        -e SRV1_HOSTPORT=172.17.0.1:18083 -e SRV1_NAME=ServerVBOX -e SRV1_USER=vbox -e SRV1_PW='password' \
+sudo docker run --name vbox_http --restart=always -p 8149:80 \
+        -e SRV1_HOSTPORT=172.17.0.1:18083 -e SRV1_NAME=ServerVBOX -e SRV1_USER=vboxadmin -e SRV1_PW='password' \
         -d phpvirtualbox6x
 
 * -p 8149:80 : port yang diekspose dari docker (80) dari container kita expose ke luar dengan menggunakan port alias 8149 (mirip seperti metode forwarding pada port/NAT)
@@ -137,4 +137,24 @@ docker run --name vbox_http --restart=always -p 8149:80 \
 * ENV SRV1_USER: username vboxweb yang digunakan phpvirtualbox
 * ENV SRV1_PW: Passowrd vboxweb yang digunakan phpvirtualbox
 
+# Login ke phpvirtualbox
+http://192.168.1.9:8149/
+dengan username dan password default : admin/admin 
+
+# Ganti Password Default 
+di menu file - > change password 
+
 {% endhighlight %}
+
+## Troubleshooting 
+1. This version of phpVirtualBox (6.1-0) is incompatible with VirtualBox 7.0.2. You probably need to download the latest phpVirtualBox 7.0-x. See the Versioning section below the file list in the link for more information
+
+Notice diatas dikarenakan phpvirtualbox 6.1 tidak mendukung dengan virtualbox 7.0.2 karena phpvirtualbox pengembangannya stuck alias kurang jadi solusinya pakai versi develop.
+
+# Untuk Solusi : 
+Pakai PHPVirtualBox dengan branch develop / master saya biasanya pakai develop karena saat direview cukup stable 
+
+# Clone Repository : 
+https://github.com/phpvirtualbox/phpvirtualbox.git -b develop
+
+karena lambat pengembangannya phpvirtualbox belum lagi karena segudang sekuritas dan bug nya jadi sebenarnya virtualbox ini punya gandengan yang lebih hebat secara stack management virtualisasinya ya kita kenal dengan Vagrant by HashiCorp, semua environment bisa kita racik sesuai kebutuhan.

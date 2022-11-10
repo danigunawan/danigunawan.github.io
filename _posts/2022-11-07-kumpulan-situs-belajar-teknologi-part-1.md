@@ -14,4 +14,4 @@ image:
 * dev.to
 
 ## Cloud Computing 
-https://learntocloud.guide
+* https://learntocloud.guide
