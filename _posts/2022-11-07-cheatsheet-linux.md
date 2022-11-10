@@ -10,4 +10,10 @@ image:
 df -H path
 du -H path
 
+mencari ukuran size mb direktori 
+du --max-depth=1 -B M |sort -rn
+
+mencari ukuran size mb spesifik direktori 
+du -H /path --max-depth=1 -B M |sort -rn
+
 Soon

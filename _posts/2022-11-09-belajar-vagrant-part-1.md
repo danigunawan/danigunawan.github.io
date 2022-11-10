@@ -97,7 +97,7 @@ rm -rf /opt/vagrant
 rm -f /usr/bin/vagrant
 
 
-## Install VirtualBox VirtualBox-5.1-5.1.38 + Vagrant 2.3.2 di CentOS 7
+## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di CentOS 7 (RHEL 7)
 
 # Membuat User Deploy
 sudo -s 
@@ -107,36 +107,54 @@ passwd deploy
 su deploy
 
 # Install dependencies
+wget https://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo -P /etc/yum.repos.d/
+rpm --import https://www.virtualbox.org/download/oracle_vbox.asc
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
 sudo yum update --skip-broken
 sudo yum -y install gcc make patch dkms qt libgomp epel-release yum-utils kernel-headers kernel-devel fontforge binutils glibc-headers glibc-devel
 
 # Install VirtualBox
-cd /etc/yum.repos.d
-sudo wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
-sudo yum install VirtualBox-5.1
-
+sudo yum install VirtualBox-7.0
 sudo systemctl status vboxdrv
+
+# Jika Anda mendapatkan kesalahan berikut selama instalasi Virtualbox, itu berarti ada konflik antara dua versi Kernel.
+
+"This system is currently not set up to build kernel modules.
+Please install the Linux kernel "header" files matching the current kernel"
+
+# pertama untuk resolving dengan mengecek kernel yang terinstall dan kemudian di update 
+
+ls /usr/src/kernels/
+uname -r
+
+yum update kernel-*
+
+reboot
+
+# Setelah sistem selesai dengan boot, masuk dan sekali lagi konfirmasikan bahwa versi kernel-devel sekarang cocok dengan versi kernel Linux.
+
+rpm -q kernel-devel
+uname -r
+
+# Kem#udian, mulai ulang proses pengaturan build dan konfirmasikan bahwa instalasi VirtualBox Anda berhasil dengan menjalankan:
+
+/sbin/vboxconfig
 
 # Check Versi VirtualBox
 sudo vboxmanage --version
 5.1.38r122592
+7.0.2r154219
 
-#Installing VirtualBox Extension Pack
-VB_VERSION=5.1.38
+# Installing VirtualBox Extension Pack
+VB_VERSION=7.0.2
 VB_VERSION_PACK=$(vboxmanage --version)
 sudo wget https://download.virtualbox.org/virtualbox/$VB_VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack
 
-sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-$VB_VERSION.vbox-extpack
 
+# Check Extpacks Yang Sudah Di Install
 sudo vboxmanage list extpacks
-
-# Periksa apakah Anda memiliki sumber kernel yang diunduh untuk versi kernel Anda yang sedang berjalan (jika tidak cocok, Anda mungkin perlu memperbarui dan mem-boot ulang yum)
-ls /usr/src/kernels/
-uname -r
-
-# Bangun modul kernel VirtualBox
-export KERN_DIR=/usr/src/kernels/$(uname -r)
-/sbin/rcvboxdrv setup
 
 # Install Vagrant
 LTS : 
@@ -145,12 +163,13 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashi
 sudo yum -y install vagrant
 
 
-#Versi Spesifik
-#cek kernel arsitektur 
+# Versi Spesifik
+
+# cek kernel arsitektur 
 uname -r
 
 [x86_64]
-sudo yum -y install https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm
+sudo yum -y install https://releases.hashicorp.com/vagrant/2.3.2/vagrant-2.3.2-1.x86_64.rpm
 
 vagrant --version
 
@@ -174,12 +193,23 @@ Vagrant.configure("2") do |config|
 end
 
 # Custom Path Vagrant Home 
-Refferensi Environment : https://www.vagrantup.com/docs/other/environmental-variables
-secara default vagrant home berada di ~/.vagrant.d namun bisa kita custom pathnya in case mungkin bisa membantu 
-jika partisi hardisk sudah mulai menipis bisa kita pindah atau pada awal kita set custom default pathnya ketempat direktori lain misalkan :
+
+# Refferensi Environment : https://www.vagrantup.com/docs/other/environmental-variables
+
+# secara default vagrant home berada di ~/.vagrant.d namun bisa kita custom pathnya in case mungkin bisa membantu 
+
+# jika partisi hardisk sudah mulai menipis bisa kita pindah atau pada awal kita set custom default pathnya ketempat direktori lain misalkan :
+
 cd /home/deploy/vagrant
 mkdir data 
-export VAGRANT_HOME=/home/deploy/vagrant/data atau via edit nano ~/.bashrc tambahkan export VAGRANT_HOME=/home/deploy/vagrant/data
+export VAGRANT_HOME=/home/deploy/vagrant/data 
+
+# atau 
+
+via edit nano ~/.bashrc 
+
+# tambahkan 
+export VAGRANT_HOME=/home/deploy/vagrant/data
 source ~/.bashrc 
 
 vagrant up
@@ -192,10 +222,10 @@ vagrant up
 ==> default: Mounting shared folders...
     default: /vagrant => /Users/XXX/nng.NETCore
 
-Vagrant RDP Password : vagrant/vagrant 
-Vagrant SSH Password : vagrant ssh atau menggunakan keys ssh yang di generate dengan ssh-keygen
+# Vagrant RDP Password : vagrant/vagrant 
+# Vagrant SSH Password : vagrant ssh atau menggunakan keys ssh yang di generate dengan ssh-keygen
 
-Perintah CLIs Lainnya :  
+# Perintah CLIs Lainnya :  
 vagrant ssh
 vagrant rdp
 vagrant halt
@@ -214,13 +244,16 @@ vagrant rdp
     default: Username: vagrant
 
 # Client Win 10 RDP (Headless)
-Karena win 10 jalan via headless, headless disini Vbox berjalan tanpa GUI maka bisa menggunakan via Client RDP/RDP Viewer
 
-MacOSX :
-Microsoft Remote Desktop (ada di appstore) 
-- tinggal masukin host ip target rdp / server nya jika vagrant dan vbox jalan di laptop sendiri gunakan localhost 
-jika via SSH local port forward : ssh -N username@IP -p 22 -L localhost:3389:localhost:3389
+# Karena win 10 jalan via headless, headless disini Vbox berjalan tanpa GUI maka bisa menggunakan via Client RDP/RDP Viewer
 
+# MacOSX :
+# Microsoft Remote Desktop (ada di appstore) 
+
+# - tinggal masukin host ip target rdp / server nya jika vagrant dan vbox jalan di laptop sendiri gunakan localhost port default rdp windows (3389)
+
+# jika via SSH local port forward : 
+ssh -N username@IP -p 22 -L localhost:3389:localhost:3389
 
 # RDP Ke VM dengan xfreerdp dan sesuaikan resolusi layar sesuai kebutuhan:
 netstat -plnt|grep 3389
@@ -228,18 +261,31 @@ tcp    0    0 0.0.0.0:33389    0.0.0.0:*    LISTEN    -
 
 xfreerdp /v:127.0.0.1:33389 /u:vagrant /p:vagrant /smart-sizing:2000x1500
 
-## Instal PHPVirtualBox untuk VirtualBox 5.1 CentOS 7
+## Instal PHPVirtualBox untuk VirtualBox 70 CentOS 7
 
+soon 
 
 {% endhighlight %}
 
 
-## ISU Dan Solusi
+## Troubleshooting
 
-1. Vagrant failed to initialize at a very early stage:
-The home directory you specified is not accessible. The home
-directory that Vagrant uses must be both readable and writable.
+{% highlight bash %} 
 
-Solusi : 
+# 1. Vagrant failed to initialize at a very early stage:
+# The home directory you specified is not accessible. The home
+# directory that Vagrant uses must be both readable and writable.
+
+# Solusi : 
 sudo chown -R <user> <directory>
 sudo chown -R deploy /home/deploy/vagrant/data
+
+cd /home/deploy/vagrant/apps/win10
+vagrant up
+
+# 2. Jika Anda mendapatkan pesan kesalahan seperti KERN_DIR atau jika direktori sumber kernel Anda tidak terdeteksi secara otomatis oleh proses pembuatan, Anda dapat mengaturnya dengan menggunakan perintah berikut. Pastikan Anda mengubah versi kernel sesuai dengan sistem Anda seperti yang ditunjukkan dalam warna merah.
+
+KERN_DIR=/usr/src/kernels/$(uname -r) # /usr/src/kernels/4.19.0-1.el7.elrepo.x86_64
+export KERN_DIR
+
+{% endhighlight %}
