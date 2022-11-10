@@ -340,4 +340,13 @@ sudo kill -9 29127 26029 13241 9682 9617 5654 5453 868 865
 # Hapus Vbox
 yum erase VirtualBox-7.0
 
+# 4. Increase Memory & CPU Vagrant OS 
+nano Vagrantfile 
+Define siza RAM dan CPU :
+
+config.vm.provider "virtualbox" do |v|
+  v.memory = 2048
+  v.cpus = 2
+end
+
 {% endhighlight %}
