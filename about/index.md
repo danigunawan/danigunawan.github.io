@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tentang Pribadi
+title: Tentang Blog Pribadi
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
