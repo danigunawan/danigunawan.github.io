@@ -198,7 +198,7 @@ sudo vagrant init gusztavvargadr/windows-10
 Vagrantfile :
 
 Vagrant.configure("2") do |config|
-    config.vm.box = "win10_ltsc_2019"
+    config.vm.box = "gusztavvargadr/windows-10"
     config.vm.guest = :windows
     config.vm.communicator = "winrm"
     # 3389 RDP
