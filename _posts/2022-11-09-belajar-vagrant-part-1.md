@@ -22,7 +22,7 @@ OS & Tools (Prerequisite):
 
 * Vagrant 
 * VirtualBox
-* OS Ubuntu 18.04 Bionic atau LTS dan CentOS 7
+* OS Ubuntu 18.04 Bionic dan CentOS 7
 
 
 ## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di Ubuntu 18.04 Bionic
