@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Kumpulan Situs Belajar Teknologi
-description: "Kumpulan Situs Belajar Teknologi"
+title: Kumpulan Situs Belajar Teknologi - Part 1
+description: "Kumpulan Situs Belajar Teknologi - Part 1"
 tags: [learning, blog]
 image:
   background: triangular.png
