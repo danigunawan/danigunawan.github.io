@@ -323,7 +323,7 @@ vbox     26029  0.0  0.1 595760 25568 ?        Sl   Nov07   0:49 /usr/lib/virtua
 # Lalu Kill Proses PID Vbox yang berjalan
 sudo kill -9 29127 26029 13241 9682 9617 5654 5453 868 865
 
-# Install / Hapus Vbox
+# Hapus Vbox
 yum erase VirtualBox-7.0
 
 {% endhighlight %}
