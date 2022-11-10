@@ -122,60 +122,47 @@ lspci
 lspci | less
 lspci | grep -i eth
 
-Chmod to change all the directories to 755 (-rwxr-xr-x):
-
+* Chmod to change all the directories to 755 (-rwxr-xr-x):
 find /opt/lampp/htdocs -type d -exec chmod 755 {} \;
 
-Check OS Release Info
-
+* Check OS Release Info
 cat /etc/redhat-release
- ## Output ##
- CentOS release 6.6 (Final)
 
-Following needs redhat-lsb package
+## Output ##
+CentOS release 6.6 (Final)
 
- lsb_release -a
- ## Output ##
- LSB Version:    :core-4.0-amd64:core-4.0-ia32:core-4.0-noarch:graphics-4.0-amd64:graphics-4.0-ia32:graphics-4.0-noarch:printing-4.0-amd64:printing-4.0-ia32:printing-4.0-noarch
- Distributor ID: CentOS
- Description:    CentOS release 6.6 (Final)
- Release:        6.6
- Codename:       Final
-
-Check if Machine supports Virtualization
-
- grep -E 'svm|vmx' /proc/cpuinfo
-
-TAR Syntax
-
-For compress
-
-tar -cvf output.tar /dirname
-
-For uncompress
-
-tar -xvf /tmp/data.ta
-
-Linux Standard Base (LSB)
-
-To show the release number of installed distribution:
-
-lsb_release -r
-
-To show the distributor ID:
-
-lsb_release -i
-
-To show all of the above information:
-
+* Following needs redhat-lsb package
 lsb_release -a
 
-Concatenated command:
+## Output ##
+LSB Version:    :core-4.0-amd64:core-4.0-ia32:core-4.0-noarch:graphics-4.0-amd64:graphics-4.0-ia32:graphics-4.0-noarch:printing-4.0-amd64:printing-4.0-ia32:printing-4.0-noarch
+Distributor ID: CentOS
+Description:    CentOS release 6.6 (Final)
+Release:        6.6
+Codename:       Final
 
+* Check if Machine supports Virtualization
+grep -E 'svm|vmx' /proc/cpuinfo
+
+* TAR Syntax For compress
+tar -cvf output.tar /dirname
+
+* For uncompress
+tar -xvf /tmp/data.ta
+
+* Linux Standard Base (LSB) To show the release number of installed distribution:
+lsb_release -r
+
+* To show the distributor ID:
+lsb_release -i
+
+* To show all of the above information:
+lsb_release -a
+
+* Concatenated command:
 lsb_release -ircd
 
-To find Out the Kernel Version by using this command:
-
+* To find Out the Kernel Version by using this command:
 uname -mrs
 
 Where:
@@ -183,185 +170,145 @@ Linux – Kernel name
 3.2.0-24-generic – Kernel version
 x86_64 – Kernel is 64-bit
 
-Port Scanning
-
+* Port Scanning
 nmap -sT -O localhost
-
 cat /etc/services | grep 834
-
 netstat -anp | grep 834
-
 lsof -i | grep 834
 
-Add Default Route
-
+* Add Default Route
 route add default gw 192.168.1.254 eth0
 
-Excluding directory when creating a .tar.gz file
-
+* Excluding directory when creating a .tar.gz file
 tar -pczf MyBackup.tar.gz /home/user/public_html/ --exclude "/home/user/public_html/tmp"
 
-Display files by date (descending)
-
+* Display files by date (descending)
 ls -utlr
 
-Repeat a command every x interval of time in terminal
-
+* Repeat a command every x interval of time in terminal
 watch -n x <your command>
 
-TCPDump Capture and Save Packets in a File
-
+* TCPDump Capture and Save Packets in a File
 tcpdump -w /tmp/0001.pcap -i eth0
 
-or
-
+## or
 tcpdump -w 0001.pcap -i eth0 port 80
-
 TCPDump Capture Packets from source IP
-
 tcpdump -i eth0 src 192.168.0.2
-
 TCPDump Capture Packets from destination IP
-
 tcpdump -i eth0 dst 50.116.66.139
-
 TCPDump Capture IP address Packets
-
 tcpdump -n -i eth0
 
-TCPDump Capture Only N Number of Packets
-
+* TCPDump Capture Only N Number of Packets
 tcpdump -c 5 -i eth0
 
-ARP Scan (Find Connected Systems in the network)
-
+* ARP Scan (Find Connected Systems in the network)
 arp-scan -I wlan0 192.168.1.0/24
 
-Check Hypervisor
+* Check Hypervisor
+apt-cache search virt-what
 
-tephenm@pc:~$ apt-cache search virt-what
-virt-what - detect if we are running in a virtual machine
-
+* virt-what - detect if we are running in a virtual machine
 sudo apt-get install virt-what
-
 sudo virt-what
 
-or
-
+## or
 sudo dmidecode | egrep -i 'manufacturer|product|vendor'
 
-or
-
+## or
 sudo egrep -i 'virtual|vbox' /var/log/dmesg
 
-How to Find a Specific String or Word in Files and Directories
-
-The command below will list all files containing a line with the text “check_root”, by recursively and aggressively searching the ~/bin directory.
+* How to Find a Specific String or Word in Files and Directories The command below will list all files containing a line with the text “check_root”, by recursively and aggressively searching the ~/bin directory.
 
 grep -Rw ~/bin/ -e 'check_root'
 
-You should use the sudo command when searching certain directories or files that require root permissions (unless you are managing your system with the root account).
+* You should use the sudo command when searching certain directories or files that require root permissions (unless you are managing your system with the root account).
 
 sudo grep -Rw / -e 'check_root'
 
-To ignore case distinctions employ the -i option as shown:
-
+* To ignore case distinctions employ the -i option as shown:
 grep -Riw ~/bin/ -e 'check_root'
 
-If you want to know the exact line where the string of text exist, include the -n option.
-
+* If you want to know the exact line where the string of text exist, include the -n option.
 grep -Rinw ~/bin/ -e 'check_root'
-
 grep -Rnw --include=\*.sh ~/bin/ -e 'check_root'
 
-If you want to know the exact line where the string of text exist, include the -n option.
-
+* If you want to know the exact line where the string of text exist, include the -n option.
 grep -Rinw ~/bin/ -e 'check_root' -e 'netstat'
 
-View Bash History and delete it permanently!
-
-To view histroy just type-
+* View Bash History and delete it permanently! To view histroy just type-
 
 history
 
-Dump History to a file
-
+* Dump History to a file
 history > history.txt
 
-to delete the history /root/.bash_hitory file use the command instead!-
-
+* to delete the history /root/.bash_hitory file use the command instead!-
 cat /dev/null > ~/.bash_history && history -c && exit
 
-Check Linux OS
-
+* Check Linux OS
 uname -a
-
 lsb_release -a
-
 lsb_release -a
-
 cat /etc/issue.net
-
 cat /etc/debian_version
 
-What is my IP
-
+* What is my IP
 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
 
-Clear Cache in Linux
-
+* Clear Cache in Linux
 sync; echo 1 > /proc/sys/vm/drop_caches
 sync; echo 2 > /proc/sys/vm/drop_caches
 sync; echo 3 > /proc/sys/vm/drop_caches
 
-Copy a folder keeping owners and permissions intact
-
+* Copy a folder keeping owners and permissions intact
 cp -rp /home/my_home /media/backup/my_home
 
-Change hostname in CentOS 7
-
+* Change hostname in CentOS 7
 hostnamectl set-hostname your-new-hostname
 
-reboot
+# reboot OS
+reboot 
 
-Finding free IPs from the range using nmap
-
+* Finding free IPs from the range using nmap
 sudo nmap -v -sn -n 192.168.1.0/24 -oG - | awk '/Status: Down/{print $2}'
 
-Linux system resource command
-
+* Linux system resource command
 lshw
-
 lshw -short
-
 lshw -html > lshw.html
 
-Recursively look for files with a specific extension
-
+* Recursively look for files with a specific extension
 find $directory -type f -name "*.in"
 
-Monitor Copy command progress
+* Monitor Copy command progress
+watch -n 0.1 du -h /opt/dump.tar.gz
 
-$ watch -n 0.1 du -h /opt/dump.tar.gz
-or
-$ watch -n 0.1 ls -h /opt/dump.tar.gz
+## or
+watch -n 0.1 ls -h /opt/dump.tar.gz
 
-verify the speed of my NIC
-
-$ sudo ethtool eth0 | grep Speed
+* verify the speed of my NIC
+sudo ethtool eth0 | grep Speed
 Speed: 1000Mb/s
 
-Remount /etc/fstab Without Reboot in Linux
+* Remount /etc/fstab Without Reboot in Linux
+mount -a
 
-# mount -a
-
-View file as uncommented 
-
+* View file as uncommented 
 grep -v "^#" your_file | grep -v "^$" | less
 
-Make scp copy hidden files
-
+* Make scp copy hidden files
 scp -rp src/. user@server:dest/
+
+* speed-test
+speed-test-cli 
+
+* sync and rsync copy data
+rsync 
+
+* SSH Local Port Forwarding 
+SSH -N root@IP -P 22 -L localhost:port:localhost:port 
 
 
 {% endhighlight %}
