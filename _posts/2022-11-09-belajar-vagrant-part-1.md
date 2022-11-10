@@ -96,6 +96,9 @@ vagrant destroy
 rm -rf /opt/vagrant
 rm -f /usr/bin/vagrant
 
+{% endhighlight %}
+
+{% highlight bash %} 
 
 ## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di CentOS 7 (RHEL 7)
 
@@ -265,8 +268,7 @@ xfreerdp /v:127.0.0.1:33389 /u:vagrant /p:vagrant /smart-sizing:2000x1500
 
 soon 
 
-{% endhighlight %}
-
+{% highlight bash %} 
 
 ## Troubleshooting
 
@@ -287,5 +289,28 @@ vagrant up
 
 KERN_DIR=/usr/src/kernels/$(uname -r) # /usr/src/kernels/4.19.0-1.el7.elrepo.x86_64
 export KERN_DIR
+
+# 3. Uninstall VirtualBox 
+# Dalam uninstall vbox terkadang agak triky jadi mesti dicoba dengan cara berikut ini jika uninstall biasa tidak berjalan,
+
+# lihat list pid vbox yang berjalan : 
+
+sudo ps aux | grep -i "vbox”
+
+vbox       865  0.0  0.0 365264  7488 ?        Sl   10:46   0:00 /usr/lib/virtualbox/VBoxSVC --auto-shutdown
+vbox       868  0.0  0.0 212472  6268 ?        S    10:46   0:00 /usr/lib/virtualbox/VBoxXPCOMIPCD
+root      1856  0.0  0.0 112816  1004 pts/0    S+   10:50   0:00 grep --color=auto -i vbox
+vbox      5453  0.0  0.1 595760 25584 ?        Sl   Nov07   0:49 /usr/lib/virtualbox/vboxwebsrv --background -H 10.10.8.149
+vbox      5654  0.0  0.1 595760 25568 ?        Sl   Nov07   0:48 /usr/lib/virtualbox/vboxwebsrv --background -H 10.10.8.149 -p 18083
+vbox      9617  0.0  0.0 522208  7136 ?        Sl   Nov07   0:02 /usr/lib/virtualbox/vboxwebsrv --background -H 0.0.0.0 -p 18083
+vbox      9682  0.0  0.0 522208  7160 ?        Sl   Nov07   0:02 /usr/lib/virtualbox/vboxwebsrv --background -H 0.0.0.0 -p 18083
+vbox     13241  0.0  0.0 522208  7164 ?        Sl   Nov07   0:02 /usr/lib/virtualbox/vboxwebsrv --background -H 0.0.0.0 -p 18083
+vbox     26029  0.0  0.1 595760 25568 ?        Sl   Nov07   0:49 /usr/lib/virtualbox/vboxwebsrv --background -H 0.0.0.0 -p 18083
+
+# Lalu Kill Proses PID Vbox yang berjalan
+sudo kill -9 29127 26029 13241 9682 9617 5654 5453 868 865
+
+# Install / Hapus Vbox
+yum erase VirtualBox-7.0
 
 {% endhighlight %}
