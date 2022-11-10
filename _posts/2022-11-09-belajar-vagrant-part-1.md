@@ -16,10 +16,13 @@ Vagrant ini bertujuan menyederhanakan, mengautomasi manajemen konfigurasi perang
 </div>
 
 <div style="text-align: justify">
-OS & Tools : 
-- Vagrant 
-- VirtualBox
-- OS Ubuntu 18.04 Bionic atau LTS
+Prasarat yang dibutuhkan untuk menjalankan Vagrant adalah sebagai berikut 
+
+OS & Tools (Prerequisite): 
+
+* - Vagrant 
+* - VirtualBox
+* - OS Ubuntu 18.04 Bionic atau LTS dan CentOS 7
 </div>
 
 ## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di Ubuntu 18.04 Bionic
