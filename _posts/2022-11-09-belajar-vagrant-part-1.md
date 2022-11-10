@@ -15,10 +15,12 @@ Jika VirtuaBox adalah tools / perangkat virtualisasi untuk menginstall sistem op
 Vagrant ini bertujuan menyederhanakan, mengautomasi manajemen konfigurasi perangkat lunak virtualisasi untuk meningkatkan produktivitas para pengembang aplikasi.
 </div>
 
+<div style="text-align: justify">
 OS & Tools : 
 - Vagrant 
 - VirtualBox
 - OS Ubuntu 18.04 Bionic atau LTS
+</div>
 
 ## Install VirtualBox 7.0.2 + Vagrant 2.3.2 di Ubuntu 18.04 Bionic
 {% highlight bash %} 
