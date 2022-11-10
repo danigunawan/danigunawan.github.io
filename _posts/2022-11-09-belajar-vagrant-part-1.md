@@ -101,13 +101,22 @@ vagrant box add gusztavvargadr/boxes/windows-10
 # Jika bermasalah karena sertifikat SSL
 vagrant box add gusztavvargadr/boxes/windows-10 --insecure
 
-# atau
-
+# Inisialisasi Vagrantfile berdasarkan box yang dipakai 
 vagrant init gusztavvargadr/boxes/windows-10
+
+# Jalankan Vagrant
 vagrant up
+
+# Vagrant SSH
 vagrant ssh
+
+# Vagrant RDP
 vagrant rdp
+
+# Vagrant Suspend
 vagrant halt
+
+# Vagrant Destroy
 vagrant destroy
 
 # Uninstall Vagrant 
