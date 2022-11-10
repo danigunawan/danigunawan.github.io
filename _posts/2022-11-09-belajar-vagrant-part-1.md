@@ -7,6 +7,14 @@ image:
   background: triangular.png
 ---
 
+## Apa Itu Vagrant ?
+
+<div style="text-align: justify">
+Jika VirtuaBox adalah tools / perangkat virtualisasi untuk menginstall sistem operasi (OS) Maka Vagrant (by HashiCorp) adalah produk perangkat lunak sumber terbuka untuk membantu virtualisasi (VBOX) untuk membangun, memelihara dan mengembangkan environment development aplikasi secara virtual. Adapun environment virtualisasi yang disupport vagrant selain VirtualBox yaitu seperti KVM, Hyper-V, Docker, Kubernetes, VMware, dan AWS. 
+
+Vagrant ini bertujuan menyederhanakan, mengautomasi manajemen konfigurasi perangkat lunak virtualisasi untuk meningkatkan produktivitas para pengembang aplikasi.
+</div>
+
 OS & Tools : 
 - Vagrant 
 - VirtualBox
