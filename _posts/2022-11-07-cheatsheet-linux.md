@@ -8,6 +8,9 @@ image:
 ---
 
 ## Kumpulan Cheatsheet Linux
+Perubahan Terakhir : 
+- 10 November 2022 
+
 {% highlight bash %} 
 * Learning Nano
 
