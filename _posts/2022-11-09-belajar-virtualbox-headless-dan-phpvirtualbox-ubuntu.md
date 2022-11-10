@@ -112,5 +112,29 @@ sudo systemctl enable phpvirtualbox.service
  sudo systemctl start phpvirtualbox.service
 
 # Install Skrip PHPVirtualBox (Via Docker)
+Struktur Code :
+- config.php (berisikan konfigurasi phpvirtualbox)
+- Dockerfile (file konfigurasi builder images docker)
+- nginx.conf (konfigrasi web phpvirtualbox dan reverse proxy nya)
+- servers-from-env.php (konfigurasi untuk environment autoload untuk phpvirtualbox)
+- Makefile (untuk shortcut pengembangan)
+
+# Langkah Pertama Build Images 
+docker build --no-cache -f Dockerfile -t phpvirtualbox6x .
+
+# Jalankan PHPVirtualBox dengan Docker yang sudah dibuild
+docker run --name vbox_http --restart=always -p 8149:80 \
+        -e SRV1_HOSTPORT=172.17.0.1:18083 -e SRV1_NAME=ServerVBOX -e SRV1_USER=vbox -e SRV1_PW='password' \
+        -d phpvirtualbox6x
+
+* -p 8149:80 : port yang diekspose dari docker (80) dari container kita expose ke luar dengan menggunakan port alias 8149 (mirip seperti metode forwarding pada port/NAT)
+* --name vbox_http : argument docker untuk menset nama container 
+* --restart=always : container dijalankan dan diset default dengan konfigurasi restart always jadi jika servis mati bisa hidup lagi
+* -d : docker dijalankan secara background
+* phpvirtualbox6x : nama images phpvirtualbox yang kita build tadi
+* ENV SRV1_HOSTPORT : Merupakan Host Server VirtualBox melalui servis vboxweb yang berjalan di port 18083 (yang membantu untuk dikonfigurasi melalui phpvirtualbox) disini kita bisa set dengan any host (0.0.0.0) atau pakai IP GW Docker 172.17.0.1
+* ENV SRV1_NAME: Nama server Vbox kita set ServerVBOX
+* ENV SRV1_USER: username vboxweb yang digunakan phpvirtualbox
+* ENV SRV1_PW: Passowrd vboxweb yang digunakan phpvirtualbox
 
 {% endhighlight %}
