@@ -319,7 +319,7 @@ SSH -N root@IP -P 22 -L localhost:port:localhost:port
 Refferensi : 
 https://www.linux.org/threads/massive-collection-of-linux-command-cheat-sheet-for-2022.38934/
 
-## Linux Command Cheat Sheet For 2022
+Linux Command Cheat Sheet For 2022 : 
 * The Linux Command Line: Download The Linx Command Line
 * Command Line Cheat Sheet: Command Line Cheat Sheet
 * Sed Stream Editor: Download Sed Stream Editor
