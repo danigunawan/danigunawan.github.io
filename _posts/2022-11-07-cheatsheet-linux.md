@@ -268,7 +268,7 @@ cp -rp /home/my_home /media/backup/my_home
 * Change hostname in CentOS 7
 hostnamectl set-hostname your-new-hostname
 
-# reboot OS
+* reboot OS
 reboot 
 
 * Finding free IPs from the range using nmap
