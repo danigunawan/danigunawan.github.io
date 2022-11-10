@@ -312,3 +312,43 @@ SSH -N root@IP -P 22 -L localhost:port:localhost:port
 
 
 {% endhighlight %}
+
+Refferensi : 
+-  https://www.linux.org/threads/massive-collection-of-linux-command-cheat-sheet-for-2022.38934/
+
+## Linux Command Cheat Sheet For 2022
+The Linux Command Line: Download The Linx Command Line
+Command Line Cheat Sheet: Command Line Cheat Sheet
+Sed Stream Editor: Download Sed Stream Editor
+Archlinux Cheat Sheet: Archlinux Cheat Sheet
+Linux/Unix Command Line Cheat Sheet: Linux/Unix Command Line Cheat Sheet
+Unix/Linux Command Reference – FOSSwire: Unix/Linux Command Reference
+Set Operations In The Unix: Set Operations In The Unix
+Linux Quick Reference GuideDownload Linux Quick Reference Guide
+Linux Bash Shell Cheat Sheet: Download Linux Bash Shell Cheat Sheet
+Advanced Linux Commands Cheat Sheet from Red Hat: Advanced Linux Commands Cheat Sheet from Red Hat
+Linux Terminal Cheat Sheet: Linux Terminal Cheat Sheet
+Perf Cheat Sheet: Perf Cheat Sheet
+Linux Command Cheat Sheet From Cheatography: Cheat Sheet By Cheatography
+AWK command cheat sheet: AWK command cheat sheet
+Bash History Cheat Sheet: Bash History Cheat Sheet
+Bash Redirections Cheat Sheet: Bash Redirections Cheat Sheet
+FreeBSD Command Reference: FreeBSD Command Reference
+Linux Administrator’s Quick Reference Card: Quick Reference Card
+Linux & LPIC Quick Reference Guide: LPIC Quick Reference Guide
+Linux Networking Commands: Linux Networking Commands
+Linux Command Cheat Sheet By Loggly: Linux Command Cheat Sheet By Loggly
+UNIX/Linux Command Reference: UNIX/Linux Command Reference
+Ubuntu Cheat Sheet: Ubuntu Cheat Sheet
+Bash Scripting Cheat Sheet: Bash Scripting Cheat Sheet
+Ryans Tutorial Cheat Sheet: Ryans Linux Cheat Sheet
+Linux Server Step-by-Step Configuration Guide Cheat Sheet: Server Cheat Sheet
+Raspberry Pi Commands Cheat Sheet: Raspberry Pi commands cheat sheet
+Unix Command Cheat Sheets: Unix Command Cheat Sheets
+The Linux® Command-Line: The Linux Command Line
+Cheat Sheet: Advanced Linux Commands: Cheat Sheet: Advanced Linux Commands
+Set Operations in the Unix Shell: Set Operations in the Unix Shell
+MakeUseOf Linux Commands Reference: MakeUseOf Linux Commands Reference
+Red Hat Linux Commands Cheat Sheet: Red Hat Linux Commands Cheat Sheet
+Linoxide Linux Command Cheat Sheet Collection: Linoxide Linux Command Cheat Sheet
+UNIX Toolbox: UNIX Toolbox
