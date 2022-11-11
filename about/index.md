@@ -10,4 +10,4 @@ modified: 2022-11-11
 ---
 
 Hai nama saya Dani Gunawan saya biasa dipanggil dadan saya tinggal di bogor. blog
-[on danigunawan.github.io](http://danigunawan.github.io) merupakan blog sharing / catatan untuk berbagi pengalaman semoga bermanfaat :)
+[danigunawan.github.io](http://danigunawan.github.io) merupakan blog sharing / catatan untuk berbagi pengalaman semoga bermanfaat :)
