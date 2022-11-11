@@ -152,7 +152,7 @@ di menu file - > change password
 Notice diatas dikarenakan phpvirtualbox 6.1 tidak mendukung dengan virtualbox 7.0.2 karena phpvirtualbox pengembangannya stuck alias kurang jadi solusinya pakai versi develop.
 
 # Untuk Solusi : 
-Pakai PHPVirtualBox dengan branch develop / master saya biasanya pakai develop karena saat direview cukup stable 
+Pakai PHPVirtualBox dengan branch develop / master saya biasanya pakai develop karena saat direview cukup stable dan Downgrade VirtualBox dengan Versi 6.1.0 karena phpvirtualbox hanya mendukung VirtualBox sampai dengan versi 6.1.0
 
 # Clone Repository : 
 https://github.com/phpvirtualbox/phpvirtualbox.git -b develop
