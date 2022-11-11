@@ -10,8 +10,22 @@ image:
 ## Apa Itu Virtualbox ?
 
 <div style="text-align: justify">
-VirtuaBox adalah tools / perangkat virtualisasi untuk menginstall sistem operasi didalamnya biasanya virtualbox digunakan sebagai alat / tools pengujian, membantu lingkungan development
+VirtuaBox adalah tools / perangkat virtualisasi untuk menginstall sistem operasi didalamnya biasanya virtualbox digunakan sebagai alat / tools pengujian, membantu lingkungan development.
 </div>
+
+## Apa Itu Virtualbox Headless Vs GUI ?
+
+<div style="text-align: justify">
+VirtuaBox Headless adalah virtualbox yang menjalankan virtual machine secara background tanpa adanya interkasi GUI sedangkan GUI sebaliknya ada interaksi GUI.
+</div>
+
+## Apa Itu PHPVirtualBox ?
+
+<div style="text-align: justify">
+PHPVirtuaBox adalah tools / perangkat yang mendukung virtualbox client web dalam manajemen virtualisasi.
+</div>
+
+
 
 Prasarat yang dibutuhkan untuk menjalankan Vagrant adalah sebagai berikut.
 
