@@ -116,6 +116,9 @@ vagrant rdp
 # Vagrant Suspend
 vagrant halt
 
+# Vagrant Suspend Force 
+vagrant halt -f 
+
 # Vagrant Destroy
 vagrant destroy
 
