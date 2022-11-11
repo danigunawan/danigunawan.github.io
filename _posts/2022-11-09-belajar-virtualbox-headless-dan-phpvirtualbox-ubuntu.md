@@ -26,7 +26,6 @@ PHPVirtuaBox adalah tools / perangkat yang mendukung virtualbox client web dalam
 </div>
 
 
-
 Prasarat yang dibutuhkan untuk menjalankan Vagrant adalah sebagai berikut.
 
 OS & Tools (Prerequisite): 
