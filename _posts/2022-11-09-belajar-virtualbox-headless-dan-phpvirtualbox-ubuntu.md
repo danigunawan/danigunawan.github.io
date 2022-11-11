@@ -80,7 +80,7 @@ sudo nano /etc/default/virtualbox
 
 VBOXWEB_USER=vboxadmin
 #VBOXWEB_PASSWD=[the password you set when you created the vbox user]
-VBOXWEB_HOST=10.48.102.238
+VBOXWEB_HOST=192.168.1.9
 #VBOXWEB_PORT=18083 # default 18083
 #VBOXWEB_TIMEOUT=
 #VBOXWEB_CHECK_INTERVAL=
