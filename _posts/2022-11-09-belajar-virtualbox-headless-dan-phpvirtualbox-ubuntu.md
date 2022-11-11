@@ -25,13 +25,13 @@ VirtuaBox Headless adalah virtualbox yang menjalankan virtual machine secara bac
 PHPVirtuaBox adalah tools / perangkat yang mendukung virtualbox client web dalam manajemen virtualisasi.
 </div>
 
-
-Prasarat yang dibutuhkan untuk menjalankan Vagrant adalah sebagai berikut.
+  
+Prasarat yang dibutuhkan untuk menjalankan VirtualBox dan PHPVirtualBox adalah sebagai berikut.
 
 OS & Tools (Prerequisite): 
 
 * VirtualBox 7.0.2
-* PHPVirtualBox
+* PHPVirtualBox (Hanya Mendukung VirtualBox 6.1.0) 
 * OS Ubuntu 18.04 Bionic
 
 ## Install VirtualBox 7.0.2 + PHPVirtualBox di Ubuntu 18.04 Bionic
@@ -160,14 +160,15 @@ di menu file - > change password
 {% endhighlight %}
 
 ## Troubleshooting 
-* This version of phpVirtualBox (6.1-0) is incompatible with VirtualBox 7.0.2. You probably need to download the latest phpVirtualBox 7.0-x. See the Versioning section below the file list in the link for more information
+
+1. This version of phpVirtualBox (6.1-0) is incompatible with VirtualBox 7.0.2. You probably need to download the latest phpVirtualBox 7.0-x. See the Versioning section below the file list in the link for more information
 
 Notice diatas dikarenakan phpvirtualbox 6.1 tidak mendukung dengan virtualbox 7.0.2 karena phpvirtualbox pengembangannya stuck alias kurang jadi solusinya pakai versi develop.
 
-# Untuk Solusi : 
+Untuk Solusi : 
 Pakai PHPVirtualBox dengan branch develop / master saya biasanya pakai develop karena saat direview cukup stable dan Downgrade VirtualBox dengan Versi 6.1.0 karena phpvirtualbox hanya mendukung VirtualBox sampai dengan versi 6.1.0
 
-# Clone Repository : 
+Clone Repository : 
 https://github.com/phpvirtualbox/phpvirtualbox.git -b develop
 
 karena lambat pengembangannya phpvirtualbox belum lagi karena segudang sekuritas dan bug nya jadi sebenarnya virtualbox ini punya gandengan yang lebih hebat secara stack management virtualisasinya ya kita kenal dengan Vagrant by HashiCorp, semua environment bisa kita racik sesuai kebutuhan.
