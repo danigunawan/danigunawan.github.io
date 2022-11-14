@@ -15,3 +15,4 @@ image:
 
 ## Cloud Computing 
 * https://learntocloud.guide
+* https://www.server-world.info
