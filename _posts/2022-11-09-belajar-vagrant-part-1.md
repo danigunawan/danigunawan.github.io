@@ -264,6 +264,8 @@ vagrant rdp
 vagrant halt
 vagrant destroy
 vagrant box list
+vagrant global-status
+vagrant reload [name/id]
 
 # Uninstall Vagrant 
 sudo yum erase vagrant 
