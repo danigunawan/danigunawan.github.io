@@ -64,8 +64,7 @@ VERSION=8.1 docker-compose run --service-ports app
 Kemudian masuk ke dalam container dengan perintah 
 
 {% highlight bash %} 
-docker exec -it nama kontainer /bin/sh
-
+docker exec -it nama_kontainer /bin/sh
 {% endhighlight %}
 
 Lalu set akses folder owner dan coba menjalankan aplikasi melalui composer :
