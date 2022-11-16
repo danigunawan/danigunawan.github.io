@@ -29,6 +29,25 @@ Ctrl + K and Ctrl + U
 5. Copy some text and paste-
 Copy beging Ctrl + ^ Copy end Ctrl + ^ For pasting Ctrol + U
 
+* Add User 
+adduser newuser
+groups newuser
+usermod -aG sudo newuser
+visudo
+
+# /etc/sudoers
+root    ALL=(ALL:ALL) ALL
+newuser ALL=(ALL:ALL) ALL # ADD
+
+deluser newuser
+deluser --remove-home newuser
+
+visudo
+
+# /etc/sudoers
+root    ALL=(ALL:ALL) ALL
+newuser ALL=(ALL:ALL) ALL # DELETE
+
 * Find files older than 60 days
 find * -mtime +60
 
