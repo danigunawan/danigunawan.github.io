@@ -359,4 +359,60 @@ config.vm.provider "virtualbox" do |v|
   v.cpus = 2
 end
 
+# 5. SSH dengan default setting (Linux)
+jika di vagrant up dan menggunakan vagrant ssh
+namun disini menggunakan config.ssh.insert_key = false pada pengaturan
+dan kemudian ssh vagrant@IP -i ~/.vagrant.d/insecure_private_key 
+
+alternatif 1 : 
+# save the config to a file
+vagrant ssh-config > vagrant-ssh
+
+# run ssh with the file.
+ssh -F vagrant-ssh default
+
+alternatif 2 : 
+membuat file ssh-vagrant.sh dan isikan : 
+
+
+#!/bin/sh
+PORT=$(vagrant ssh-config | grep Port | grep -o '[0-9]\+')
+ssh -q \
+    -o UserKnownHostsFile=/dev/null \
+    -o StrictHostKeyChecking=no \
+    -i ~/.vagrant.d/insecure_private_key \
+    vagrant@localhost \
+    -p $PORT \
+    "$@"
+
+As a one-liner (with thanks to kgadek):
+
+ssh $(vagrant ssh-config | awk 'NR>1 {print " -o "$1"="$2}') localhost
+
+To account for when you have more than one vagrant host, this will select the desired host, as well as cull blank lines from the config (using sed):
+
+HOST=name-of-my-host
+ssh $(vagrant ssh-config $HOST | sed '/^[[:space:]]*$/d' |  awk 'NR>1 {print " -o "$1"="$2}') localhost
+
+alternatif 3 :
+ssh vagrant@127.0.0.1 -p 2222 -o Compression=yes -o DSAAuthentication=yes -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i ~/.vagrant.d/less_insecure_private_key -o ForwardAgent=yes
+
+# 6. Slow Vagrant Box
+Lambat untuk permainan.  ada 2 plugin yang akan meningkatkan kecepatan vagrant box.
+
+vagrant-cachier
+vagrant plugin install vagrant-cachier
+
+Vagrant-faster
+vagrant plugin install vagrant-faster
+
+untuk database seperti mysql
+menggunakan MySQL-tuner-perl yang cukup bagus untuk fine tuning MySQL
+
+# 7. Vagrant Box Reload With Cronjobs 
+crontab -e 
+vagrant global-status (get id box : dab44bd)
+tambahkan di crontab -e setiap jam 12 malam di refresh:
+0 0 * * * /usr/bin/vagrant reload dab44bd
+
 {% endhighlight %}
