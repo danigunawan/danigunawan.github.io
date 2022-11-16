@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Belajar Ansible - Part 1
+title: Apa Itu SaaS, PaaS, IaaS dan XaaS - Part 1
 modified: 2022-11-8T20:00:28+07:00
 categories:
-description: "Belajar Ansible - Part 1"
-tags: [ansible, ias, hashicorp]
+description: "Apa Itu SaaS, PaaS, IaaS dan XaaS - Part 1"
+tags: [saas, ias, paas, iaas, xaas]
 image:
   background: triangular.png
 comments: true
