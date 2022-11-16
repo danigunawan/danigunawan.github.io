@@ -5,8 +5,6 @@ comments: true
 share: true
 reading_time:     true
 words_per_minute: 200
-# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
-# When testing locally leave blank or use http://localhost:4000
 url:
 
 # Owner/author information
@@ -20,7 +18,7 @@ owner:
   facebook:       
   github:         
   stackexchange:  
-  linkedin:       
+  linkedin:     
   instagram:      
   flickr:         
   tumblr:         
@@ -38,7 +36,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Jakarta
-future:      false  # publish future dated posts --  true, false (default) 
+future:      true  # publish future dated posts --  true, false (default) 
 highlighter: rouge
 markdown:    kramdown
 plugins:
