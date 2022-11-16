@@ -15,5 +15,32 @@
   ga('send', 'pageview');
 </script>
 {% endif %}
+<script>
+  (function() {
+      var cx = '82c44d79741034c24';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search queryParameterName="searchString"></gcse:search>
+
+  <!-- Histats.com  START (async)-->
+  <!-- Histats.com  END  -->
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS9X582"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- Start of Woopra Code -->
+  <!-- End of Woopra Code -->
+  
+  <!-- Default Statcounter code -->
+  <!-- End of Statcounter Code -->
 
 {% if page.comments != false %}{% include disqus_comments.html %}{% endif %}
