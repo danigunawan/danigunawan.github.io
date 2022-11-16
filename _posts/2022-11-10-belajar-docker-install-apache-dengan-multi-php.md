@@ -1,10 +1,15 @@
 ---
 layout: post
 title: Belajar docker install apache dengan multiple php version
+modified: 2022-11-10T15:00:28+07:00
+categories:
 description: "Belajar docker install apache dengan multiple php version"
 tags: [php, apache, dockerize, docker, multiple php version]
 image:
   background: triangular.png
+comments: true
+share: true
+date: 2022-11-10T15:00:28+07:00
 ---
 Beberapa versi php dalam container 
 Versi PHP yang disupport : 

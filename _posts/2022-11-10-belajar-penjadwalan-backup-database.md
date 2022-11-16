@@ -1,10 +1,15 @@
 ---
 layout: post
 title: Belajar penjadwalan backup database
+modified: 2022-11-10T17:00:28+07:00
+categories:
 description: "Belajar penjadwalan backup database"
 tags: [cheatsheet, cronjobs, backup database]
 image:
   background: triangular.png
+comments: true
+share: true
+date: 2022-11-10T17:00:28+07:00
 ---
 
 {% highlight bash %} 

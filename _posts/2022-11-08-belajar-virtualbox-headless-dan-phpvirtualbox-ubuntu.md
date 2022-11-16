@@ -1,10 +1,15 @@
 ---
 layout: post
 title: Belajar VirtualBox Headless dan PHPVirtualBox Ubuntu/Mint
+modified: 2022-11-8T20:00:28+07:00
+categories:
 description: "Belajar VirtualBox Headless dan PHPVirtualBox Ubuntu/Mint"
 tags: [virtualbox, phpvirtualbox, headless]
 image:
   background: triangular.png
+comments: true
+share: true
+date: 2022-11-8T17:00:28+07:00
 ---
 
 ## Apa Itu Virtualbox ?

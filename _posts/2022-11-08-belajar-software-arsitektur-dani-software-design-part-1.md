@@ -1,10 +1,15 @@
 ---
 layout: post
 title: Belajar Software Arsitektur dan Software Design - Part 1
+modified: 2022-11-8T20:00:28+07:00
+categories:
 description: "Belajar Software Arsitektur dan Software Design - Part 1"
 tags: [software architecture, software design]
 image:
   background: triangular.png
+comments: true
+share: true
+date: 2022-11-8T17:00:28+07:00
 ---
 
 <div style="text-align: justify">
