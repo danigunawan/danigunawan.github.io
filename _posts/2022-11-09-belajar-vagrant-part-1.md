@@ -398,7 +398,7 @@ alternatif 3 :
 ssh vagrant@127.0.0.1 -p 2222 -o Compression=yes -o DSAAuthentication=yes -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i ~/.vagrant.d/less_insecure_private_key -o ForwardAgent=yes
 
 # 6. Slow Vagrant Box
-Lambat untuk permainan.  ada 2 plugin yang akan meningkatkan kecepatan vagrant box.
+Vagrant Box terasa lambat. ada 2 plugin yang akan meningkatkan kecepatan vagrant box.
 
 vagrant-cachier
 vagrant plugin install vagrant-cachier
