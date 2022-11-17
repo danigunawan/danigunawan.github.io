@@ -175,7 +175,7 @@ reboot
 rpm -q kernel-devel
 uname -r
 
-# Kem#udian, mulai ulang proses pengaturan build dan konfirmasikan bahwa instalasi VirtualBox Anda berhasil dengan menjalankan:
+# Kemudian, mulai ulang proses pengaturan build dan konfirmasikan bahwa instalasi VirtualBox Anda berhasil dengan menjalankan:
 
 /sbin/vboxconfig
 
