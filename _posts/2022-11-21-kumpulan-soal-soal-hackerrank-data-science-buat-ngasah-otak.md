@@ -19,14 +19,15 @@ okay dibawah ini kumpulan soal-soal hackerank saya simpan dalam note buat catata
 
 
 Berikut Kumpulan Soal-Soal Hacker Rank Data Science :
-Q1 Database Question 4 languages allowed: mysql, oracle, tsql, db2
-- List Customer and Product Without Sale : [LINK] (https://github.com/danigunawan/list-customer-and-product-without-sale)
-Q2 Coding Question 2 languages allowed: python, python3
-- Python : List Of Even Integers (Pythoniast pastinya bisa explorasi)
-Q3 Data Science Question Jupyter Notebook
-- Analyze Loan Eligibility : [LINK] (https://github.com/danigunawan/analyze_loan_eligibility)
-Q4 Data Science Question
-- Predict Loan Default : [LINK](https://github.com/danigunawan/predict_loan_default.git)
-Q5 Backend Question
-- PySpark: Healthcare Data Cleaning : [LINK] (https://github.com/danigunawan/pyspark_healthcare_data_cleaning.git)
+
+- Q1 Database Question 4 languages allowed: mysql, oracle, tsql, db2
+List Customer and Product Without Sale : [LINK] (https://github.com/danigunawan/list-customer-and-product-without-sale)
+- Q2 Coding Question 2 languages allowed: python, python3
+Python : List Of Even Integers (Pythoniast pastinya bisa explorasi)
+- Q3 Data Science Question Jupyter Notebook
+Analyze Loan Eligibility : [LINK] (https://github.com/danigunawan/analyze_loan_eligibility)
+- Q4 Data Science Question
+Predict Loan Default : [LINK](https://github.com/danigunawan/predict_loan_default.git)
+- Q5 Backend Question
+PySpark: Healthcare Data Cleaning : [LINK] (https://github.com/danigunawan/pyspark_healthcare_data_cleaning.git)
 
