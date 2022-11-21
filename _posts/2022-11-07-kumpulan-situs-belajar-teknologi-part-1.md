@@ -21,3 +21,8 @@ date: 2022-11-7T17:00:28+07:00
 ## Cloud Computing 
 * https://learntocloud.guide
 * https://www.server-world.info
+
+## Youtube 
+
+* Belajar Data Science dari Nol : 
+  [LINK](https://www.youtube.com/@JCOpUntukIndonesia)
