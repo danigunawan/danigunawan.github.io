@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Soal-soal hacker rank data science buat ngasah otak
+title: Soal-soal Hacker Rank Data Science Buat Ngasah Otak
 modified: 2022-11-21T24:00:00+07:00
 categories:
-description: "kumpulan soal-soal hacker rank data science supaya makin sayentist"
+description: "soal-soal hacker rank data science supaya makin sayentist"
 tags: [cheatsheet, cronjobs, backup database]
 image:
   background: triangular.png
@@ -18,7 +18,7 @@ goku punya level super saiya dengan tingkatan nya dari 1,2,3,4 begitupun saint s
 okay dibawah ini kumpulan soal-soal hackerank saya simpan dalam note buat catatan saja, karena saya sudah bosan menyimpan catatan dilaptop dan biasa nulis di notion, mulai sekarang saya lebih senang sepertinya menyimpan catatan diblog di mungkin bisa bermanfaat untuk pribadi, teman-teman sebaya senusa, sebangsa setanah air.. :D 
 
 
-# Kumpulan Soal-Soal Hacker Rank Data Science
+Berikut Kumpulan Soal-Soal Hacker Rank Data Science :
 Q1 Database Question 4 languages allowed: mysql, oracle, tsql, db2
 - List Customer and Product Without Sale : [LINK] (https://github.com/danigunawan/list-customer-and-product-without-sale)
 Q2 Coding Question 2 languages allowed: python, python3
