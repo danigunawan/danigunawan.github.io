@@ -15,7 +15,7 @@ date: 2022-11-21T24:00:00+07:00
 kalau anak 90 an penggemar film cemen as kartun pasti kenal dengan film saint saiya dan film super saiya (Dragon Ball), dari alur ceritanya mereka itu sama-sama ingin jadi manusia super, kalau di film dragon ball
 goku punya level super saiya dengan tingkatan nya dari 1,2,3,4 begitupun saint saiya sampai menjadi saiya gold. jadi disini mahu berbagi saja bagaimana ilmu kita bisa bermanfaat, semakin bermanfaat pastinya semakin berkah kayak goku aja bisa saling menolong, semakin kuat level goku pastinya semakin sulit melawan musuhnya. Jadi cerita cemen diatas hanya sedikit refreshing biar ga terlalu dalam bahas judulnya yak wkwkw...
 
-okay dibawah ini kumpulan soal-soal hackerank saya simpan dalam note buat catatan saja, karena saya sudah bosan menyimpan catatan dilaptop dan biasa nulis di notion, mulai sekarang saya lebih senang sepertinya menyimpan catatan diblog di mungkin bisa bermanfaat untuk pribadi, teman-teman sebaya senusa, sebangsa setanah air.. :D 
+okay dibawah ini kumpulan soal-soal hackerank saya simpan dalam note buat catatan saja, karena saya sudah bosan menyimpan catatan dilaptop dan biasa nulis di notion, mulai sekarang saya lebih senang sepertinya menyimpan catatan diblog mungkin bisa bermanfaat untuk pribadi, teman-teman sebaya senusa, sebangsa setanah air.. :D 
 
 
 Berikut Kumpulan Soal-Soal Hacker Rank Data Science :
