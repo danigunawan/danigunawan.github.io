@@ -4,7 +4,7 @@ title: Soal-soal Hacker Rank Data Science Buat Ngasah Otak
 modified: 2022-11-21T24:00:00+07:00
 categories:
 description: "soal-soal hacker rank data science supaya makin sayentist"
-tags: [cheatsheet, cronjobs, backup database]
+tags: [hackerrank, data science, hacker rank data science]
 image:
   background: triangular.png
 comments: true
