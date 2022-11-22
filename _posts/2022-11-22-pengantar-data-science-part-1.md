@@ -28,8 +28,10 @@ Namun seiring berkembangnya teknologi dan implementasi dibidang Data Science ber
 
 Mari kita lihat dari flow pekerjaannya bagaimana kita lihat aliran data nya bagaimana sebagai berikut : 
 
-1. Analitik
+### 1. Analitik
+
 dibidang analitik terdapat role-role yang bertugas dan bertanggung jawab atas data analitik sebagai berikut :
+
 - Role Business Analyst
 
 Bisnis analyst mencari kebutuhan bisnis itu apa (needsnya) setelah menemukan kebutuhan bisnisnya akan disampaikan ke data analyst requirement-requirement nya apa saja.
@@ -54,7 +56,8 @@ Jadi pada bagian Analitik ini fokusnya lebih ke "APA" needsnya kebutuhan bisnis 
 
 Ketika kita sudah mendapatkan insight next stepnya adalah selain reporting / insight kita ingin melakukan Prediction dan jika ingin membutuhkan Prediction kita membutuhkan yang namanya model matematik, model yang dimana bisa melakukan sebuah Prediksi sehingga setelah bidang analitik ini ada fase Modeling.
 
-2. Modeling 
+### 2. Modeling 
+
 - Data Scientist 
 
 Data analyst ini merupakan Data Analyst yang sudah memiliki pengalaman dan berkembang menjadi Data Scientist sehingga fokusnya jadi berbeda yakni dibidang permodelan, fokusnya melakukan Prediksi "In The Future" mau prediksi apa sesuai dengan kebutuhan bisnis, namun terkadang Role Data scientists ini datang beragam dari disiplin ilmu seperti statistika, matematika, teknik sampai dengan bisnis sehingga trend kedepan data scientists ini menjadi roles yang diminati karena begitu luas implementasinya.
@@ -62,16 +65,16 @@ Data analyst ini merupakan Data Analyst yang sudah memiliki pengalaman dan berke
 - ML Engineer
 - AI Engineer
 
-3. Testing
+### 3. Testing
 
-4. Research
+### 4. Research
 - ML Researcher 
 - AI Researcher
 
-5. Operational
+### 5. Operational
 - MLOps
 - AIOps
 
-6. Security 
+### 6. Security 
 - MLSecOps
 - AISecOps
