@@ -12,9 +12,8 @@ share: true
 date: 2022-11-22T11:00:00+07:00
 ---
 
-Wajib bagi kamu yang ingin terjun ke dunia data science 
-
 <div style="text-align: justify">
+Wajib bagi kamu yang ingin terjun ke dunia data science. !
 Kita mulai dari data science, data science itu dipecah menjadi 3 bidang yang besar yaitu : 
 - Analitik
 - Modeling
