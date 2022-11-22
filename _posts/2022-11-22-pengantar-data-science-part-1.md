@@ -4,7 +4,7 @@ title: Pengantar Data Science Part 1
 modified: 2022-11-22T11:00:00+07:00
 categories:
 description: "pengantar data science part 1"
-tags: [data science, pengantar data science, apat itu data science?]
+tags: [data science, pengantar data science, apa itu data science]
 image:
   background: triangular.png
 comments: true
