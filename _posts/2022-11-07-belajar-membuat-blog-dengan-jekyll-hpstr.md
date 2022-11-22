@@ -12,3 +12,6 @@ share: true
 date: 2022-11-7T17:00:28+07:00
 ---
 
+# Proteksi Halaman Dengan Jekyll Password Protect 
+https://github.com/lilykonings/jekyll-password-protect
+https://www.tachyonstemplates.com/2020/jekyll-netlify-password/

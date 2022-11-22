@@ -15,6 +15,11 @@ date: 2022-11-9T17:00:28+07:00
 ## Ebook 
 [Ebook AWS Certified Data Analytics Study Guide DAS-C01 Exam](http://danigunawan.github.io/download/ebook_aws_certified_data_analytics_study_guide_specialty_das_c01_exam.pdf) 
 
+[Big_Data_on_AWS_3.8_(EN)_Student_Guide.pdf](https://drive.google.com/drive/folders/1VMgBfGqOYu7xz7jn3Bmsg-3DqE0qZk7J?usp=share_link) 
+
+[Big_Data_on_AWS_3.8_(EN)_Lab_Guide.pdf](https://drive.google.com/drive/folders/1VMgBfGqOYu7xz7jn3Bmsg-3DqE0qZk7J?usp=share_link) 
+
+
 ## Cheatsheet
 
 - Redshift Spectrum
