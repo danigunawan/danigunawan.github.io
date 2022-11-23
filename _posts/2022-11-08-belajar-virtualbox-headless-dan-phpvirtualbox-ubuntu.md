@@ -164,6 +164,19 @@ di menu file - > change password
 
 {% endhighlight %}
 
+# Running VirtualBox Headless Via CLI
+Start VirtualBox VM in Headless Mode
+
+# List virtual machines
+VBoxManage list vms
+"MyVM" {e4b0c92c-4301-4a7d-8af8-fe02fed00451}
+
+# Start VM in headless mode
+VBoxManage startvm MyVM --type headless
+
+# Power off VM
+VBoxManage controlvm MyVM poweroff
+
 ## Troubleshooting 
 
 1. This version of phpVirtualBox (6.1-0) is incompatible with VirtualBox 7.0.2. You probably need to download the latest phpVirtualBox 7.0-x. See the Versioning section below the file list in the link for more information

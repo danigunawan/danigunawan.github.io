@@ -40,6 +40,12 @@ groups newuser
 usermod -aG sudo newuser
 visudo
 
+* List Users
+compgen -u 
+
+* List Group Users
+compgen -g
+
 # /etc/sudoers
 root    ALL=(ALL:ALL) ALL
 newuser ALL=(ALL:ALL) ALL # ADD
