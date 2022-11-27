@@ -465,6 +465,7 @@ or crontabs :
 
 or crontabs 2 for if reloads vagrant box :
 vagrant global-status get id 
+sudo crontab -e
 @reboot /bin/su -c "/usr/bin/vagrant reload 42885aa" deploy
 
 
