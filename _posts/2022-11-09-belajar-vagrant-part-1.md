@@ -467,4 +467,10 @@ or crontabs 2 for if reloads vagrant box :
 vagrant global-status get id 
 @reboot /bin/su -c "/usr/bin/vagrant reload 42885aa" deploy
 
+
+@reboot /bin/su -c "/usr/bin/vagrant reload dab44bd" deploy
+
+# Vagrant + Docker with bootstraper 
+https://dev.to/vumdao/create-an-ubuntu-20-04-server-using-vagrant-3d2i
+
 {% endhighlight %}
