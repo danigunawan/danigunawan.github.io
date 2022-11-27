@@ -415,4 +415,56 @@ vagrant global-status (get id box : dab44bd)
 tambahkan di crontab -e setiap jam 12 malam di refresh:
 0 0 * * * /usr/bin/vagrant reload dab44bd
 
+# 8. Vagrant VM Increase Disk Size
+Install this plugin: vagrant plugin install vagrant-disksize
+Edit the Vagrantfile:
+
+Vagrant.configure('2') do |config|
+    ...
+    config.vm.box = 'ubuntu/xenial64'
+    config.disksize.size = '50GB'
+    ...
+end
+
+vagrant halt && vagrant up
+
+Note: tidak akan bekerja dengan vagrant reload
+# 9. Vagrant Not Starting Up. User that created VM doesn't match current user
+I edited my UID by opening the file .vagrant/machines/default/virtualbox/creator_uid and changing the 501 to a 0.
+
+After I saved the file, the command vagrant up worked like a champ.
+
+NB: the .vagrant folder is in the same directory as your Vagrantfile, where you ran vagrant up
+
+# 10. Starting Vagrant VM on host boot 
+
+With rc.local : 
+As you are running Ubuntu as host, I'd recommend using /etc/rc.local, place the commands in the rc.local script which is executed at the end of the init process.
+
+It'll look like this
+
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.    
+cd /path/to/vagrant_vm1 && vagrant up
+cd /path/to/vagrant_vm2 && vagrant up
+exit 0
+
+or crontabs :
+
+@reboot cd /home/deploy/vagrant/apps/win10 && sleep 20; /bin/su -c "/usr/bin/vagrant up" deploy
+
+or crontabs 2 for if reloads vagrant box :
+vagrant global-status get id 
+@reboot /bin/su -c "/usr/bin/vagrant reload 42885aa" deploy
+
 {% endhighlight %}
