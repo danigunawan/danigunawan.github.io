@@ -40,7 +40,7 @@ User yang digunakan untuk uid dan gid : 1005
 
 # Build Keseluruhan
 
-{% highlight bash %
+{% highlight bash %}
 bin/build.sh [optional:version]
 {% endhighlight %}
 
@@ -92,4 +92,4 @@ composer create-project --prefer-dist laravel/lumen .
 
 {% endhighlight %}
 
-Repository :[LINK](https://github.com/danigunawan/belajar-docker-apache-multiple-php-version.git)
+Git Repository :[LINK](https://github.com/danigunawan/belajar-docker-apache-multiple-php-version.git)
