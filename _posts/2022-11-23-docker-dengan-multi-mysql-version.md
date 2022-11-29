@@ -102,7 +102,7 @@ $ vi ./mariadb10.3/conf.d/my.cnf
 
 Jika Anda ingin mengubah skema DB, nama pengguna, kata sandi, atau kata sandi root, edit `.env`.
 
-{% endhighlight %}yaml
+{% endhighlight %}
 DB_DATABASE=work
 DB_USER=worker
 DB_PASSWORD=worker
