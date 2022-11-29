@@ -49,26 +49,32 @@ saat memanggil connect-xxx.sh, `mysql yang dipasang di container akan dicek dan 
 ### Clone this repository
 
 {% highlight bash %} 
+
 git clone git@github.com:treetips/docker-compose-all-mysql.git
+
 {% endhighlight %}
 
 ### Jalankan mysql docker containers
 
 {% highlight bash %}
+
 docker-compose up -d
+
 {% endhighlight %}
 
 ### Hubungkan mysql-server lainnya pada docker container
 
 {% highlight bash %}
-$ ./connect-mysql-5-5.sh
-$ ./connect-mysql-5-6.sh
-$ ./connect-mysql-5-6.sh
-$ ./connect-mysql-8-0.sh
-$ ./connect-mariadb-10-0.sh
-$ ./connect-mariadb-10-1.sh
-$ ./connect-mariadb-10-2.sh
-$ ./connect-mariadb-10-3.sh
+
+./connect-mysql-5-5.sh
+./connect-mysql-5-6.sh
+./connect-mysql-5-6.sh
+./connect-mysql-8-0.sh
+./connect-mariadb-10-0.sh
+./connect-mariadb-10-1.sh
+./connect-mariadb-10-2.sh
+./connect-mariadb-10-3.sh
+
 {% endhighlight %}
 
 Tunggu startup MySQL selesai sebelum menghubungkan.
@@ -80,7 +86,9 @@ Tunggu startup MySQL selesai sebelum menghubungkan.
 ### Customize mysql client settings
 
 {% highlight bash %}
+
 vi ./my.cnf
+
 {% endhighlight %}
 
 Konfigurasikan pengaturan selain port yang sama.
@@ -88,14 +96,16 @@ Konfigurasikan pengaturan selain port yang sama.
 ### Customize mysql server settings
 
 {% highlight bash %}
-$ vi ./mysql5.5/conf.d/my.cnf
-$ vi ./mysql5.6/conf.d/my.cnf
-$ vi ./mysql5.7/conf.d/my.cnf
-$ vi ./mysql8.0/conf.d/my.cnf
-$ vi ./mariadb10.0/conf.d/my.cnf
-$ vi ./mariadb10.1/conf.d/my.cnf
-$ vi ./mariadb10.2/conf.d/my.cnf
-$ vi ./mariadb10.3/conf.d/my.cnf
+
+vi ./mysql5.5/conf.d/my.cnf
+vi ./mysql5.6/conf.d/my.cnf
+vi ./mysql5.7/conf.d/my.cnf
+vi ./mysql8.0/conf.d/my.cnf
+vi ./mariadb10.0/conf.d/my.cnf
+vi ./mariadb10.1/conf.d/my.cnf
+vi ./mariadb10.2/conf.d/my.cnf
+vi ./mariadb10.3/conf.d/my.cnf
+
 {% endhighlight %}
 
 ### Customize default schema, user, password
@@ -103,10 +113,12 @@ $ vi ./mariadb10.3/conf.d/my.cnf
 Jika Anda ingin mengubah skema DB, nama pengguna, kata sandi, atau kata sandi root, edit `.env`.
 
 {% endhighlight %}
+
 DB_DATABASE=work
 DB_USER=worker
 DB_PASSWORD=worker
 DB_ROOT_PASSWORD=root
+
 {% endhighlight %}
 
 ### Remove logs
