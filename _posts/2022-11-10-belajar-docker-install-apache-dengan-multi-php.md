@@ -12,7 +12,6 @@ share: true
 date: 2022-11-10T15:00:28+07:00
 ---
 
-# Belajar docker install apache dengan multiple php version
 Beberapa versi php dalam container Versi PHP yang disupport : 
 - 5.6
 - 5,
@@ -22,7 +21,7 @@ Beberapa versi php dalam container Versi PHP yang disupport :
 - 7.4
 - 8.1
 
-# Struktur Folder dan File
+## Struktur Folder dan File
 - Apps/ : adalah folder apps terdapat penempatan path untuk apps dengan spesifik php version
 - bin/ : terdapat setup dan binary untuk menjalankan dan mendukung php container seperti setup ssh, build image docker php version, dan lain-lain
 - config/ : berisi konfigurasi
@@ -38,20 +37,20 @@ Beberapa versi php dalam container Versi PHP yang disupport :
 
 User yang digunakan untuk uid dan gid : 1005
 
-# Build Keseluruhan
+## Build Keseluruhan
 
 {% highlight bash %}
 bin/build.sh [optional:version]
 {% endhighlight %}
 
-# Eksekusi dan menggunakan passing argument
+## Eksekusi dan menggunakan passing argument
 {% highlight bash %} 
 bin/run.sh [version]
 
 ARGS_FILE=custom-file bin/run 5.6
 {% endhighlight %}
 
-# Untuk menambahkan host tambahan, cukup perbarui
+## Untuk menambahkan host tambahan, cukup perbarui
 `config/hosts.yml`
 
 
@@ -72,14 +71,14 @@ Menjalankan dengan docker-compose run
 VERSION=8.1 docker-compose run --service-ports app
 {% endhighlight %}
 
-# Kemudian masuk ke dalam container dengan perintah
+## Kemudian masuk ke dalam container dengan perintah
 
 {% highlight bash %} 
 docker exec -it nama_kontainer /bin/sh
 {% endhighlight %}
 
 
-# Lalu set akses folder owner dan coba menjalankan aplikasi melalui composer 
+## Lalu set akses folder owner dan coba menjalankan aplikasi melalui composer 
 
 {% highlight bash %} 
 chown apache-user /var/www/apps/test
