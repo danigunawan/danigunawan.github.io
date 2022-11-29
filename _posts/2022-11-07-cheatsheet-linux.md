@@ -78,6 +78,9 @@ find /var/www/ -user apache -type d
 ls -lh or
 ls -lh -a
 
+* Listing files with size Megabytes
+ls -al --block-size=MB
+
 * Copy an entire directory (files + subdirectories)
 cp -R existingdir/ newdir/
 

@@ -12,7 +12,6 @@ share: true
 date: 2022-11-7T17:00:28+07:00
 ---
 
-
 ## Cheatsheet MySQL
 
 {% highlight sql %} 
@@ -159,5 +158,28 @@ mysqlcheck -u username -p --auto-repair --optimize --all-databases
 # Dapatkan ukuran Database MySQL dalam MB
 
 SELECT table_schema AS "Database", ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)" FROM information_schema.TABLES GROUP BY table_schema;
+
+# LANJUTAN 
+
+# BACKUP ALL DATABASE
+mysqldump -u root -p --all-databases | gzip -9 > alldb_backup_db_name_19_06_2022.gz
+
+# BACKUP ALL DATABASE - SINGLE TRANSACTIONS WITHOUT LOCK_TABLES
+mysqldump --single-transaction -u root -p --all-databases | gzip -9 > alldb_backup_db_name_19_06_2022_single_transactions.gz
+
+# RESTORE ALL DATABASE
+mysql -u root -p < alldb_backup_db_name_19_06_2022_single_transactions.sql
+
+# RESTORE ALL DATABASE (FORCE REPLACE EXISTING)
+mysql -f -u root -p < alldb_backup_db_name_19_06_2022_single_transactions.sql
+
+# BACKUP VIEWS
+cat alldb_backup_db_name_19_06_2022_single_transactions | grep -A 3 "CREATE ALGORITHM" > backup_views_all_db_db_name_19_06_2022.sql
+
+# TROUBLESHOOTING
+1. mysqldump: Got error: 1449: "The user specified as a definer ('other_user'@'%') does not exist" when using LOCK TABLES 
+
+Solusi : 
+# mysql -u root -p --force < alldb_backup_db_name_19_06_2022_single_transactions.sql
 
 {% endhighlight %}
