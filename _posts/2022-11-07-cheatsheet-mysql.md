@@ -180,6 +180,6 @@ cat alldb_backup_db_name_19_06_2022_single_transactions | grep -A 3 "CREATE ALGO
 1. mysqldump: Got error: 1449: "The user specified as a definer ('other_user'@'%') does not exist" when using LOCK TABLES 
 
 Solusi : 
-# mysql -u root -p --force < alldb_backup_db_name_19_06_2022_single_transactions.sql
+# mysql -u root -p --force < alldb_backup_db_name_19_06_2022_single_transactions.gz
 
 {% endhighlight %}
