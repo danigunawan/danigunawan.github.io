@@ -10,7 +10,7 @@ image:
 comments: true
 share: true
 date: 2022-11-23T08:00:00+07:00
-published: false
+published: true
 # permalink: "/encrypted.html"
 ---
 
