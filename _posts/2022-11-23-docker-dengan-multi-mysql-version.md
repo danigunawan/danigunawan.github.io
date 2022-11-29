@@ -15,7 +15,6 @@ published: true
 ---
 
 Membuat environment container mysql-server yang fleksibel dan dinamis
-====
 
 ## Motivasi
 
