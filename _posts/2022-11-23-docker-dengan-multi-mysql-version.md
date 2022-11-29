@@ -129,6 +129,6 @@ https://hub.docker.com/_/mysql/#initializing-a-fresh-instance
 #### Execution order at startup
 
 1. `./common/initdb.d/common-init.(sh|sql)` (dieksekusi secara umum untuk semua kontainer)
-1. `./(mysql|mariadb)X.X/initdb.d/xxx.(sh|sql)` (dieksekusi untuk setiap wadah)
+1. `./(mysql|mariadb)X.X/initdb.d/xxx.(sh|sql)` (dieksekusi untuk setiap container)
 
 Dengan menyesuaikan ini, data awal dapat diisi saat startup.
