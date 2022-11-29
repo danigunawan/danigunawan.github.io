@@ -167,6 +167,9 @@ mysqldump -u root -p --all-databases | gzip -9 > alldb_backup_db_name_19_06_2022
 # BACKUP ALL DATABASE - SINGLE TRANSACTIONS WITHOUT LOCK_TABLES
 mysqldump --single-transaction -u root -p --all-databases | gzip -9 > alldb_backup_db_name_19_06_2022_single_transactions.gz
 
+# BACKUP SPECIFIC DATABASE - SINGLE TRANSACTIONS VIA QUICK AND COMPRESS WITHOUT LOCK_TABLES
+mysqldump -v -h localhost --protocol=TCP -P 3306 -u root --compress --single-transaction --quick -pYourPasswdDB your_specific_db_name > specific_backup_db_name_19_06_2022_single_transactions.gz
+
 # RESTORE ALL DATABASE
 mysql -u root -p < alldb_backup_db_name_19_06_2022_single_transactions.sql
 
@@ -174,12 +177,13 @@ mysql -u root -p < alldb_backup_db_name_19_06_2022_single_transactions.sql
 mysql -f -u root -p < alldb_backup_db_name_19_06_2022_single_transactions.sql
 
 # BACKUP VIEWS
-cat alldb_backup_db_name_19_06_2022_single_transactions | grep -A 3 "CREATE ALGORITHM" > backup_views_all_db_db_name_19_06_2022.sql
+cat alldb_backup_db_name_19_06_2022_single_transactions.sql | grep -A 3 "CREATE ALGORITHM" > backup_views_all_db_db_name_19_06_2022.sql
 
 # TROUBLESHOOTING
-1. mysqldump: Got error: 1449: "The user specified as a definer ('other_user'@'%') does not exist" when using LOCK TABLES 
+1. [RESTORE DB] mysqldump: Got error: 1449: "The user specified as a definer ('other_user'@'%') does not exist" when using LOCK TABLES 
 
 Solusi : 
+
 # mysql -u root -p --force < alldb_backup_db_name_19_06_2022_single_transactions.gz
 
 {% endhighlight %}
