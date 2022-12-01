@@ -48,7 +48,7 @@ saat memanggil connect-xxx.sh, `mysql yang dipasang di container akan dicek dan 
 ### Clone this repository
 
 {% highlight bash %} 
-git clone git@github.com:treetips/docker-compose-all-mysql.git
+git clone https://github.com/danigunawan/docker-compose-all-mysql-versions.git
 {% endhighlight %}
 
 ### Jalankan mysql docker containers
