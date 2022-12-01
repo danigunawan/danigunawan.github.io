@@ -346,6 +346,9 @@ rsync
 * SSH Local Port Forwarding 
 SSH -N root@IP -P 22 -L localhost:port:localhost:port 
 
+* Anydesk 
+Get Id : anydesk --get-id 
+Set Password : echo your_password | anydesk --set-password
 
 {% endhighlight %}
 

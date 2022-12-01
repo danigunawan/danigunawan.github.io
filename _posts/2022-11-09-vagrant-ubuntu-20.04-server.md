@@ -187,7 +187,66 @@ Bringing machine 'ubuntu20.04' up with 'libvirt' provider...
 vagrant@ubuntu2004:~$ 
 {% endhighlight %}
 
-Mirror:
-https://github.com/vumdao/vagrant/tree/master/ubuntu20.04
-https://vumdao.hashnode.dev/create-an-ubuntu-2004-server-using-vagrant
 
+## VAGRANT EXTRAS 
+Vagrantfile :
+
+{% highlight bash %} 
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+
+  config.vm.provider :virtualbox do |v|
+    v.gui = true
+    v.cpu = 8
+    v.memory = 8192
+  end
+
+  # Setup Networking
+  #  config.vm.network :forwarded_port, guest: 80, host: 8000 # Web server
+  #  config.vm.network :forwarded_port, guest: 3306, host: 3307 # MySQL
+  config.vm.network :forwarded_port, guest: 5900, host: 5901 # X11VNC
+
+  # Currently "ubuntu/bionic64" on VirtualBox requires `type: "virtualbox"`
+  # to make synced folder works.sudo apt install tightvncserver
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+
+  # Add Google Chrome repository
+  config.vm.provision :shell, inline: "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub|sudo apt-key add -"
+  config.vm.provision :shell, inline: "sudo sh -c 'echo \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" > /etc/apt/sources.list.d/google.list'"
+
+  # Update repositories
+  config.vm.provision :shell, inline: "sudo apt update -y"
+
+  # Upgrade installed packages
+  config.vm.provision :shell, inline: "sudo apt upgrade -y"
+
+  # Add `vagrant` to Administrator
+  config.vm.provision :shell, inline: "sudo usermod -a -G sudo vagrant"
+
+  # Permission denied (publickey)
+  config.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;", run: "always"
+  
+  # Dependencies 
+  config.vm.provision :shell, inline: "sudo apt install -y net-tools vim" 
+
+  # Add Google Chrome
+  config.vm.provision :shell, inline: "sudo apt install -y google-chrome-stable"
+
+  # Add Chromium
+  config.vm.provision :shell, inline: "sudo apt install -y chromium-browser"
+
+  # Add Firefox
+  config.vm.provision :shell, inline: "sudo apt install -y firefox"
+
+  # Setup Anydesk
+  
+  # Setup Docker  & K8s
+  
+  # Setup Anydesk, Config VNC Password
+  <!-- config.vm.provision "shell", path: "setup.sh" -->
+  
+  # Restart
+  config.vm.provision :shell, inline: "sudo shutdown -r now"
+
+end
+{% endhighlight %}

@@ -269,6 +269,9 @@ vagrant rdp
 vagrant halt
 vagrant destroy
 vagrant box list
+vagrant box remove your_id_or_name_vagrant_box
+vagrant box remove laravel/homestead --provider=hyperv
+vagrant box remove laravel/homestead --provider=virtualbox --all
 vagrant global-status
 vagrant reload [name/id]
 
@@ -468,5 +471,23 @@ vagrant global-status get id
 sudo crontab -e
 @reboot /bin/su -c "/usr/bin/vagrant reload 42885aa" deploy
 save
+
+10. Kill all and destroy Vagrant & VMs
+killall -9 VBoxHeadless && vagrant destroy
+
+11. Vagrant : Permission denied (publickey)
+add to Vagrantfile : 
+config.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;", run: "always"
+
+12. Vagrant XFREERDP
+$ netstat -plnt|grep 3389
+tcp    0    0 0.0.0.0:33389    0.0.0.0:*    LISTEN    -
+
+Then connect to the VM directly using xfreerdp command-line, adjusting the screen resolution as needed:
+
+$ xfreerdp /v:127.0.0.1:33389 /u:vagrant /p:vagrant /smart-sizing:2000x1500
+
+13. Vagrant Reload 
+vagrant plugin install vagrant-reload
 
 {% endhighlight %}
