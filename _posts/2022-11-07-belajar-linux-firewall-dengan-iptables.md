@@ -88,7 +88,7 @@ Skrip ini murni firewall yang strict/ketat. Itu memungkinkan ssh masuk. Tidak ad
 
 Status koneksi ssh keluar hanya dapat dibuat. Secara default skrip ini memungkinkan semua orang untuk ssh dengan aturan -s 0/0. Jika Anda ingin akses tersebut dibatasi oleh IP atau alamat jaringan, ganti -s 0/0 dengan alamat IP. Misalnya izinkan ssh masuk dari IP 202.54.1.20:
 
-Allow incoming ssh only from IP 202.54.1.20
+Izinkan ssh masuk hanya dari IP 202.54.1.20
 
 {% highlight bash %}
 iptables -A INPUT -p tcp -s 202.54.1.20 -d $SERVER_IP --sport 513:65535 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
