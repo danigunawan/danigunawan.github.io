@@ -16,27 +16,37 @@ date: 2022-11-7T17:00:28+07:00
 
 * Linux Iptables Memblokir Semua Lalu Lintas Masuk Kecuali SSH
 
-Ini adalah skenario yang tersebar luas. ingin mengizinkan akses remote machine hanya dengan SSH di TCP port 22. memblokir semua lalu lintas yang masuk ke sistem kecuali koneksi ssh di Linux.
+Ingin mengizinkan akses remote machine hanya dengan SSH di TCP port 22. memblokir semua lalu lintas yang masuk ke sistem kecuali koneksi ssh di Linux.
 
 disini menjelaskan cara memblokir semua lalu lintas IPv4 dan IPv6 yang masuk tetapi mengizinkan lalu lintas menggunakan perintah iptables untuk SSH TCP port 22.
 
 Sintaksnya adalah sebagai berikut untuk firewall IPv4:
+{% highlight bash %} 
 /sbin/iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+{% endhighlight %}
+
 
 Untuk IPv6 coba:
+{% highlight bash %} 
 /sbin/ip6tables -A INPUT -p tcp --dport 22 -j ACCEPT
+{% endhighlight %}
 
 Kemudian Anda menyimpan aturan iptables dengan menjalankan perintah berikut:
+
+{% highlight bash %}
 iptables-save > /path/to/iptables.save.conf
 iptables-save > /etc/sysconfig/iptables
 ip6tables-save > /etc/sysconfig/ip6tables
+{% endhighlight %}
+
 
 Memblokir semua lalu lintas kecuali pada port TCP 22
 
 ingin memiliki skrip shell khusus untuk firewall? Kemudian tambahkan aturan berikut ke skrip shell iptables:
-
+{% highlight bash %}
 /sbin/iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 /sbin/iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+{% endhighlight %}
 
 Aturan pertama akan menerima koneksi tcp masuk (INPUT) pada port 22 (server ssh) dan aturan kedua akan mengirimkan respons server ssh yang masuk ke klien (OUTPUT) dari port sumber server ssh 22.
 
@@ -47,7 +57,7 @@ Namun, iptables dengan kernel 2.4/2.6/3.x/4.x/5.x menyediakan fasilitas yang san
 {% highlight bash %} 
 #!/bin/sh
 # Purpose: Linux Iptables Block All Incoming Traffic But Allow SSH @ TCP/22
-# AUTHOR: Vivek Gite {www.cyberciti.biz}
+# AUTHOR: Vivek Gite {www.danigunawan.github.io}
 # -------------------------------------------------------------------------------------
 # My system IP/set ip address of server here
 SERVER_IP="65.55.12.13"
@@ -81,50 +91,67 @@ Status koneksi ssh keluar hanya dapat dibuat. Secara default skrip ini memungkin
 
 Allow incoming ssh only from IP 202.54.1.20
 
+{% highlight bash %}
 iptables -A INPUT -p tcp -s 202.54.1.20 -d $SERVER_IP --sport 513:65535 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+
 iptables -A OUTPUT -p tcp -s $SERVER_IP -d 202.54.1.20 --sport 22 --dport 513:65535 -m state --state ESTABLISHED -j ACCEPT
 
-Cara membuat daftar aturan/rules firewall
+{% endhighlight %}
 
-iptables -S
+
+Cara membuat daftar aturan/rules firewall
+{% highlight bash %}
+ iptables -S
 ip6tables -S
 # Filter out tcp/22 using the grep/egrep command #
 ip6tables -S | grep -i '22'
 # IPv6 examples #
 iptables -L -n -v
 ip6tables -L -n -v
+{% endhighlight %}
 
 Menghapus Rules Firewall
-Pertama dapatkan daftar aturan dengan nomor baris:
+{% highlight bash %}
+ Pertama dapatkan daftar aturan dengan nomor baris:
 /sbin/iptables -L INPUT -v -n --line-numbers
 /sbin/ip6tables -L INPUT -v -n --line-numbers
+{% endhighlight %}
 
 Kemudian hapus aturan itu. 
 asumsi pada nomor 7, jadi:
 
+{% highlight bash %}
 /sbin/iptables -D INPUT 7
 /sbin/ip6tables -D INPUT 7
+{% endhighlight %}
 
 Cara melihat log firewall
-dmesg | more
+{% highlight bash %}
+ dmesg | more
 dmesg | grep -w 'DPT=22'
+{% endhighlight %}
 
 Catatan tentang menjaga agar log firewall tetap terkendali
 dengan penggunaan disk direktori log Linux menggunakan perintah df atau du perintah. Contohnya:
-df -hT
+{% highlight bash %}
+ df -hT
 du -chs /var/log
 
-Outputs:
+# Outputs:
 
 2.5G	/var/log
 2.5G	total
+{% endhighlight %}
+
 
 Linux Iptables Memblokir Semua Lalu Lintas Kecuali Untuk SSH Dengan Batasan
 terlalu banyak log karena iptables? dengan cara membatasi ukuran log menggunakan modul -m limit. Sebagai contoh:
 
-# Enable log but with limits
+{% highlight bash %}
+ # Enable log but with limits
 /sbin/iptables -A INPUT -p tcp --dport 22 -m limit --limit 5/m --limit-burst 7 -j LOG --log-prefix "SSH_TCP_22_LOG: "
 /sbin/iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+{% endhighlight %}
 
 Catatan tentang firewalld dan ufw
 
@@ -135,5 +162,8 @@ Kesimpulan
 Dan begitulah cara mengizinkan lalu lintas IPv4/IPv6 di port SSH TCP 22 tetapi memblokir yang lainnya.
 
 manual iptables berikut menggunakan perintah:
+{% highlight bash %}
 man iptables
 man ip6tables
+{% endhighlight %}
+
