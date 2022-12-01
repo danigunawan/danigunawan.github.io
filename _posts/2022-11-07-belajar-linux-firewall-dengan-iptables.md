@@ -100,7 +100,7 @@ iptables -A OUTPUT -p tcp -s $SERVER_IP -d 202.54.1.20 --sport 22 --dport 513:65
 
 Cara membuat daftar aturan/rules firewall
 {% highlight bash %}
- iptables -S
+iptables -S
 ip6tables -S
 # Filter out tcp/22 using the grep/egrep command #
 ip6tables -S | grep -i '22'
@@ -133,7 +133,7 @@ dmesg | grep -w 'DPT=22'
 Catatan tentang menjaga agar log firewall tetap terkendali
 dengan penggunaan disk direktori log Linux menggunakan perintah df atau du perintah. Contohnya:
 {% highlight bash %}
- df -hT
+df -hT
 du -chs /var/log
 
 # Outputs:
@@ -147,7 +147,8 @@ Linux Iptables Memblokir Semua Lalu Lintas Kecuali Untuk SSH Dengan Batasan
 terlalu banyak log karena iptables? dengan cara membatasi ukuran log menggunakan modul -m limit. Sebagai contoh:
 
 {% highlight bash %}
- # Enable log but with limits
+
+# Enable log but with limits
 /sbin/iptables -A INPUT -p tcp --dport 22 -m limit --limit 5/m --limit-burst 7 -j LOG --log-prefix "SSH_TCP_22_LOG: "
 /sbin/iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 {% endhighlight %}
