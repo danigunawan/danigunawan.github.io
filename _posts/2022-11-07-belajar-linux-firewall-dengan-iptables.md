@@ -231,7 +231,7 @@ Mengaktifkan dukungan /etc/rc.local dengan distro Linux berbasis systemd
 
 Ketik perintah systemctl berikut
 {% highlight bash %}
-sudo systemctl aktifkan rc-local.service
+sudo systemctl enable rc-local.service
 {% endhighlight %}
 
 Sekarang dapat menggunakan /etc/rc.local untuk mengembalikan aturan iptables saat boot. Lihat cara mengaktifkan skrip shell rc.local di systemd saat mem-boot sistem Linux.
@@ -266,3 +266,5 @@ Perintah Restore Firewall Rules RHEL/CentOS/Fedora:
 iptables-restore < /etc/sysconfig/iptables
 ip6tables-restore < /etc/sysconfig/ip6tables
 {% endhighlight %}
+
+Referensi : [LINK](https://gist.github.com/davydany/0ad377f6de3c70056d2bd0f1549e1017)
