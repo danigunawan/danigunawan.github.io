@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Kumpulan Cheatsheet Linux Security
+title: Belajar Linux Firewall Dengan Iptables
 modified: 2022-11-7T20:00:28+07:00
 categories:
-description: "Kumpulan Cheatsheet Linux Security"
-tags: [cheatsheet, cheatsheet linux]
+description: "Belajar Linux Firewall Dengan Iptables"
+tags: [cheatsheet, cheatsheet linux, security, linux security]
 image:
   background: triangular.png
 comments: true
@@ -12,9 +12,7 @@ share: true
 date: 2022-11-7T17:00:28+07:00
 ---
 
-## Kumpulan Cheatsheet Linux Security Firewall
-
-* Linux Iptables Memblokir Semua Lalu Lintas Masuk Kecuali SSH
+### 1.Linux Iptables Memblokir Semua Lalu Lintas Masuk Kecuali SSH
 
 Ingin mengizinkan akses remote machine hanya dengan SSH di TCP port 22. memblokir semua lalu lintas yang masuk ke sistem kecuali koneksi ssh di Linux.
 
@@ -39,6 +37,7 @@ iptables-save > /etc/sysconfig/iptables
 ip6tables-save > /etc/sysconfig/ip6tables
 {% endhighlight %}
 
+Bagaimana cara menyimpan iptables bisa disimak pada bab [* Bagaimana Saya Menyimpan Aturan atau Pengaturan Iptables?]
 
 Memblokir semua lalu lintas kecuali pada port TCP 22
 
@@ -167,3 +166,103 @@ man iptables
 man ip6tables
 {% endhighlight %}
 
+
+
+### 2.Bagaimana Saya Menyimpan Aturan atau Pengaturan Iptables?
+menggunakan alat GUI untuk mengatur aturan firewall untuk komputer server yang terhubung ke jaringan ADSL (DSL/Cable) / FO, Cloud, bahkan VPS. Namun, setelah reboot rules Iptables tidak tersimpan. 
+Bagaimana cara dapat menyimpan dan memuat semua aturan firewall lagi?
+
+Kita perlu menggunakan perintah iptables-save. Ini digunakan untuk membuang isi Tabel IP dalam format yang mudah diuraikan ke layar. Menggunakan I/O redirection yang disediakan oleh shell, kita dapat menyimpan aturan firewall iptables ke file teks. Untuk mengembalikan aturan iptables gunakan perintah iptables-restore. Ini digunakan untuk mengembalikan Tabel IP dari data yang ditentukan dari file. Gunakan I/O redirection yang disediakan oleh shell kita untuk membaca dari file.
+
+Contoh: Menyimpan dan Merestore Aturan Iptables
+
+Dalam contoh ini, simpan aturan firewall iptables saat ini ke file bernama /root/dsl.fw, masukkan:
+{% highlight bash %}
+iptables-save > /root/dsl.fw
+{% endhighlight %}
+
+Untuk mengembalikan aturan iptables, masukkan:
+{% highlight bash %}
+iptables-restore < /root/dsl.fw
+{% endhighlight %}
+
+Untuk memulihkan aturan secara otomatis setelah sistem Linux di-boot ulang, tambahkan perintah berikut ke file /etc/rc.local Anda, masukkan:
+
+{% highlight bash %}
+vi /etc/rc.local
+{% endhighlight %}
+
+Tambahkan baris:
+{% highlight bash %}
+/sbin/iptables-restore < /root/dsl.fw
+{% endhighlight %}
+
+Simpan dan tutup file dengan menekan Esc diikuti dengan :x saat menggunakan vim.
+Catatan tentang RHEL/CentOS 6.x dan versi Fedora yang lebih lama
+
+Harap perhatikan bahwa di bawah Red Hat enterprise Linux (RHEL) / CentOS / Fedora Linux Anda dapat menggunakan perintah berikut untuk menyimpan dan memulihkan aturan firewall. Untuk Menyimpan aturan ke file /etc/sysconfig/iptables:
+
+{% highlight bash %}
+/etc/init.d/iptables save
+{% endhighlight %}
+
+Untuk mengembalikan aturan dari file /etc/sysconfig/iptables:
+
+{% highlight bash %}
+/etc/init.d/iptables start
+{% endhighlight %}
+
+Cara Restore Firewall Rules Debian/Ubuntu Linux
+
+Jika menggunakan Debian / Ubuntu Linux, buka /etc/network/interfaces:
+
+{% highlight bash %}
+vi /etc/network/interfaces
+{% endhighlight %}
+
+Tambahkan baris ke bagian eth0:
+{% highlight bash %}
+post-up iptables-restore </path/to/file
+{% endhighlight %}
+
+Tutup dan simpan file. Reboot ulang sistem.
+
+Mengaktifkan dukungan /etc/rc.local dengan distro Linux berbasis systemd
+
+Ketik perintah systemctl berikut
+{% highlight bash %}
+sudo systemctl aktifkan rc-local.service
+{% endhighlight %}
+
+Sekarang dapat menggunakan /etc/rc.local untuk mengembalikan aturan iptables saat boot. Lihat cara mengaktifkan skrip shell rc.local di systemd saat mem-boot sistem Linux.
+
+Kesimpulan
+
+Halaman tutorial singkat ini menjelaskan beberapa cara di mana aturan iptables dapat disimpan atau direstore secara permanen di Linux.
+
+Perintah Simpan Firewall Rules Debian/Ubuntu:
+
+{% highlight bash %}
+iptables-save > rules.v4
+ip6tables-save > rules.v6
+{% endhighlight %}
+
+Debian/Ubuntu Perintah Restore Firewall Rules
+{% highlight bash %}
+iptables-restore < rules.v4
+ip6tables-restore < rules.v6
+{% endhighlight %}
+
+Perintah simpan Rules Firewall RHEL/CentOS/Fedora:
+
+{% highlight bash %}
+iptables-save > /etc/sysconfig/iptables
+ip6tables-save > /etc/sysconfig/ip6tables
+{% endhighlight %}
+
+
+Perintah Restore Firewall Rules RHEL/CentOS/Fedora:
+{% highlight bash %}
+iptables-restore < /etc/sysconfig/iptables
+ip6tables-restore < /etc/sysconfig/ip6tables
+{% endhighlight %}
