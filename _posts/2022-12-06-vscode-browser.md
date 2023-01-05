@@ -14,12 +14,6 @@ published: false
 # permalink: "/encrypted.html"
 ---
 
-docker run -d --cpus=1 --memory=4g --restart=always --name balXasczx -p 2222:8080 -v "/:/workspace" --env AUTHENTICATE_VIA_JUPYTER="your_password!" mltooling/ml-workspace:0.13.2
-
-docker run -d -p 2222:8443 -e PASSWORD='your_password' -v "/home/coder:/home/coder/project" codercom/code-server --allow-http
-
-docker run -d -p 2222:8443 -e PASSWORD='your_password' -v "/home/coder:/home/coder/project" codercom/code-server --allow-http
-
 mkdir -p ~/.config
 docker run -d --cpus=1 --memory=2g --shm-size=2G --name code-server -p 2222:8080 \
   -v "$HOME/.config:/home/coder/.config" \

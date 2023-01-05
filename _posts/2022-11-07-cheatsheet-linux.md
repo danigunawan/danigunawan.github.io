@@ -13,9 +13,6 @@ date: 2022-11-7T17:00:28+07:00
 ---
 
 ## Kumpulan Cheatsheet Linux
-Perubahan Terakhir : 
-- 10 November 2022 
-
 {% highlight bash %} 
 * Learning Nano
 
@@ -342,6 +339,16 @@ speed-test-cli
 
 * sync and rsync copy data
 rsync 
+
+* Login SSH With Key
+ssh-keygen -t rsa -b 4096 -C "your_email@host.com"
+cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
+cd /home/deploy
+cat ~/.ssh/id_rsa > key
+
+scp [user:host]/home/deploy/key your_path_dest/key
+chmod 400 key
+ssh -i key deploy@your_ip_public_remote
 
 * SSH Local Port Forwarding 
 SSH -N root@IP -P 22 -L localhost:port:localhost:port 
