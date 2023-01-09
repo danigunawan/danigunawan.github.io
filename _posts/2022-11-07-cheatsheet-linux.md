@@ -357,6 +357,9 @@ SSH -N root@IP -P 22 -L localhost:port:localhost:port
 Get Id : anydesk --get-id 
 Set Password : echo your_password | anydesk --set-password
 
+* Email Tester 
+swaks -server your_mail_server:587 -tls --auth-user your_user_mail@mail.com --auth-password your_password_mail --to your_sender_to_mail@mail.com --from your_from_mail_sender@mail.com
+
 {% endhighlight %}
 
 Refferensi : 
