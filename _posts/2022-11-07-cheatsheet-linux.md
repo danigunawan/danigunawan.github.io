@@ -360,6 +360,28 @@ Set Password : echo your_password | anydesk --set-password
 * Email Tester 
 swaks -server your_mail_server:587 -tls --auth-user your_user_mail@mail.com --auth-password your_password_mail --to your_sender_to_mail@mail.com --from your_from_mail_sender@mail.com
 
+* The following commands will get you the IP address list to find public IP addresses for your machine:
+
+curl ifconfig.me
+curl -4/-6 icanhazip.com
+curl ipinfo.io/ip
+curl api.ipify.org
+curl checkip.dyndns.org
+dig +short myip.opendns.com @resolver1.opendns.com
+host myip.opendns.com resolver1.opendns.com
+curl ident.me
+curl bot.whatismyipaddress.com
+curl ipecho.net/plain
+
+* The following commands will get you the private IP address of your interfaces:
+
+ifconfig -a
+ip addr (ip a)
+hostname -I | awk '{print $1}'
+ip route get 1.2.3.4 | awk '{print $7}'
+(Fedora) Wifi-Settings→ click the setting icon next to the Wifi name that you are connected to → Ipv4 and Ipv6 both can be seen
+nmcli -p device show
+
 {% endhighlight %}
 
 Refferensi : 
