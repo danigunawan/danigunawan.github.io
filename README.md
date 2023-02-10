@@ -1,5 +1,5 @@
 # danigunawan.github.io
-Berikut daftar lengkap bahasa yang didukung mardown dibawah ini :
+Berikut daftar lengkap bahasa yang didukung markdown dibawah ini :
 - Cucumber ('*.feature')
 - abap ('*.abap')
 - ada ('*.adb', '*.ads', '*.ada')
