@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Pelatihan dan Seritikasi Aviatrix Multicloud Network Associate
+title: Pelatihan dan Sertifikasi Aviatrix Multicloud Network Associate
 modified: 2023-01-28T17:00:28+07:00
 categories:
-description: "Pelatihan dan Seritikasi Aviatrix Multicloud Network Associate"
+description: "Pelatihan dan Sertifikasi Aviatrix Multicloud Network Associate"
 tags: [multicloud, certifications, cloud network]
 image:
   background: triangular.png
