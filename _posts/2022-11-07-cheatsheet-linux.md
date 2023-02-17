@@ -382,6 +382,29 @@ ip route get 1.2.3.4 | awk '{print $7}'
 (Fedora) Wifi-Settings→ click the setting icon next to the Wifi name that you are connected to → Ipv4 and Ipv6 both can be seen
 nmcli -p device show
 
+* Hide command line history
+1. Insert space before command
+[space]echo "this is a top secret"
+export HISTCONTROL = ignorespace
+
+2. Disable the entire history for the current session
+export HISTFILE=0
+
+3. Erase the entire history after you’re done
+history -cw
+
+4. Turn off history only for the work you do
+[space]set +o history
+
+To re-enable the history, run the following command:
+[Space]set -o history
+
+5. Delete specific commands from history
+[space]history | grep "part of command you want to remove"
+
+history | grep echo 
+history -d [num] ex. history -d 1
+
 {% endhighlight %}
 
 Refferensi : 
