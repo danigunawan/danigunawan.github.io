@@ -405,6 +405,11 @@ To re-enable the history, run the following command:
 history | grep echo 
 history -d [num] ex. history -d 1
 
+6. flush / clear history permanent
+One annoying side-effect is that the history entries has a copy in the memory and it will flush back to the file when you log out.
+
+cat /dev/null > ~/.bash_history && history -c && exit
+
 {% endhighlight %}
 
 Refferensi : 
