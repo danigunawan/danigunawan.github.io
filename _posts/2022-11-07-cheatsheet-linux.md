@@ -410,6 +410,13 @@ One annoying side-effect is that the history entries has a copy in the memory an
 
 cat /dev/null > ~/.bash_history && history -c && exit
 
+* Screen Linux 
+screen --version
+screen 
+screen -ls
+screen -S your_session_name_screen
+screen -r your_session_name_screen or id screen
+
 {% endhighlight %}
 
 Refferensi : 
