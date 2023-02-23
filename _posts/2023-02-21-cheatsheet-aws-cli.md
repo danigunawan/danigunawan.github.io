@@ -12,10 +12,10 @@ share: true
 date: 2023-02-17T17:00:28+07:00
 ---
 
+## Kumpulan Cheatsheet AWS CLI
+
 {% highlight bash %} 
-
 * Get IP Private EC2
-
 curl -s http://169.254.169.254/latest/meta-data/local-ipv4
 
 {% endhighlight %}
