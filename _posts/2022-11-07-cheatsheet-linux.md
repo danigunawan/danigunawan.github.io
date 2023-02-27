@@ -182,6 +182,7 @@ tar -cvf output.tar /dirname
 
 * For uncompress
 tar -xvf /tmp/data.ta
+tar -xvzf community_images.tar.gz
 
 * Linux Standard Base (LSB) To show the release number of installed distribution:
 lsb_release -r
@@ -416,6 +417,63 @@ screen
 screen -ls
 screen -S your_session_name_screen
 screen -r your_session_name_screen or id screen
+
+* Chown (Change Ownership of directory)
+sudo chown -R user:group /parent_dir 
+sudo chown -R 1001:1001 "your_folder_or_file"
+
+* Find SUID
+find / -perm -u=s -type f 2>/dev/null
+
+* Find Word in dir 
+find / -type f -exec grep -H 'text-to-find-here' {} \;
+
+* Find where alias or command is based
+grep -r 'sudo' ~
+
+* Find directory
+find . -name "dirname" -type d
+
+* Find File more
+find . -name testfile.txt
+find /home -name *.jpg
+
+* info where command is located
+type commandname 
+type rm
+
+* SSH copy to remote
+rsync -av dir/ user@domain.de:dir
+
+* Mount 
+lsblk
+sudo mount /dev/your-drive-from-lsblk /your-dir-you-want-to-mount
+sudo mount /dev/sda1 /mnt/ext-2-tb
+
+* Unmount
+- umount /dev/sda1
+
+* Force Unmount
+- umount -l /dev/sda1
+
+* copy with progress status
+rsync --progress -a sourceDirectory destinationDirectory
+
+* move with rsync
+rsync -a --progress --remove-source-files src/test/ dest
+
+* download file via curl
+curl http://example.com --output my.file
+
+* download and execute
+bash <(curl -s http://mywebsite.com/myscript.txt)
+
+* Change only year of machine
+date --set="$(date +'2013%m%d %H:%M')"
+
+* Taskmanager | show resources
+top
+htop
 
 {% endhighlight %}
 
