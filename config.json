@@ -1,0 +1,44 @@
+[
+    {
+       "YOUR_HWID_0": {
+          "NAME": "DEVICE NAME",
+          "TYPE": "CHECK_IN",
+          "HWID": "YOUR_HWID",
+          "DEVICE_LOCATION_ID": "0"
+       }
+    },
+    {
+       "YOUR_HWID_1": {
+          "NAME": "DEVICE NAME",
+          "TYPE": "CHECK_OUT",
+          "HWID": "YOUR_HWID",
+          "DEVICE_LOCATION_ID": "1"
+       }
+    },
+    {
+       "YOUR_HWID_2": {
+          "NAME": "DEVICE NAME",
+          "TYPE": "DEVICES_IN_OUT",
+          "HWID": "YOUR_HWID",
+          "DEVICE_LOCATION_ID": "2"
+       }
+    },
+    {
+      "000EC60131F000A1": {
+        "NAME": "PINTU UTARA",
+        "TYPE": "DEVICES_IN_OUT",
+        "HWID": "000EC60131F000A1",
+        "DEVICE_LOCATION_ID": "0"
+        }
+    },
+    {
+       "000EC601307700A1": {
+        "NAME": "PINTU SELATAN",
+        "TYPE": "DEVICES_IN_OUT",
+        "HWID": "000EC601307700A1",
+        "DEVICE_LOCATION_ID": "1"
+        }
+     }
+ ]
+ 
+ 
