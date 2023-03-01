@@ -12,8 +12,6 @@ share: true
 date: 2023-02-22T17:00:28+07:00
 ---
 
-## Simple Linux Server Health Monitoring
-
 {% highlight bash %} 
 * Save monitor.sh
             
