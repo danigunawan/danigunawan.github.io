@@ -186,4 +186,9 @@ Solusi :
 
 # mysql -u root -p --force < alldb_backup_db_name_19_06_2022_single_transactions.gz
 
+
+## In MySQL, how to return the week of the month?
+
+FLOOR((DayOfMonth("2023-02-01")-1)/7)+1
+
 {% endhighlight %}
