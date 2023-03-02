@@ -475,6 +475,9 @@ date --set="$(date +'2013%m%d %H:%M')"
 top
 htop
 
+* Kill Port
+lsof -t -i tcp:4000 | xargs kill
+
 {% endhighlight %}
 
 Refferensi : 
