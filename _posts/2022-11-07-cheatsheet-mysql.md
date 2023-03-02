@@ -187,8 +187,13 @@ Solusi :
 # mysql -u root -p --force < alldb_backup_db_name_19_06_2022_single_transactions.gz
 
 
-## In MySQL, how to return the week of the month?
+# In MySQL, how to return the week of the month?
 
 FLOOR((DayOfMonth("2023-02-01")-1)/7)+1
+
+# Mysql how to get First Monday of given year and Month
+
+SET @firstday = '2023-01-01';
+SELECT ADDDATE( @firstday , MOD((9-DAYOFWEEK(@firstday)),7)) as first_monday;
 
 {% endhighlight %}
