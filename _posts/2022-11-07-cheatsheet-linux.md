@@ -351,6 +351,14 @@ scp [user:host]/home/deploy/key your_path_dest/key
 chmod 400 key
 ssh -i key deploy@your_ip_public_remote
 
+* Login menggunakan Copy Public Key ke remotehost dengan ssh-copy-id 
+
+dengan key : 
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@remotehost -p 22
+
+tanpa key: 
+ssh-copy-id root@remotehost -p 22
+
 * SSH Local Port Forwarding 
 SSH -N root@IP -P 22 -L localhost:port:localhost:port 
 
