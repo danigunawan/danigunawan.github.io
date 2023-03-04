@@ -359,6 +359,14 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@remotehost -p 22
 tanpa key: 
 ssh-copy-id root@remotehost -p 22
 
+Login ke remotehost Sekarang sudah dapat login ke remotehot tanpa memasukkan password
+
+ssh root@remotehost
+
+Jika anda berganti komputer dan membawa file id_rsa.pub atau file key lain bisa dengan
+
+ssh -i /path/id_rsa.pub root@remotehost
+
 * SSH Local Port Forwarding 
 SSH -N root@IP -P 22 -L localhost:port:localhost:port 
 
