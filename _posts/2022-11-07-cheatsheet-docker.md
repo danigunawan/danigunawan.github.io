@@ -17,3 +17,10 @@ sudo usermod -aG docker $USER
 
 # get access to group in current shell
 newgrp docker
+
+# Docker copy
+docker cp container_name:/src_path dest_path
+
+
+# Referensi : 
+https://github.com/wsargent/docker-cheat-sheet

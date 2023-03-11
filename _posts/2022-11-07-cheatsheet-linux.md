@@ -348,6 +348,11 @@ cd /home/deploy
 cat ~/.ssh/id_rsa > key
 
 scp [user:host]/home/deploy/key your_path_dest/key
+
+scp -r user@host:/home/path_src your_path_dest/
+
+dashboard-video-analytics-intelligence /Volumes/HDD500-DANI/PICASO-PLATFORM/PICASO-OBJECT-DETECTION/dishub-mojokerto/
+
 chmod 400 key
 ssh -i key deploy@your_ip_public_remote
 
