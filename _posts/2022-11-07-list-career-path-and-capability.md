@@ -12,27 +12,27 @@ share: true
 date: 2022-11-7T17:00:28+07:00
 ---
 
-# List Role : 
-Scrum Master
-Fullstack Developer
-Front End Developer
-Back End Developer
-Data Scientist
-Data Engineer
-Data Analyst
-Data Architect
-UI Designer
-UX Designer
-QA Engineer
-Artificial Intelligence
-Business Analyst
-Project Manager
-Project Administration
-Solution Architecture
-Marketing
-Digital Marketing
-Machine Learning Engineer
-Natural Language Processing (NLP) Engineer
+List Roles : 
+- Scrum Master
+- Fullstack Developer
+- Front End Developer
+- Back End Developer
+- Data Scientist
+- Data Engineer
+- Data Analyst
+- Data Architect
+- UI Designer
+- UX Designer
+- QA Engineer
+- Artificial Intelligence
+- Business Analyst
+- Project Manager
+- Project Administration
+- Solution Architecture
+- Marketing
+- Digital Marketing
+- Machine Learning Engineer
+- Natural Language Processing (NLP) Engineer
 
 Scrum Master
 - Lean&Agile
