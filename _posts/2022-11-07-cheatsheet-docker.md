@@ -21,6 +21,8 @@ newgrp docker
 # Docker copy
 docker cp container_name:/src_path dest_path
 
+# Remove all image None
+docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
 
 # Referensi : 
 https://github.com/wsargent/docker-cheat-sheet
