@@ -21,16 +21,37 @@ newgrp docker
 # Docker copy
 docker cp container_name:/src_path dest_path
 
-# Cleanup exited processes:
+# Docker Tips: Clean Up Your Local Machine
+- docker file system
+docker system df 
+- Clean build cache
+docker builder prune
+
+- Image prune 
+docker image prune
+
+- system prune
+docker system prune 
+
+- find img file docker
+find /var/lib/docker -type f -name test.img
+
+- Historical command
+docker rm -f $(docker ps -aq)
+
+- More recent command
+docker container rm -f $(docker container ls -aq)
+
+- Cleanup exited processes:
 docker rm $(docker ps -q -f status=exited)
 
-# Cleanup dangling volumes:
+- Cleanup dangling volumes:
 docker volume rm $(docker volume ls -qf dangling=true)
 
-# Cleanup dangling or None images:
+- Cleanup dangling or None images:
 docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
-
 docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
+
 
 
 # Referensi : 

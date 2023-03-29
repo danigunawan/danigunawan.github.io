@@ -88,17 +88,45 @@ zip -r zipefilename foldername
 ls -1 | wc -l
 find . -type f | wc -l
 
+* Midnight commander
+mc /var
+
+* Ncdu Command
+ncdu /var
+
 * Get directory size
 du -hs /var/www
+du /var
+du -BM --max-depth=1 /var | sort -n | tail -n 5 
+du -BM --max-depth=<strong>2</strong> /var | sort -n | tail -n 5
+du -BM --max-depth=1 <strong>/var/log</strong> | sort -n | tail -n 5
+du -x -d1 -h /var  | sort -hr
+
+* Find directory size 
+find /var -size +100M -printf '%s %p\n' | sort -n
+find . -size +1G
+find / -type f -size +1G 2>/dev/null
+
+* Deleted files Still using space
+lsof | grep -E '^COM|deleted'
 
 * Get directory size by MB
 du --max-depth=1 -B M |sort -rn
 du -H /path --max-depth=1 -B M |sort -rn
+du -h --max-depth=1 -x /home
+du -sh *
 
 * Get amount of free disk space available
 df -h
 df -H path
 du -H path 
+
+* Free Up Space on Ubuntu
+- Clean the APT Cache (And Do It Regularly)
+du -sh /var/cache/apt/archives
+sudo apt-get clean
+- Remove Old Kernels (If No Longer Required)
+sudo apt-get autoremove --purge
 
 * Get Linux version details
 uname -a
