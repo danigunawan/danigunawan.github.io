@@ -21,8 +21,17 @@ newgrp docker
 # Docker copy
 docker cp container_name:/src_path dest_path
 
-# Remove all image None
+# Cleanup exited processes:
+docker rm $(docker ps -q -f status=exited)
+
+# Cleanup dangling volumes:
+docker volume rm $(docker volume ls -qf dangling=true)
+
+# Cleanup dangling or None images:
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+
 docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
+
 
 # Referensi : 
 https://github.com/wsargent/docker-cheat-sheet
