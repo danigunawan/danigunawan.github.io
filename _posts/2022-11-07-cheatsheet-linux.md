@@ -527,6 +527,9 @@ htop
 * Kill Port
 lsof -t -i tcp:4000 | xargs kill
 
+* This fuser 8080/tcp will print you PID of process bound on that port.
+fuser -k 8080/tcp will kill that process.
+
 {% endhighlight %}
 
 Refferensi : 
