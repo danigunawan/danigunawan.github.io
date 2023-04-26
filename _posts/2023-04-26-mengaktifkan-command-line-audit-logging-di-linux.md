@@ -12,8 +12,6 @@ share: true
 date: 2023-04-26T17:00:28+07:00
 ---
 
-Solution
-
 Masuk dan Login ssh dengan menggunakan root akses
 
     sudo su - 
