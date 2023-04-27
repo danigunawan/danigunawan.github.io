@@ -91,5 +91,6 @@ akan terlihat seperti ini:
 
 Anda dapat menyimpan log pada NFS dan atau log syslog ke komputer lain.
 
-Optional : 
+Optional :
+
     PROMPT_COMMAND='history -a >(tee -a ~/.bash_history | logger -t "$USER[$$] $SSH_CONNECTION")'
