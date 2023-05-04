@@ -42,7 +42,10 @@ Restart service rsyslog, atau mulai ulang seluruh mesin untuk agar bisa memuat u
 
 Logging audit akan terlihat di bawah /var/log/syslog dan /var/log/cmdline.
 
-    cat /var/log/syslog atau cat /var/log/cmdline 
+    cat /var/log/syslog
+    cat /var/log/cmdline 
+    sudo tail -f /var/log/syslog
+    sudo tail -f /var/log/cmdline
 
 akan terlihat seperti ini:
 
