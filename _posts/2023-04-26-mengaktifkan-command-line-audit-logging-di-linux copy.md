@@ -12,6 +12,7 @@ share: true
 date: 2023-04-26T17:00:28+07:00
 ---
 
+[METODE 1] 
 Masuk dan Login ssh dengan menggunakan root akses
 
     sudo su - 
@@ -97,3 +98,110 @@ Anda dapat menyimpan log pada NFS dan atau log syslog ke komputer lain.
 Optional (simpan env di ~/.bashrc):
 
     PROMPT_COMMAND='history -a >(tee -a ~/.bash_history | logger -t "$USER[$$] $SSH_CONNECTION")'
+
+
+[METODE 1] – alternative via rsyslog service
+
+Untuk menggunakan rsyslog untuk mencatat setiap perintah Shell, cukup ikuti langkah-langkah di bawah ini:
+
+1. Buat file konfigurasi rsyslog baru, dan tentukan jalur file log. Misalnya: /var/log/commands.log.
+
+    vi /etc/rsyslog.d/bash.conf
+    local6.* /var/log/commands.log
+
+2. Edit file ~/bashrc. Catatan: Anda perlu mengedit setiap pengguna ~/bashrc siapa pun yang membutuhkan log tersebut.
+    vi ~/.bashrc
+    whoami="$(whoami)@$(echo $SSH_CONNECTION | awk '{print $1}')"
+    export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$whoami [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
+
+Contoh : 
+    cat ~/.bashrc | tail -n2
+
+    whoami="$(whoami)@$(echo $SSH_CONNECTION | awk '{print $1}')"
+    export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$whoami [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
+
+3. Restart rsyslog service
+    systemctl restart rsyslog
+
+Semua selesai. Lihat contoh format log di bawah ini:
+
+    date
+    Thu Apr 9 00:26:11 EDT 2020
+    
+    cat /etc/redhat-release
+    Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+    tail -2 /var/log/commands.log
+    Apr 9 00:26:11 hostname root: root@x.x.x.x [1643]: date [0]
+    Apr 9 00:26:18 hostname root: root@x.x.x.x [1643]: cat /etc/redhat-release [0]
+
+[METODE 2] – via bash shell option
+
+1. Tambahkan 'shopt -s syslog_history' ke seluruh sistem startup /etc/profile atau file inisialisasi pribadi ~/.bash_profile. Misalnya:
+
+    cat /etc/profile | grep shopt
+    shopt -s syslog_history
+
+2. Logout dan login lagi untuk melihat perubahan opsi ini.
+
+3. Log example:
+    pwd
+    /root
+    date
+    Thu Apr 9 01:26:46 EDT 2020
+
+4. Lihat log
+    tail -2 /var/log/messages
+
+    Apr 9 01:26:46 hostname -bash: HISTORY: PID=1345 UID=0 date
+    Apr 9 01:26:52 hostname -bash: HISTORY: PID=1345 UID=0 tail -2 /var/log/messages
+
+5. Lihat live log
+
+    tail -f /var/log/messages
+    
+    Apr 9 01:26:45 hostname -bash: HISTORY: PID=1345 UID=0 pwd
+    Apr 9 01:26:46 hostname -bash: HISTORY: PID=1345 UID=0 date
+    Apr 9 01:26:52 hostname -bash: HISTORY: PID=1345 UID=0 tail -2 /var/log/messages
+
+[METODE 3] – via script command
+
+Selain itu, jika Anda hanya ingin mencatat satu sesi terminal, coba saja perintah 'skrip' seperti di bawah ini, juga mudah digunakan dan sangat membantu.
+
+1. untuk memasang logging, jalankan:
+
+    script /tmp/screen.log
+
+2. Sekarang Anda dapat memulai perintah bash Anda. Setelah selesai, Anda dapat keluar:
+
+    exit
+
+Ini kemudian akan menyimpan semua sesi ke file /tmp/screen.log
+
+3. Verifikasi output:
+    cat /tmp/screen.log
+
+Contoh :
+
+    script /tmp/screen.log
+    Script started, file is /tmp/screen.log
+    
+    date
+    Thu Apr 9 00:28:26 EDT 2020
+    
+    whoami
+    root
+    
+    exit
+    
+    Script done, file is /tmp/screen.log
+    
+    cat /tmp/screen.log
+    Script started on Thu 09 Apr 2020 12:28:23 AM EDT
+    date
+    Thu Apr 9 00:28:26 EDT 2020
+    whoami
+    root
+    exit
+    exit
+    Script done on Thu 09 Apr 2020 12:28:42 AM EDT
