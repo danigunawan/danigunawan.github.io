@@ -104,7 +104,7 @@ Optional (simpan env di ~/.bashrc):
 
 Untuk menggunakan rsyslog untuk mencatat setiap perintah Shell, cukup ikuti langkah-langkah di bawah ini:
 
-1. Buat file konfigurasi rsyslog baru, dan tentukan jalur file log. Misalnya: /var/log/commands.log.
+1. Buat file konfigurasi rsyslog baru, dan tentukan jalur file log. Misalnya: /var/log/commands.log
 
     vi /etc/rsyslog.d/bash.conf
     local6.* /var/log/commands.log
