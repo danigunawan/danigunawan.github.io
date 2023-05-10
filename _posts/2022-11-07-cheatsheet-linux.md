@@ -580,7 +580,6 @@ sudo service sshd restart
 
 3. test again via ssh keygen (without password)
 
-
 * SSH tunneling error: "channel 1: open failed: administratively prohibited: open failed"
 
 ssh -N user@ip -L localhost:port:localhost:port
