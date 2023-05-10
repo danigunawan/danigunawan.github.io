@@ -554,6 +554,20 @@ else
     exit 1
 fi
 
+* SSH tunneling error: "channel 1: open failed: administratively prohibited: open failed"
+
+ssh -N user@ip -L localhost:port:localhost:port
+
+Solution : 
+sudo nano /etc/ssh/sshd_config
+AllowTcpForwarding yes
+
+and 
+
+PermitOpen is either not present, is commented out, or is set to any
+
+sudo service sshd restart
+
 {% endhighlight %}
 
 Refferensi : 
