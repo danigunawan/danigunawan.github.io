@@ -554,6 +554,33 @@ else
     exit 1
 fi
 
+## SSH CHEATSHEET
+* SSH Permission denied (publickey) (Via Key Without Password)
+1. client (your laptop/other machines)
+ssh-keygen
+
+cat ~/.ssh/id_rsa.pub 
+ssh-rsa AAAAB3Nzkajskldjakldjklajdkljakldsjakljdkj1312k3j12k3j12kj3k12j3kj12k3j1k23jk1j23kj12k3j1kl23j9u9ua9ud9a9d89a8d98a9d89a898d9ada danigungun@dagun.local
+
+theen save key.
+
+2. login ssh server
+add user 
+sudo adduser deploy
+sudo adduser deploy sudo
+
+sudo nano /home/deploy/.ssh/authorized_keys
+copy this key and save : 
+ssh-rsa AAAAB3Nzkajskldjakldjklajdkljakldsjakljdkj1312k3j12k3j12kj3k12j3kj12k3j1k23jk1j23kj12k3j1kl23j9u9ua9ud9a9d89a8d98a9d89a898d9ada Danigunawan@DSC-Dani-Gunawan.local
+
+sudo nano /etc/ssh/sshd_config
+add :
+AllowUsers user deploy
+sudo service sshd restart
+
+3. test again via ssh keygen (without password)
+
+
 * SSH tunneling error: "channel 1: open failed: administratively prohibited: open failed"
 
 ssh -N user@ip -L localhost:port:localhost:port
