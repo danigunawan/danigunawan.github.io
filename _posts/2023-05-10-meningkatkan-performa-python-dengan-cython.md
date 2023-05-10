@@ -12,7 +12,7 @@ share: true
 date: 2023-05-10T17:00:28+07:00
 ---
 
-"Cython adalah modul dan bahasa yang digunakan oleh para pengembang Python untuk mempercepat kode mereka"
+"Cython adalah modul dan bahasa yang digunakan oleh para pengembang Python untuk mempercepat kode mereka"c
 
 Bagaimana Cython bekerja? Apa itu Cython? Haruskah Anda menulis semua kode Python Anda dengan Cython? Seberapa cepat Cython membuat kode Anda? Dan apakah selalu berhasil?
 
@@ -94,7 +94,7 @@ Dalam demonstrasi ini, kita akan menulis dua fungsi sederhana dalam satu file ya
 
 Perhatikan bahwa semua file untuk demonstrasi ini akan berada dalam satu direktori. Juga, daripada menggunakan ekstensi .py dalam file ini, Anda akan menggunakan .pyx karena Anda sudah menginstal Cython di mesin atau lingkungan Anda.
 
-# 1. The basic Python function
+    # 1. The basic Python function
 
     """
     Dalam fungsi ini, yang akan Anda harapkan sebagai nilai pengembalian adalah daftar dari beberapa angka pertama tergantung pada apa yang Anda masukkan sebagai parameter masukan. Daftar angka prima yang ditemukan akan kosong pada awalnya.
