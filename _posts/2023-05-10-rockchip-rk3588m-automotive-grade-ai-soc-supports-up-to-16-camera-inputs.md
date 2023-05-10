@@ -77,6 +77,6 @@ Firefly AIO-3588MQ specifications:
 
 ![Rockchip-RK3588M](/images/2023/Rockchip-RK3588M-sbc-board.png)
 
-Perusahaan ini menyediakan dukungan untuk Android 12.0, Ubuntu Desktop dan Server, Debian 11, dan buildroot RTLinux untuk papan // sistem-on-module. Firefly juga menyebutkan dukungan Kernel-based Virtual Machine (KVM) dan Docker container, karena akan diperlukan untuk mendukung bagian-bagian perangkat lunak yang kritis (misalnya, dashboard) dan non-kritis (misalnya, infotainment) dengan sistem operasi terisolasi yang mungkin berbeda. Dokumentasi teknis dapat ditemukan di Wiki untuk memulai dengan Android, Linux, dan RTLinux.
+Perusahaan ini menyediakan dukungan untuk Android 12.0, Ubuntu Desktop dan Server, Debian 11, dan buildroot RTLinux untuk papan // sistem-on-module. Firefly juga menyebutkan dukungan Kernel-based Virtual Machine (KVM) dan Docker container, karena akan diperlukan untuk mendukung bagian-bagian perangkat lunak yang kritis (misalnya, dashboard) dan non-kritis (misalnya, infotainment) dengan sistem operasi terisolasi yang mungkin berbeda. Dokumentasi teknis dapat ditemukan di Wiki (https://wiki.t-firefly.com/en/iCore-3588MQ/started.html) untuk memulai dengan Android, Linux, dan RTLinux.
 
 Pertama kali saya mengetahui tentang RK3588M adalah dalam sebuah demo pada bulan Februari lalu di RKDC (Rockchip Developer Conference), yang menunjukkan sistem yang mengoperasikan empat tampilan independen dan dua gamepad.
