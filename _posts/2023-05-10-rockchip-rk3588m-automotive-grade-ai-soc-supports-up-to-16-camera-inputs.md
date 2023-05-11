@@ -4,7 +4,7 @@ title: Rockchip RK3588M automotive-grade AI SoC dengan kualitas tinggi yang mend
 modified: 2023-05-10T17:00:28+07:00
 categories:
 description: "Rockchip RK3588M automotive-grade AI SoC dengan kualitas tinggi yang mendukung hingga 16 input kamera"
-tags: [cython, python, c++]
+tags: [sbc, iot, rockchip]
 image:
   background: triangular.png
 comments: true
