@@ -54,6 +54,7 @@ docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
 
 - Docker run with bash
 docker run --rm -it --entrypoint bash <image_or_id>
+docker exec -it <container-name-or-id> bash
 
 # Referensi : 
 https://github.com/wsargent/docker-cheat-sheet
