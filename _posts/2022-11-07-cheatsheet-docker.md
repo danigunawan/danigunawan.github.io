@@ -52,7 +52,8 @@ docker volume rm $(docker volume ls -qf dangling=true)
 docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
 
-
+- Docker run with bash
+docker run --rm -it --entrypoint bash <image_or_id>
 
 # Referensi : 
 https://github.com/wsargent/docker-cheat-sheet
