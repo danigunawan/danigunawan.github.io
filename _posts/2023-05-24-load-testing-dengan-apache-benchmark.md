@@ -76,6 +76,14 @@ Setelah pengujian selesai, ApacheBench akan menampilkan hasilnya, termasuk rata-
 
 Perlu diingat bahwa hasil pengujian beban dapat dipengaruhi oleh banyak faktor, seperti spesifikasi server, jaringan, dan jenis permintaan yang dikirimkan. Oleh karena itu, hasil pengujian dapat berbeda-beda pada setiap situasi.
 
+Dalam konteks pengujian beban (load testing), konkurensi (concurrency) merujuk pada jumlah permintaan yang dikirimkan secara bersamaan ke server dalam satu waktu. Ini menggambarkan seberapa banyak pengguna atau klien yang berinteraksi dengan server secara bersamaan.
+
+Misalkan Anda mengatur tingkat konkurensi 10 dalam pengujian beban. Ini berarti pada setiap saat, ada 10 permintaan yang dikirimkan ke server secara bersamaan. Saat permintaan pertama sedang diproses oleh server, permintaan kedua, ketiga, dan seterusnya sedang dalam antrian menunggu. Begitu permintaan pertama selesai diproses, server akan memulai pemrosesan permintaan kedua, dan seterusnya. Tingkat konkurensi ini mencerminkan situasi di mana banyak pengguna atau klien mengakses server secara bersamaan.
+
+Tingkat konkurensi yang tinggi dalam pengujian beban dapat membantu mengidentifikasi potensi masalah kinerja pada server. Hal ini karena memperoleh gambaran tentang seberapa baik server mengatasi beban yang tinggi dari pengguna yang berinteraksi secara bersamaan. Dalam pengujian beban, Anda dapat meningkatkan atau menurunkan tingkat konkurensi untuk mengamati bagaimana kinerja server berubah dengan adanya variasi jumlah pengguna yang aktif secara bersamaan.
+
+Jadi, tingkat konkurensi dalam pengujian beban memainkan peran penting dalam mengevaluasi kemampuan server dalam menangani jumlah permintaan yang datang secara bersamaan dari pengguna yang berinteraksi dengan sistem.
+
 Selain ApacheBench, ada juga banyak alat pengujian beban lainnya seperti JMeter, Gatling, dan Siege yang dapat digunakan untuk melakukan pengujian beban dengan cara yang serupa. Setiap alat memiliki fitur dan kemampuan yang berbeda, jadi penting untuk memilih alat yang sesuai dengan kebutuhan Anda.
 
 Refferensi : 
