@@ -4,7 +4,7 @@ title: Load Testing Dengan Apache Benchmark
 modified: 2023-05-24T17:00:28+07:00
 categories:
 description: "Load Testing Dengan Apache Benchmark"
-tags: [python, asyncio, multithreading]
+tags: [loadtesting, QPS, apache]
 image:
   background: triangular.png
 comments: true
