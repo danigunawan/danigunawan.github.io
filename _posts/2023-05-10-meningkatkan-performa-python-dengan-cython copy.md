@@ -76,15 +76,15 @@ Sekarang mari kita buat proyek contoh untuk melihat Cython dalam aksi.
 
 Langkah pertama adalah membuka terminal, mengatur lingkungan yang aman untuk bekerja (opsional), dan menginstal Cython beserta dependensi yang diperlukan.
 
-$ sudo apt install build-essential
+    $ sudo apt install build-essential
 
 Ini akan membuat kompiler gcc tersedia jika komputer Anda belum memiliki kompiler tersebut.
 
-$ sudo apt install python3-venv
+    $ sudo apt install python3-venv
 
 Ini menyediakan lingkungan aman bagi Anda untuk bekerja dengan aman. Langkah ini tidak diperlukan, tetapi selalu baik untuk membuat proyek Anda dalam lingkungan virtual terpisah agar dependensi tidak saling bertentangan.
 
-$ sudo pip3 install cython
+    $ sudo pip3 install cython
 
 Ini menginstal Cython ke mesin Anda.
 

@@ -87,3 +87,6 @@ exclude:
   - package.json
   - spec
   - tmp
+
+# excerpt_length: 100
+excerpt_separator: <!--more-->
