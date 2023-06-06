@@ -409,7 +409,7 @@ Pencarian Dengan Pagination (Bonus)
     import time
 
     headers = {
-    'Authorization': 'token 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'
+    'Authorization': 'token <YOUR_TOKEN>'
     }
 
     results = []
