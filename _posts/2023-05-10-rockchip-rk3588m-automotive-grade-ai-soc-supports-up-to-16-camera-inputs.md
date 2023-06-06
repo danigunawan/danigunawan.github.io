@@ -12,7 +12,7 @@ share: true
 date: 2023-05-10T17:00:28+07:00
 ---
 
-![Rockchip-RK3588M](/images/2023/Rockchip-RK3588M-2.png)
+![Rockchip-RK3588M](/images/2023/Rockchip-RK3588M.png)
 
 Rockchip RK3588M adalah varian otomotif dari Rockchip RK3588, sebuah SoC Cortex-A76/A55 octa-core yang mendukung setidaknya 6 tampilan Full HD dan 16 input kamera, serta dapat menjalankan secara simultan dashboard mobil, hiburan di dalam kendaraan, cermin belakang digital, monitor sandaran kepala, sistem ADAS, dan lain-lain.
 
