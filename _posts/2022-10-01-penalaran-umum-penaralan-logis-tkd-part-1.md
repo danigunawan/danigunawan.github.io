@@ -14,30 +14,30 @@ date: 2022-10-01T17:00:28+07:00
 
 # PENALARAN UMUM - PENALARAN LOGIS
 
-1. Daftar Isi 
-Pengertian Pernyataan
-Pengertian Ingkaran atau Negasi
-Pernyataan Majemuk
-1. Disjungsi
-2. Konjungsi
-3. Implikasi
-4. Biimplikasi
-Kuantor Universal dan Kuantor Eksistensial
-1. Kuantor Universal
-2. Kuantor Eksistensial
-Penarikan Kesimpulan
-1. Silogisme
-2. Modus Ponens
-3. Modus Tolens
+{% highlight html %}
+
+DAFTAR ISI
+  - Pengertian Pernyataan
+  - Pengertian Ingkaran atau Negasi
+  - Pernyataan Majemuk
+      - Disjungsi
+      - Konjungsi
+      - Implikasi
+      - Biimplikasi
+  - Kuantor Universal dan Kuantor Eksistensial
+      - Kuantor Universal
+      - Kuantor Eksistensial
+  - Penarikan Kesimpulan
+      - Silogisme
+      - Modus Ponens
+      - Modus Tolens
 
 A. Pengertian Pernyataan 
-
-Untuk pembahasan penalaran umum awal, Quipper Blog mau memberi tahu kamu tentang pengertian pernyataan. Pernyataan disebut juga kalimat deklaratif, yaitu kalimat yang hanya bernilai benar atau salah. Artinya, pernyataan tidak bisa bernilai benar dan salah sekaligus. Benar tidaknya suatu pernyataan bisa kamu sesuaikan dengan keadaan aslinya. Contohnya sebagai berikut.
-Telepon genggam merupakan salah satu alat komunikasi. (Pernyataan benar)
-Semua ikan bernapas menggunakan paru-paru. (Pernyataan salah)
+pengertian pernyataan. Pernyataan disebut juga kalimat deklaratif, yaitu kalimat yang hanya bernilai benar atau salah. Artinya, pernyataan tidak bisa bernilai benar dan salah sekaligus. Benar tidaknya suatu pernyataan bisa kamu sesuaikan dengan keadaan aslinya. Contohnya sebagai berikut. Telepon genggam merupakan salah satu alat komunikasi. (Pernyataan benar) Semua ikan bernapas menggunakan paru-paru. (Pernyataan salah)
 
 
 B. Pengertian Ingkaran atau Negasi
+
 Ingkaran atau negasi adalah pernyataan baru yang merupakan lawan dari pernyataan semula. Jika pernyataan semula bernilai benar, maka pernyataan barunya bernilai salah. Sebaliknya, jika pernyataan semula bernilai salah, maka pernyataan barunya bernilai benar. Perhatikan permisalan berikut.
 
 Jika pernyataan (p) bernilai benar (B), maka ingkarannya (~p) bernilai salah (S).
@@ -46,29 +46,29 @@ Jika pernyataan (p) bernilai salah (S), maka ingkarannya (~p) bernilai benar (B)
 Untuk lebih jelasnya, simak contoh berikut.
 
 Contoh 1 : 
+
 p  = Hari ini turun hujan 
 ~p = Hari ini tidak turun hujan 
 
 Contoh 2 : 
+
 p  = Ibu pergi menggunakan mobil
 ~q = Ibu pergi tidak menggunakan mobil
 
 C. Pernyataan Majemuk 
-Pernyataan majemuk adalah pernyataan yang terdiri dari dua atau lebih pernyataan tunggal yang terhubung oleh kata penghubung logika, seperti "dan"
-(conjunction), "atau" (disjunction), "jika... maka" (implication),atau "jika dan hanya jika" (biconditional).
-Pernyataan majemuk dapat menggabungkan pernyataan tunggal untuk membentuk pernyataan yang lebih kompleks dan memungkinkan analisis logika yang lebih rinci.
+Pernyataan majemuk adalah pernyataan yang terdiri dari dua atau lebih pernyataan tunggal yang terhubung oleh kata penghubung logika, seperti "dan" (conjunction), "atau" (disjunction), "jika... maka" (implication),atau "jika dan hanya jika" (biconditional). Pernyataan majemuk dapat menggabungkan pernyataan tunggal untuk membentuk pernyataan yang lebih kompleks dan memungkinkan analisis logika yang lebih rinci.
 
 1. Disjungsi
 Disjungsi adalah pernyataan majemuk yang dihubungkan oleh kata hubung ‘atau’. 
 Secara matematis, disjungsi ditulis sebagai p v q yang berarti ‘p atau q’.
 
 Perhatikan contoh berikut.
+
 p = sekolah libur pada hari sabtu
 q = sekolah libur pada hari minggu 
 (p v q) disjungsi = sekolah libur pada hari sabtu atau minggu
 
-Suatu disjungsi akan bernilai benar jika salah satu pernyataan bernilai benar atau kedua pernyataan 
-(p dan q) bernilai benar. 
+Suatu disjungsi akan bernilai benar jika salah satu pernyataan bernilai benar atau kedua pernyataan (p dan q) bernilai benar. 
 
 1.1 Ingkaran Disjungsi 
 ~(p v q) ≡ ~p ˄ ~q 
@@ -76,7 +76,6 @@ Suatu disjungsi akan bernilai benar jika salah satu pernyataan bernilai benar at
 Perhatikan contoh berikut.
 p v q = sekolah libur pada hari sabtu atau minggu 
 ~(p v q) ≡ ~p ˄ ~q 
-
 ~p ˄ ~q ingkaran disjungsi = sekolah tidak libur pada hari sabtu dan minggu 
 
 tabel kebenaran disjungsi :
@@ -89,6 +88,7 @@ _________________
 -----------------
 
 2. Konjungsi 
+
 Konjungsi adalah kalimat majemuk yang dihubungkan oleh tanda hubung ‘dan’.
 Secara matematis, dilambangkan sebagai p ˄ q. Untuk lebih jelasnya, simak contoh berikut.
 
@@ -101,7 +101,7 @@ Jika salah satu pernyataan salah, nilai kebenaran konjungsi juga akan salah (S).
 
 2.1 Ingkaran Konjungsi 
 Untuk ingkaran konjungsi, memenuhi persamaan : 
-~(p ˄ q) ≡ ~p v ~q. 
+~(p ˄ q) ≡ ~p v ~q
 
 Berikut contohnya.
 (p ^ q) Konjungsi = Novi memiliki hewan peliharaan kucing dan kelinci
@@ -134,6 +134,7 @@ Adapun jenis-jenis implikasi adalah sebagai berikut.
 - Kontraposisi dari implikasi p => q adalah ~q => ~p.
 
 3.1 Ingkaran/Negasi Implikasi
+
 ~(p => q) ≡ p ˄ ~q
 
 Untuk lebih jelasnya, simak contoh berikut.
@@ -253,7 +254,7 @@ Premis 1 :Jika Reni mengikut lomba tari maka reni rajin berlatih ( p => q )
 Premis 2 : Reni tidak rajin berlatih (~q)
 Kesimpulan : Reni tidak mengikuti lomba tari (~p)
 
-Contoh Soal Mandiri hehe : 
+Contoh Soal (Bonus 1) : 
 
 Jika bahan kaus yang digunakan adalah katun maka penjualan kaus meningkat.
 Jika penjualan kaus meningkat maka penjualan kemeja akan meningkat.
@@ -284,6 +285,97 @@ Premis 3 :  ~r (x)
 ~p = Bahan kaus yang digunakan bukan katun
 
 Jawaban benar adalah (C) 
+
+Contoh Soal (Bonus 2) : 
+
+Negasi dari invers pernyataan “Jika limbah
+dibuang ke sungai maka populasi ikan
+terancam” adalah …
+
+A. Limbah dibuang ke sungai dan populasi ikan
+tidak terancam
+B. Populasi ikan terancam dan limbah tidak
+dibuang ke sungai
+C. Poluasi ikan tidak terancam atau limbah
+dibuang ke sungai
+D. Limbah tidak dibuang ke sungai dan populasi
+ikan terancam
+E. Limbah dibuang ke sungai atau populasi ikan
+tidak terancam
+
+p = jika limbah dibuang kesungai
+q = populasi ikan terancam
+
+~p = jika limbah tidak dibuang kesungai
+~q = populasi ikan tidak terancam
+
+Aturan
+
+premis 1 :          p => q
+                    ~p => ~q (inverse)
+
+                    p => q
+                    p ^ ~q (negasi)
+
+                    ~p ^ ~(~q)
+                    ========= (BELUM YAKIN)
+                    ~p v q
+
+                    p => q
+                    p ^ ~q (negasi)
+                    ============ (MASIH PERKIRAAN)
+                    ~p v q (abis dinegasikan terus di inverse)
+
+negasi inversenya : ~p v q (mirip ada di aturan 6)
+
+Jawaban benar adalah (D)
+limbah tidak dibuang kesungai atau populasi ikan terancam
+
+Bonus Cheatsheet Penarikan Kesimpulan : 
+
+Aturan 1
+-----------
+Premis 1 :  p => q
+premis 2 :  p
+            =========          
+kesimpulan: q
+
+Aturan 2
+-----------
+Premis 1 :  p => q
+premis 2 :  ~q
+            =========          
+kesimpulan: ~p
+
+Aturan 3
+-----------
+Premis 1 :  p => q
+premis 2 :  ~p
+            =========          
+kesimpulan: ~p
+
+Aturan 4
+-----------
+Premis 1 :  p => q
+premis 2 :  q
+            =========          
+kesimpulan: tidak dapat disimpulkan
+
+Aturan 5
+-----------
+Premis 1 :  p => q
+premis 2 :  q => r
+            =========          
+kesimpulan: p => r
+
+Aturan 6
+-----------
+Premis 1 :  p => q
+premis 2 :  ~q => ~p
+            =========          
+kesimpulan: ~p v q
+
+{% endhighlight %}
 
 Refferensi : 
 - Quipper (https://www.quipper.com/id/blog/masuk-ptn/sbmptn/informasi-sbmptn/penalaran-umum-penalaran-logis/#Pengertian_Ingkaran_atau_Negasi)

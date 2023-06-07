@@ -12,6 +12,8 @@ share: true
 date: 2022-11-7T17:00:28+07:00
 ---
 
+{% highlight bash %}
+
 # add user to docker group
 sudo usermod -aG docker $USER
 
@@ -59,8 +61,10 @@ docker exec -it <container-name-or-id> bash
 - Docker Inspect (All)
 docker inspect <container_name_or_id>
 
-- Docker Inspect (Only Command) 
-docker inspect --format='{{.Config.Cmd}}' <container_name_or_id>
+- Docker Inspect (Only Command)
+docker inspect --format="{.Config.Cmd}" <container_name_or_id>
 
 # Referensi : 
 https://github.com/wsargent/docker-cheat-sheet
+
+{% endhighlight %}
