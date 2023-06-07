@@ -372,7 +372,7 @@ Aturan 6
 -----------
 Premis 1 :  p => q
 premis 2 :  ~q => ~p
-            =========          
+            ========= 
 kesimpulan: ~p v q
 
 {% endhighlight %}
