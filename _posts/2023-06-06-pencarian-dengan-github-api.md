@@ -415,7 +415,7 @@ Pencarian Dengan Pagination (Bonus)
     results = []
     min_max = (1,31)
     for i in range(min_max[0], min_max[1]):
-        url = "https://api.github.com/search/code?q='cube ARRAY'+in:file + language:python&per_page=10&page="+str(i)
+        url = "https://api.github.com/search/code?q='pytorch'+in:file + language:python&per_page=10&page="+str(i)
         backoff = 2 # backoff in seconds
         while backoff < 1024:
             time.sleep(backoff)
