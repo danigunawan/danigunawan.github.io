@@ -44,22 +44,22 @@ Token Akses Personal
 
 Untuk mengakses GitHub API, Anda akan memerlukan token akses untuk memberi otorisasi pada panggilan API. Silakan ikuti langkah-langkah berikut untuk mendapatkan token akses dari halaman pengaturan token GitHub. Jika Anda belum memiliki akun GitHub, Anda perlu membuat akun terlebih dahulu.
 
-1. Buka halaman GitHub dan masuk ke akun Anda.
-2. Klik pada foto profil Anda di pojok kanan atas halaman.
-3. Pilih "Settings" dari menu dropdown yang muncul.
-4. Di halaman pengaturan, pilih "Developer settings" di sidebar sebelah kiri.
-5. Pilih "Personal access tokens".
-6. Klik tombol "Generate new token".
+- Buka halaman GitHub dan masuk ke akun Anda.
+- Klik pada foto profil Anda di pojok kanan atas halaman.
+- Pilih "Settings" dari menu dropdown yang muncul.
+- Di halaman pengaturan, pilih "Developer settings" di sidebar sebelah kiri.
+- Pilih "Personal access tokens".
+- Klik tombol "Generate new token".
 
 ![Generate Personal Access Token](/images/2023/github-api-generate-token.webp)
 
-7. Berikan deskripsi yang relevan untuk token Anda.
-8. Pilih cakupan (scopes) yang sesuai dengan kebutuhan Anda. Misalnya, jika Anda hanya melakukan pencarian, Anda mungkin perlu memilih cakupan "public_repo" atau "repo" tergantung pada apakah repositori yang ingin Anda cari adalah publik atau pribadi.
+- Berikan deskripsi yang relevan untuk token Anda.
+- Pilih cakupan (scopes) yang sesuai dengan kebutuhan Anda. Misalnya, jika Anda hanya melakukan pencarian, Anda mungkin perlu memilih cakupan "public_repo" atau "repo" tergantung pada apakah repositori yang ingin Anda cari adalah publik atau pribadi.
 
 ![Generate Personal Access Token Description](/images/2023/github-api-generate-token-description.webp)
 
-9. Gulir ke bawah dan klik tombol "Generate token".
-10. Salin token akses yang dihasilkan. Pastikan untuk menyimpannya dengan aman dan tidak membagikannya ke publik.
+- Gulir ke bawah dan klik tombol "Generate token".
+- Salin token akses yang dihasilkan. Pastikan untuk menyimpannya dengan aman dan tidak membagikannya ke publik.
 
 Token akses personal ini akan digunakan dalam kode Python Anda untuk mengotentikasi permintaan API ke GitHub. Pastikan untuk menjaga kerahasiaan token Anda dan tidak mengungkapkannya secara publik atau menyimpannya dalam repositori yang dapat diakses oleh orang lain.
 
