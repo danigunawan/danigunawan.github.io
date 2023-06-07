@@ -56,5 +56,11 @@ docker rmi $(docker images -a|grep "<none>"|awk '$1=="<none>" {print $3}')
 docker run --rm -it --entrypoint bash <image_or_id>
 docker exec -it <container-name-or-id> bash
 
+- Docker Inspect (All)
+docker inspect <container_name_or_id>
+
+- Docker Inspect (Only Command) 
+docker inspect --format='{{.Config.Cmd}}' <container_name_or_id>
+
 # Referensi : 
 https://github.com/wsargent/docker-cheat-sheet
