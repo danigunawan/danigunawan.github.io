@@ -386,11 +386,14 @@ Bernilai benar hanya jika kedua pernyataan benar
 
 Bernilai salah hanya jika kedua pernyataan salah
 
-- Implikasi (⇒⇒) : pernyataan majemuk dengan kata hubung "jika... maka..."
+- Implikasi (⇒) : pernyataan majemuk dengan kata hubung "jika... maka..."
 
 Bernilai salah jika anteseden benar dan konsequen salah
 
-Misal p ⇒ q, bernilai salah ketika pp benar dan q salah
+Misal p ⇒ q, bernilai salah ketika p benar dan q salah
+
+{% endhighlight %}
+
 
 contoh membuat Tabel kebenaran dari (r ∧ p) ⇒ (q∨r) 
 
@@ -399,7 +402,6 @@ adalah:
 
 ![Tabel Kebenran](/images/2023/tabel_kebenaran.png)
 
-{% endhighlight %}
 
 Refferensi : 
 - Quipper (https://www.quipper.com/id/blog/masuk-ptn/sbmptn/informasi-sbmptn/penalaran-umum-penalaran-logis/#Pengertian_Ingkaran_atau_Negasi)
