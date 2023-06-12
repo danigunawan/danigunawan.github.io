@@ -135,6 +135,7 @@ Adapun jenis-jenis implikasi adalah sebagai berikut.
 
 3.1 Ingkaran/Negasi Implikasi
 
+negasi p => q adalah p ^ ~q atau ditulis
 ~(p => q) ≡ p ˄ ~q
 
 Untuk lebih jelasnya, simak contoh berikut.
@@ -374,6 +375,29 @@ Premis 1 :  p => q
 premis 2 :  ~q => ~p
             ========= 
 kesimpulan: ~p v q
+
+Rangkuman (Logika Matematika - Membuat Tabel Kebenaran) : 
+
+- Konjungsi (^) : pernyataan majemuk dengan kata hubung "dan"
+
+Bernilai benar hanya jika kedua pernyataan benar
+
+- Disjungsi (v) : pernyataan majemuk dengan kata hubung "atau"
+
+Bernilai salah hanya jika kedua pernyataan salah
+
+- Implikasi (⇒⇒) : pernyataan majemuk dengan kata hubung "jika... maka..."
+
+Bernilai salah jika anteseden benar dan konsequen salah
+
+Misal p ⇒ q, bernilai salah ketika pp benar dan q salah
+
+contoh membuat Tabel kebenaran dari (r ∧ p) ⇒ (q∨r) 
+
+adalah:
+
+
+![Tabel Kebenran](/images/2023/tabel_kebenaran.png)
 
 {% endhighlight %}
 
