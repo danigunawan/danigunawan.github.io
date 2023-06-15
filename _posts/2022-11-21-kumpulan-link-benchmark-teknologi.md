@@ -22,3 +22,9 @@ mengukur kinerja beberapa platform aplikasi web, kerangka kerja tumpukan penuh, 
 kode, kumpulan data, metode, dan tabel evaluasi Pembelajaran Mesin.
 
 - https://paperswithcode.com
+
+# Code Search & AI Assistant
+
+- https://sourcegraph.com/search
+- https://githuber.cn/
+- https://www.libhunt.com/
