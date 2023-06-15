@@ -28,3 +28,9 @@ kode, kumpulan data, metode, dan tabel evaluasi Pembelajaran Mesin.
 - https://sourcegraph.com/search
 - https://githuber.cn/
 - https://www.libhunt.com/
+
+# arXiv
+
+arXiv adalah layanan distribusi gratis dan arsip akses terbuka untuk > 2.275.234 artikel ilmiah di bidang fisika, matematika, ilmu komputer, biologi kuantitatif, keuangan kuantitatif, statistik, teknik elektro dan ilmu sistem, serta ekonomi. Materi di situs ini tidak ditinjau sejawat oleh arXiv.
+
+- https://arxiv.org/
