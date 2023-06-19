@@ -14,3 +14,8 @@ date: 2022-11-21T24:00:00+07:00
 
 # Temporary Mail
 - https://temp-mail.org
+
+# Grammarly
+Compose bold, clear, mistake-free writing with Grammarly’s new AI-powered desktop app.
+
+- https://www.grammarly.com/
