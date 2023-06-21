@@ -16,3 +16,7 @@ date: 2022-11-7T17:00:28+07:00
 https://github.com/lilykonings/jekyll-password-protect
 https://www.tachyonstemplates.com/2020/jekyll-netlify-password/
 https://twpower.github.io/87-make-jekyll-blog-post-private-en
+
+# Custom Jekyll HPSTR
+https://github.com/danigunawan/lsfalimis.github.io atau
+http://lsfalimis.github.io/customise-hpstr-jekyll-theme/
