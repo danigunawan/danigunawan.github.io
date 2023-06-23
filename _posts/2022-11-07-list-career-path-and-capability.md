@@ -79,6 +79,11 @@ Back End Developer
 - Infrastructure & application security architecture
 - Testing
 
+DevSecOps
+
+![Tools_DevSecOps](/images/2023/tools_devsecops.png)
+
+
 Data Scientist
 - Data Engineering
 - Programming Language
