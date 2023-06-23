@@ -23,10 +23,16 @@ Rust juga menawarkan fitur pemrograman fungsional dan pemrograman konkuren yang 
 
 Dalam beberapa tahun terakhir, Rust telah menjadi semakin populer di kalangan pengembang karena kombinasi keamanan, keandalan, dan performanya yang tinggi.
 
+![rust benchmark](/images/2023/rust_benchmark.png)
+
+
 # Belajar Rust Beserta Contohnya
 
 Rust by Example (RBE) adalah kumpulan contoh program yang dapat dijalankan yang menggambarkan berbagai konsep Rust dan pustaka standar. RBE memberikan contoh konkret tentang cara menggunakan fitur-fitur Rust dan pustaka standarnya dalam bentuk program yang dapat dijalankan.
 
+Prerequisite
+- Install Rust : https://www.rust-lang.org/tools/install
+- Dokumentasi : https://doc.rust-lang.org/std/
 
 Berikut adalah daftar topik yang dicakup dalam Rust by Example:
 
@@ -56,6 +62,28 @@ Berikut adalah daftar topik yang dicakup dalam Rust by Example:
     Meta - Dokumentasi, pengujian kinerja (benchmarking), dan topik lainnya terkait Rust.
 
 Rust by Example merupakan sumber yang bagus untuk belajar bahasa Rust dengan contoh konkret yang dapat dieksekusi.
+
+# Frameworks
+
+Di dunia pemrograman Rust, terdapat beberapa framework yang populer dan digunakan untuk membangun aplikasi web dan layanan jaringan. Berikut ini adalah beberapa framework Rust yang terkenal:
+
+1. Rocket: Rocket adalah framework web yang sangat populer dan mudah digunakan. Ia menekankan pada kesederhanaan, kinerja tinggi, dan keamanan. Rocket menggunakan makro Rust untuk menyediakan sintaks yang intuitif dan menyenangkan. Ia juga memiliki sistem tipe yang kuat untuk mencegah kesalahan pada waktu kompilasi.
+
+1. Actix: Actix adalah framework web dan layanan jaringan yang berkinerja tinggi dan tangguh. Ia didesain untuk menangani lalu lintas yang tinggi dan skalabilitas yang baik. Actix menggunakan pemodelan actor untuk mengelola pemrosesan konkuren dan memastikan keselamatan dalam pemrograman konkuren.
+
+1. Tide: Tide adalah framework web yang ringan dan intuitif. Ia menggunakan abstraksi modern seperti async/await dan Future untuk menghadirkan pemrograman yang non-blokir dan efisien. Tide juga memanfaatkan sistem tipe Rust untuk mencegah kesalahan pada waktu kompilasi.
+
+1. Warp: Warp adalah framework web ringan dan cepat yang menggunakan combinators untuk menyusun rute dan middleware. Ia menyediakan alat yang kuat untuk menangani permintaan HTTP dengan cara yang mudah dipahami dan terstruktur. Warp juga menekankan kinerja yang tinggi dengan menggunakan asinkronisitas.
+
+1. Nickel: Nickel adalah framework web yang bersifat modular dan fleksibel. Ia mengikuti paradigma middleware dan menyediakan alat yang kuat untuk mengembangkan aplikasi web dengan mudah. Nickel juga mendukung penggunaan makro Rust untuk membuat sintaks yang deklaratif dan mudah dibaca.
+
+1. Rocket.rs: Rocket.rs adalah sebuah framework web yang memungkinkan pengembangan aplikasi web yang aman, cepat, dan dapat diskalakan. Ia menggabungkan fitur-fitur seperti routing, input parsing, dan validasi data dengan sistem tipe yang kuat untuk menghindari banyak jenis kesalahan umum dalam pengembangan web.
+
+1. Yew: Yew adalah framework front-end web yang menggunakan pemrograman fungsional reaktif untuk membangun antarmuka pengguna yang interaktif. Ia mengintegrasikan Rust dengan DOM (Document Object Model) melalui WebAssembly dan menyediakan alat untuk mengelola keadaan aplikasi dengan mudah.
+
+1. salvo.rs: Salvo.rs menawarkan fitur-fitur seperti routing HTTP, middleware, penanganan request dan response, serta dukungan untuk asynchronous programming. Framework ini didesain dengan fokus pada performa yang tinggi dan keamanan. Salvo.rs memiliki sintaks yang bersih dan mudah dipahami, sehingga memudahkan pengembang untuk membuat aplikasi web yang efisien dan andal menggunakan bahasa Rust. Framework ini juga kompatibel dengan ecosystem Rust yang luas, sehingga memungkinkan pengguna untuk memanfaatkan berbagai pustaka dan alat bantu lainnya yang tersedia dalam ekosistem Rust.
+
+Itu hanya beberapa contoh dari berbagai framework yang tersedia dalam ekosistem Rust. Setiap framework memiliki keunikan dan tujuan yang berbeda-beda, sehingga pemilihan framework tergantung pada kebutuhan dan preferensi pengembang.
 
 Reff : 
 - https://doc.rust-lang.org/rust-by-example/
