@@ -15,13 +15,21 @@ date: 2022-11-21T24:00:00+07:00
 # Frameworks
 mengukur kinerja beberapa platform aplikasi web, kerangka kerja tumpukan penuh, dan kerangka kerja microservices.
 
-- https://www.techempower.com
+* https://www.techempower.com
 
 
 # AI/Machine Learning
 kode, kumpulan data, metode, dan tabel evaluasi Pembelajaran Mesin.
 
-- https://paperswithcode.com
+
+1.  Papers
+
+    * Paperswithcode : https://paperswithcode.com
+
+2.  Facial Expression
+
+    * Awesome SOTA FER : https://github.com/kdhht2334/awesome-SOTA-FER
+    * Awesome FER : https://github.com/EvelynFan/AWESOME-FER
 
 # Code Search & AI Assistant
 
@@ -34,9 +42,3 @@ kode, kumpulan data, metode, dan tabel evaluasi Pembelajaran Mesin.
 arXiv adalah layanan distribusi gratis dan arsip akses terbuka untuk > 2.275.234 artikel ilmiah di bidang fisika, matematika, ilmu komputer, biologi kuantitatif, keuangan kuantitatif, statistik, teknik elektro dan ilmu sistem, serta ekonomi. Materi di situs ini tidak ditinjau sejawat oleh arXiv.
 
 - https://arxiv.org/
-
-# Facial Expression 
-
-A curated list of facial expression recognition in both 7-emotion classification and affect estimation. In addition, this repository includes basic studies on FER and recent datasets.
-
-- https://github.com/kdhht2334/awesome-SOTA-FER#challenges
