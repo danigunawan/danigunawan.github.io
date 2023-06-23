@@ -4,7 +4,7 @@ title: Belajar Rust Beserta Contohnya
 modified: 2023-06-23T17:00:28+07:00
 categories:
 description: "Belajar Rust Beserta Contohnya"
-tags: [api tweaking, api performance, api]
+tags: [rust, rust by example]
 image:
   background: triangular.png
 comments: true
