@@ -34,3 +34,9 @@ kode, kumpulan data, metode, dan tabel evaluasi Pembelajaran Mesin.
 arXiv adalah layanan distribusi gratis dan arsip akses terbuka untuk > 2.275.234 artikel ilmiah di bidang fisika, matematika, ilmu komputer, biologi kuantitatif, keuangan kuantitatif, statistik, teknik elektro dan ilmu sistem, serta ekonomi. Materi di situs ini tidak ditinjau sejawat oleh arXiv.
 
 - https://arxiv.org/
+
+# Facial Expression 
+
+A curated list of facial expression recognition in both 7-emotion classification and affect estimation. In addition, this repository includes basic studies on FER and recent datasets.
+
+- https://github.com/kdhht2334/awesome-SOTA-FER#challenges
