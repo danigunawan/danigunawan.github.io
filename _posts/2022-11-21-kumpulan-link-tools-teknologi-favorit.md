@@ -20,7 +20,10 @@ Compose bold, clear, mistake-free writing with Grammarly’s new AI-powered desk
 
 - https://www.grammarly.com/
 
-# Self-Hosted Monitoring Tools
-Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+# Monitoring Tools
+Self-Hosted :
 
-- https://github.com/louislam/uptime-kuma
+- https://github.com/louislam/uptime-kuma (Uptime Kuma is an easy-to-use self-hosted monitoring tool.)
+
+Cloud : 
+- https://cronitor.io
