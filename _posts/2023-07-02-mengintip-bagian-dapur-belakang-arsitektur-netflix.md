@@ -38,10 +38,8 @@ Berikut ini beberapa teknologi yang digunakan oleh Netflix:
 
 Arsitektur Netflix didesain untuk skalabilitas, keandalan, dan keamanan. Selain itu, arsitektur ini juga dirancang agar fleksibel, sehingga Netflix dapat dengan mudah menambah fitur dan layanan baru.
 
-Jika Anda tertarik untuk mempelajari lebih lanjut tentang arsitektur Netflix, saya sarankan untuk mengunjungi sumber daya berikut:
+Jika Anda tertarik untuk mempelajari lebih lanjut tentang arsitektur Netflix, saya sarankan untuk mengunjungi sumber daya atau referensi berikut:
 
 - Netflix TechBlog: https://lnkd.in/dFpm7Xxz
 - Netflix Open Source: https://netflix.github.io/
 - Netflix Architecture: https://lnkd.in/dUmxWhNd
-
-Saya harap penjelasan ini memberikan pemahaman yang lebih baik tentang arsitektur Netflix. Jika kamu memiliki pertanyaan, silakan tinggalkan komentar.
