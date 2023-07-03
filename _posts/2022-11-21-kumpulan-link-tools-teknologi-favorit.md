@@ -19,3 +19,8 @@ date: 2022-11-21T24:00:00+07:00
 Compose bold, clear, mistake-free writing with Grammarly’s new AI-powered desktop app.
 
 - https://www.grammarly.com/
+
+# Self-Hosted Monitoring Tools
+Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+
+- https://github.com/louislam/uptime-kuma
