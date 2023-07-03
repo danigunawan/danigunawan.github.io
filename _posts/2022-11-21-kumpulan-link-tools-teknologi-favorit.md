@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Kumpulan Link tools teknologi favorit
+title: Kumpulan Link Tools Teknologi Favorit
 modified: 2022-11-21T24:00:00+07:00
 categories:
-description: "kumpulan link tools teknologi favorit"
+description: "kumpulan link Tools Teknologi Favorit"
 tags: [link, tools]
 image:
   background: triangular.png
