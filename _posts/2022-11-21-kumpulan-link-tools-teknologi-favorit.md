@@ -33,4 +33,4 @@ Everything you need to take your system
 design skill to the next level
 
 - https://bytebytego.com/
-- https://www.instagram.com/learnwithrockybhatia/
+- https://openinapp.co/vs6x4
