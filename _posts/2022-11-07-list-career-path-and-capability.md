@@ -332,3 +332,96 @@ Other:
 Digital Marketing Tools
 - Google Analytics
 - Google Ads
+
+Tambahan Skill Uji Kompetensi LSP TIK (Indonesia) :
+- Graphic Design
+- Grafika Komunikasi
+- Junior Networking
+- Networking
+- Basic Computer Assembly
+- Junior Programming
+- Programming
+- Technical Support
+- Technical 2D Layout Artist
+- Basic Programming
+- Technical 3D Low Poly Model Artist
+- System Analyst
+- Junior Technical Support
+- Technical Motion Graphic Artist
+- Technical 3D Illustration Artist
+- Asset Modeling
+- Motion Graphic 2D
+- Motion Graphic 3D
+- 3D Character Design
+- 3D Animation
+- Database Programming
+- ICT Project Manager
+- ICT Site Management
+- Data Entry Clerk
+- Data Management Staff
+- Data Entry Coordinator
+- Technical Engineer
+- Data Analyst
+- Database Administrator
+- Teknisi Muda Jaringan Komputer
+- Teknisi Utama Jaringan Komputer
+- Network Administrator
+- System Administrator
+- Junior Mobile Programmer
+- Junior Web Developer
+- Junior Web Programmer
+- Junior Network Administrator
+- Intermediate Animator
+- Junior Graphic Designer
+- Junior Computer Technician
+- Teknisi Pusat Data Muda
+- Teknisi Pusat Data Madya
+- Data Center Manager
+- Junior Mobile Computing
+- Cloud Computing Developer
+- Senior Mobile Computing
+- Cloud Computing Architect
+- Cloud Computing Security
+- Cloud Computing Engineer
+- Enterprise Architect
+- ITSM Supervisor
+- Site Operations Manager
+- ERP Analyst
+- Junior Layout Artist
+- Senior Layout Artist
+- Desainer Grafis Junior
+- Multimedia Graphic Designer
+- Camera Operator
+- Book Layouter
+- Book Designer
+- Art Director
+- Video Editor
+- Senior Graphic Designer
+- Basic Office Operator
+- Junior Office Operator
+- Senior Office Operator
+- System Analyst (Okupasi)
+- IT Project Supervisor
+- IT Auditor
+- Junior Cyber Security
+- Cyber Security Analyst
+- Hardware Installation Supervisor
+- IT Security Management Staff
+- Practical Office Advanced
+- Office Basic
+- Office Professional
+- Computer Operator Assistant
+- Infographic
+- Digital Imaging
+- Illustration
+- Photography
+- Modeling Photography
+- Software Quality Control Tester
+- Architectural Photography
+- Journalism Photography
+- Software Engineer
+- Programmer
+- Web Developer
+- Database Programmer
+- Senior Software Engineer
+
