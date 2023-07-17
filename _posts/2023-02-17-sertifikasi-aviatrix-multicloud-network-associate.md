@@ -17,6 +17,17 @@ date: 2023-02-17T17:00:28+07:00
 	<figcaption style="text-align:center;">Aviatrix Certified Engineer - Multicloud Network Associate</figcaption>
 </figure>
 
+Sertifikasi Aviatrix adalah program sertifikasi yang disediakan oleh Aviatrix Systems Inc., sebuah perusahaan teknologi yang mengkhususkan diri dalam solusi jaringan cloud. Program sertifikasi Aviatrix dirancang untuk memvalidasi pengetahuan dan keterampilan individu dalam mengimplementasikan, mengelola, dan mengamankan jaringan cloud menggunakan solusi Aviatrix.
+
+Sertifikasi Aviatrix memiliki beberapa tingkatan yang mencakup berbagai aspek jaringan cloud, termasuk desain arsitektur, konfigurasi, troubleshooting, keamanan, dan pengelolaan. Beberapa contoh sertifikasi Aviatrix termasuk:
+
+- Aviatrix Certified Engineer (ACE): Sertifikasi ini ditujukan untuk individu yang ingin memvalidasi pemahaman mereka tentang konsep dasar, fitur, dan fungsionalitas solusi Aviatrix. Ini mencakup pengetahuan tentang jaringan cloud, konfigurasi peering, VPN, keamanan, dan pengelolaan Aviatrix Controller.
+
+- Aviatrix Certified Engineer - Multi-Cloud Network Associate (ACE-MCNA): Sertifikasi ini ditujukan untuk individu yang ingin memperdalam pemahaman mereka tentang desain dan implementasi jaringan multi-cloud menggunakan solusi Aviatrix. Ini mencakup topik seperti desain transit networking, penghubung jaringan lintas wilayah, dan integrasi dengan penyedia cloud utama.
+
+Sertifikasi Aviatrix dapat memberikan manfaat dalam meningkatkan pemahaman dan keterampilan dalam mengelola jaringan cloud, serta membantu membedakan diri dalam industri. Namun, penting untuk menyelidiki persyaratan, materi ujian, dan sumber daya pelatihan yang disediakan oleh Aviatrix untuk setiap jenis sertifikasi yang Anda minati.
+
+## Aviatrix Certified Engineer Multicloud Network 
 Sertifikasi dan Pelatihan Aviatrix Certified Engineer Multicloud Network Associate adalah titik awal untuk belajar security dan networking dalam lingkungan multicloud Anda.
 
 Pelatihan ini mencakup komponen jaringan dasar dan terminologi penyedia layanan cloud utama seperti (AWS, Azure, Google Cloud Platform, dan Oracle Cloud Infrastructure) dan membahas tantangan umum dan batasan utama saat menggunakan infrastruktur cloud publik.
