@@ -27,7 +27,7 @@ Sertifikasi Aviatrix memiliki beberapa tingkatan yang mencakup berbagai aspek ja
 
 Sertifikasi Aviatrix dapat memberikan manfaat dalam meningkatkan pemahaman dan keterampilan dalam mengelola jaringan cloud, serta membantu membedakan diri dalam industri. Namun, penting untuk menyelidiki persyaratan, materi ujian, dan sumber daya pelatihan yang disediakan oleh Aviatrix untuk setiap jenis sertifikasi yang Anda minati.
 
-## Aviatrix Certified Engineer Multicloud Network 
+## Aviatrix Certified Engineer Multicloud Network Associate
 Sertifikasi dan Pelatihan Aviatrix Certified Engineer Multicloud Network Associate adalah titik awal untuk belajar security dan networking dalam lingkungan multicloud Anda.
 
 Pelatihan ini mencakup komponen jaringan dasar dan terminologi penyedia layanan cloud utama seperti (AWS, Azure, Google Cloud Platform, dan Oracle Cloud Infrastructure) dan membahas tantangan umum dan batasan utama saat menggunakan infrastruktur cloud publik.
