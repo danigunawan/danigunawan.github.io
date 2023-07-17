@@ -4,7 +4,7 @@ title: Pelatihan dan Sertifikasi Aviatrix Multicloud Network Associate
 modified: 2023-02-17T17:00:28+07:00
 categories:
 description: "Pelatihan dan Sertifikasi Aviatrix Multicloud Network Associate"
-tags: [multicloud, certifications, cloud network]
+tags: [multicloud, aviatrix certifications, cloud network, cloud security, certifications]
 image:
   background: triangular.png
 comments: true
@@ -29,25 +29,24 @@ Pelatihan merinci pola desain yang telah terbukti untuk arsitektur multicloud da
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Scope](#scope)
-- [Prerequisites](#Prerequisites)
-- [Refferences](#Refferences)
+- [Prerequisites](#prerequisites)
+- [Refferences](#refferences)
 
 ## Objectives
 
-• Develop an architecture for your multicloud network
+• Mengembangkan arsitektur untuk jaringan multicloud Anda
 
-• Extend native cloud networking constructs
+• Memperluas konstruksi jaringan cloud asli
 
-• Integrate your preferred next-generation firewall vendor into your network architecture
+• Mengintegrasikan vendor firewall generasi berikutnya yang Anda pilih ke dalam arsitektur jaringan Anda
 
-• Enable profile-based access to cloud applications and resources
+• Memungkinkan akses berbasis profil ke aplikasi dan sumber daya cloud
 
-• Use transit networking services to integrate cloud VPCs/VNets and on-premise resources
+• Menggunakan layanan transit networking untuk mengintegrasikan VPC/VNet cloud dan sumber daya on-premise
 
-• Implement high performance encryption for data-in-motion
+• Mengimplementasikan enkripsi kinerja tinggi untuk data yang sedang bergerak
 
-• Gain visibility, global monitoring, and efficiently troubleshoot your cloud network
-
+• Mendapatkan visibilitas, pemantauan global, dan memecahkan masalah dengan efisien pada jaringan cloud Anda
 
 ## Scope
 pelatihan dan sertifikasi ini cocok bagi anda yang berkecimpung di dunia cloud network seperti : 
