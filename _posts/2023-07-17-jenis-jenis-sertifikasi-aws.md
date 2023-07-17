@@ -12,6 +12,9 @@ share: true
 date: 2023-07-02T17:00:28+07:00
 ---
 
+![arsitektur-netflix](/images/2023/jenis-jenis-sertifikasi-aws.png)
+
+
 Ada beberapa alasan mengapa mengambil sertifikasi AWS penting:
 
 - Validasi Pengetahuan dan Keterampilan: Sertifikasi AWS merupakan bukti yang terverifikasi secara independen bahwa Anda memiliki pengetahuan dan keterampilan yang diperlukan untuk bekerja dengan layanan AWS. Ini dapat meningkatkan kredibilitas dan kepercayaan dari calon pengusaha atau klien potensial.
@@ -23,10 +26,6 @@ Ada beberapa alasan mengapa mengambil sertifikasi AWS penting:
 - Akses ke Sumber Daya dan Komunitas: Ketika Anda mengambil sertifikasi AWS, Anda mendapatkan akses ke sumber daya dan materi pelatihan resmi dari AWS. Ini termasuk panduan studi, modul pelatihan, dan akses ke komunitas profesional AWS. Anda dapat belajar dari dan berinteraksi dengan sesama profesional AWS, mendapatkan wawasan, dan bertukar informasi.
 
 - Pertumbuhan Pribadi dan Profesional: Memperoleh sertifikasi AWS melibatkan studi mandiri, persiapan ujian, dan pengujian diri. Ini membantu Anda memperdalam pemahaman Anda tentang layanan AWS, meningkatkan keterampilan teknis, dan mengikuti perkembangan terbaru di bidang komputasi awan. Ini dapat meningkatkan kemampuan Anda untuk menghadapi tantangan dan tugas yang kompleks dalam peran teknis.
-
-
-![arsitektur-netflix](/images/2023/jenis-jenis-sertifikasi-aws.png)
-
 
 # Fundamental
 
