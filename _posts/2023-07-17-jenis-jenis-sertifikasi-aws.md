@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jenis-Jenis Sertifikasi AWS
-modified: 2023-07-02T17:00:28+07:00
+modified: 2023-07-17T17:00:28+07:00
 categories:
 description: "Jenis-Jenis Sertifikasi AWS"
 tags: [aws certification, sertifikasi aws, aws]
@@ -9,7 +9,7 @@ image:
   background: triangular.png
 comments: true
 share: true
-date: 2023-07-02T17:00:28+07:00
+date: 2023-07-17T17:00:28+07:00
 ---
 
 ![arsitektur-netflix](/images/2023/jenis-jenis-sertifikasi-aws.png)
