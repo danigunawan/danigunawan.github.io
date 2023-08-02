@@ -38,10 +38,8 @@ Daftar untuk tantangan di bawah ini. Selama 30 hari berikutnya, kami akan mengir
 Setelah 30 hari, kami akan mengadakan sesi persiapan belajar interaktif selama satu jam. Ini akan dilakukan secara online (https://www.nginx.com/c/nginx-super-user-assessment), dengan kesempatan bagi sejumlah peserta terbatas di Singapura untuk menghadiri secara langsung.
 
 Setelah itu, Anda akan siap untuk mengikuti asesmen Super User secara online.
-Contoh panduan:
 
-Panduan tersedia dalam bentuk tulisan dan video. Berikut adalah contoh rekaman video: Panduan belajar dan rekaman NGINX Super User
-Mengapa memilih NGINX
+## Mengapa memilih NGINX
 
 NGINX adalah proyek open source yang populer dan dipercaya oleh lebih dari 400 juta situs. Pengguna NGINX telah menggunakan rangkaian teknologi kami dalam mengembangkan dan menyampaikan aplikasi modern sejak proyek open source diluncurkan pada tahun 2003. NGINX Super User adalah orang-orang di seluruh dunia yang bersemangat dalam menciptakan solusi menggunakan NGINX di pusat proyek pengembangan web dan aplikasi mereka, dan seringkali menunjukkan pengetahuan dan keahlian mereka dengan membantu komunitas dan berbagi pengalaman langsung.
 
