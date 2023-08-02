@@ -71,6 +71,28 @@ berikut adalah beberapa jenis sertifikasi Oracle Cloud Infrastructure (OCI) yang
 
 Ini hanya beberapa contoh sertifikasi yang ditawarkan oleh Oracle untuk Oracle Cloud Infrastructure. Setiap sertifikasi memiliki tujuan dan tingkat kesulitan yang berbeda, dan Anda dapat memilih sertifikasi berdasarkan peran dan minat Anda dalam penggunaan Oracle Cloud Infrastructure. Pastikan untuk merujuk ke situs resmi Oracle untuk informasi terbaru tentang sertifikasi-sertifikasi ini.
 
+
+# Tantangan Perlombaan Menuju Sertifikasi
+Oracle University dengan senang hati menawarkan kesempatan eksklusif kepada Anda untuk membuktikan keahlian Anda dengan ujian sertifikasi gratis untuk Oracle Cloud Infrastructure dan Oracle Cloud Applications Business Process hingga 31 Agustus 2023. Ambillah langkah maju dan bergabunglah dengan komunitas pemimpin industri yang telah memanfaatkan kekuatan sertifikasi Oracle Cloud untuk memajukan karier mereka dan meraih kesuksesan. Dengan memanfaatkan sertifikasi gratis ini, Anda akan dapat:
+
+1. Memperoleh keterampilan kunci yang diminati dalam Cloud Computing, AI/ML, Keamanan, DevOps, Autonomous Database, dan lainnya.
+1. Belajar konsep-konsep dalam jalur pembelajaran terstruktur dan sederhana yang dirancang oleh instruktur ahli Oracle dan dengan memanfaatkan komunitas pembelajaran kami.
+1. Mendapatkan sertifikasi dengan pilihan kursus inti yang mencakup Oracle Cloud Infrastructure dan Oracle Cloud Applications Business Process.
+
+Tantangan Perlombaan Menuju Sertifikasi mencakup akses gratis ke pelatihan dan sertifikasi OCI dan Cloud Applications Business Process, serta dua percobaan ujian sertifikasi gratis yang berlaku hingga 31 Agustus 2023.
+
+Untuk membuat pengalaman pembelajaran Anda lebih menarik dan menyenangkan, kami telah membuat tantangan perlombaan di mana Anda dapat mendapatkan lencana dan memenangkan hadiah dengan menyelesaikan tonggak pembelajaran di setiap sektor perlombaan.:
+
+## Bergabunglah dalam perlombaan menuju sertifikasi - ujian sertifikasi OCI gratis
+
+1. Sektor 1 adalah tentang memulai - Anda perlu lulus 1 ujian sertifikasi, menyelesaikan 1 kursus digital, dan menghadiri 1 sesi online langsung, dan Anda akan mendapatkan percobaan ujian sertifikasi gratis (berlaku selama 1 tahun) dan lencana khusus Sektor 1 OU.
+
+1. Sektor 2 adalah tentang kecepatan - di sini, Anda perlu menyelesaikan 2 kursus digital, lulus 2 ujian sertifikasi, dan menghadiri 1 sesi online langsung, dan Anda akan diberikan 1 percobaan ujian sertifikasi gratis tambahan (berlaku selama 1 tahun) dan lencana khusus Sektor 2 OU.
+
+1. Sektor 3 adalah perlombaan menuju akhir - di sini, Anda perlu menyelesaikan 3 kursus digital, lulus 4 ujian sertifikasi (2 ujian Pro), dan menghadiri 1 sesi online langsung, dan Anda akan diberikan 1 percobaan ujian sertifikasi gratis tambahan (berlaku selama 1 tahun) dan lencana khusus Sektor 3 OU, sorotan komunitas, serta akses ke lab premium OCI selama 3 bulan.
+
+1. Dengan berpartisipasi dalam tantangan Perlombaan Menuju Sertifikasi dan menyelesaikan sektor 1, 2, dan 3, Anda akan mendapatkan total 1, 2, atau 3 percobaan sertifikasi masing-masing - ini adalah cara yang luar biasa tidak hanya untuk mendapatkan sertifikasi secara gratis, tetapi juga mendapatkan percobaan sertifikasi gratis tambahan, yang berlaku selama 12 bulan ke depan.
+
 Referensi : 
 - https://www.youtube.com/watch?v=1k6MeV2Tdoc
 - https://blogs.oracle.com/oracleuniversity/post/free-certification-oci-and-oca-2023
