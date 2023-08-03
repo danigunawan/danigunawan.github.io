@@ -12,7 +12,7 @@ share: true
 date: 2023-07-29T17:00:28+07:00
 ---
 
-![arsitektur-netflix](/images/2023/oracle-free-certifications-2023.png)
+![jenis-sertifikasi-oracle-oci](/images/2023/jenis-jenis-sertifikasi-oracle-oci.png)
 
 Sertifikasi Oracle adalah pengakuan resmi dari Oracle Corporation tentang kemampuan dan pengetahuan seseorang dalam menggunakan dan mengelola produk dan teknologi Oracle. Sertifikasi ini dapat mencakup berbagai bidang, termasuk database, cloud computing, aplikasi perangkat lunak, jaringan, dan lainnya. Sertifikasi Oracle memberikan bukti bahwa individu tersebut telah memenuhi standar yang ditetapkan oleh Oracle dalam hal kompetensi dalam penggunaan produk-produk mereka.
 
@@ -73,6 +73,9 @@ Ini hanya beberapa contoh sertifikasi yang ditawarkan oleh Oracle untuk Oracle C
 
 
 # Tantangan Perlombaan Menuju Sertifikasi
+
+![join-oci-race](/images/2023/oracle-free-certifications-2023.png)
+
 Oracle University dengan senang hati menawarkan kesempatan eksklusif kepada Anda untuk membuktikan keahlian Anda dengan ujian sertifikasi gratis untuk Oracle Cloud Infrastructure dan Oracle Cloud Applications Business Process hingga 31 Agustus 2023. Ambillah langkah maju dan bergabunglah dengan komunitas pemimpin industri yang telah memanfaatkan kekuatan sertifikasi Oracle Cloud untuk memajukan karier mereka dan meraih kesuksesan. Dengan memanfaatkan sertifikasi gratis ini, Anda akan dapat:
 
 1. Memperoleh keterampilan kunci yang diminati dalam Cloud Computing, AI/ML, Keamanan, DevOps, Autonomous Database, dan lainnya.
@@ -96,3 +99,8 @@ Untuk membuat pengalaman pembelajaran Anda lebih menarik dan menyenangkan, kami 
 Referensi : 
 - https://www.youtube.com/watch?v=1k6MeV2Tdoc
 - https://blogs.oracle.com/oracleuniversity/post/free-certification-oci-and-oca-2023
+
+
+
+merancang, meningkatkan performa, kemudahan pemeliharaan, membangun
+keandalan sistem cloud data dan AI
