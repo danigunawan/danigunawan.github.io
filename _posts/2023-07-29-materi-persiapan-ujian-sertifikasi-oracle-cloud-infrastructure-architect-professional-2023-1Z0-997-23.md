@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Materi Persiapan Ujian Oracle Cloud Infrastructure Architect 2023 Professional (1Z0-997-23)
+title: Materi Persiapan Ujian Sertifikasi Oracle Cloud Infrastructure Architect 2023 Professional (1Z0-997-23)
 modified: 2023-07-29T17:00:28+07:00
 categories:
-description: "Materi Persiapan Ujian Oracle Cloud Infrastructure Architect 2023 Professional (1Z0-997-23)"
+description: "Materi Persiapan Ujian Sertifikasi Oracle Cloud Infrastructure Architect 2023 Professional (1Z0-997-23)"
 tags: [sertifikasi oracle, oracle]
 image:
   background: triangular.png
