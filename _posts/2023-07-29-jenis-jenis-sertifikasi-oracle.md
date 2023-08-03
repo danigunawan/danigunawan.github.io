@@ -99,8 +99,3 @@ Untuk membuat pengalaman pembelajaran Anda lebih menarik dan menyenangkan, kami 
 Referensi : 
 - https://www.youtube.com/watch?v=1k6MeV2Tdoc
 - https://blogs.oracle.com/oracleuniversity/post/free-certification-oci-and-oca-2023
-
-
-
-merancang, meningkatkan performa, kemudahan pemeliharaan, membangun
-keandalan sistem cloud data dan AI
