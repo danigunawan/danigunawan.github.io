@@ -34,3 +34,6 @@ design skill to the next level
 
 - https://bytebytego.com/
 - https://openinapp.co/vs6x4
+
+# SimilarWeb
+https://www.similarweb.com/
