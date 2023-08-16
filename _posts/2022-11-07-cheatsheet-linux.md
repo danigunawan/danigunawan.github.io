@@ -594,6 +594,27 @@ PermitOpen is either not present, is commented out, or is set to any
 
 sudo service sshd restart
 
+## CRONTAB CHEATSHEET
+- crontab -e
+- crontab run program with sleep every 1 minutes 30 second
+
+*/1 * * * * sleep 30; command 1 && sleep 30; command 2
+
+- Every 5 seconds
+script.sh
+
+i=0
+
+while [ $i -lt 12 ]; do # 12 five-second intervals in 1 minute
+  command/to/run & #run your command
+  sleep 5
+  i=$(( i + 1 ))
+done
+
+/etc/crontab
+
+* * * * * script.sh
+
 {% endhighlight %}
 
 Refferensi : 
