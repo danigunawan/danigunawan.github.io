@@ -460,6 +460,10 @@ One annoying side-effect is that the history entries has a copy in the memory an
 
 cat /dev/null > ~/.bash_history && history -c && exit
 
+or 
+
+history -c && history -w
+
 * Screen Linux 
 screen --version
 screen 
