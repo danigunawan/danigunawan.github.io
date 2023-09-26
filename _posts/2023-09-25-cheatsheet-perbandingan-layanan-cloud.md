@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Perbandingan Layanan Cloud (Part 1)
+title: Perbandingan Layanan Cloud Modern Saat Ini (Part 1)
 modified: 2023-07-29T17:00:28+07:00
 categories:
-description: "Perbandingan Layanan Cloud (Part 1)"
+description: "Perbandingan Layanan Cloud Modern Saat Ini (Part 1)"
 tags: [comparison, aws, azure, google]
 image:
   background: triangular.png
