@@ -621,6 +621,21 @@ done
 
 {% endhighlight %}
 
+## To copy a file from "Server 2" to your local laptop through "Server 1" using a single command, you can utilize SSH port forwarding and the scp command. Here's an example command:
+
+scp -r -o ProxyJump=username@server1_ip username@server2_ip:/path/to/source/file /path/to/destination/on/laptop/
+
+Replace the following placeholders:
+
+    username@server1_ip with the username and IP address of "Server 1."
+    username@server2_ip with the username and IP address of "Server 2."
+    /path/to/source/file with the file's location on "Server 2" that you want to copy.
+    /path/to/destination/on/laptop/ with the destination location on your local laptop.
+
+This command will establish an SSH tunnel through "Server 1" to connect to "Server 2" and copy the file from "Server 2" to your laptop. You might be prompted to enter the SSH passwords for both "Server 1" and "Server 2" during this process.
+
+Make sure you have the appropriate permissions to access files on both servers, and replace the parameters with the correct information in the command above.
+
 Refferensi : 
 https://www.linux.org/threads/massive-collection-of-linux-command-cheat-sheet-for-2022.38934/
 
