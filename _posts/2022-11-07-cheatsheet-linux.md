@@ -515,6 +515,10 @@ rsync --progress -a sourceDirectory destinationDirectory
 * move with rsync
 rsync -a --progress --remove-source-files src/test/ dest
 
+* rsync via SSH proxyjump (bandwidth limit 1MB)
+
+rsync --bwlimit=1000 -azvP -e 'ssh -J username@server1:22' username@server2:/path/source/folder target/folder
+
 * download file via curl
 curl http://example.com --output my.file
 
@@ -619,11 +623,12 @@ done
 
 * * * * * script.sh
 
-{% endhighlight %}
-
 ## To copy a file from "Server 2" to your local laptop through "Server 1" using a single command, you can utilize SSH port forwarding and the scp command. Here's an example command:
 
 scp -r -o ProxyJump=username@server1_ip username@server2_ip:/path/to/source/file /path/to/destination/on/laptop/
+
+* Custom Ports
+scp -r -o ProxyJump=username@server1_ip:15338 username@server2_ip:/path/to/source/file /path/to/destination/on/laptop/
 
 Replace the following placeholders:
 
@@ -636,7 +641,7 @@ This command will establish an SSH tunnel through "Server 1" to connect to "Serv
 
 Make sure you have the appropriate permissions to access files on both servers, and replace the parameters with the correct information in the command above.
 
-Refferensi : 
+Referensi : 
 https://www.linux.org/threads/massive-collection-of-linux-command-cheat-sheet-for-2022.38934/
 
 Linux Command Cheat Sheet For 2022 : 
@@ -675,3 +680,5 @@ Linux Command Cheat Sheet For 2022 :
 * Red Hat Linux Commands Cheat Sheet: Red Hat Linux Commands Cheat Sheet
 * Linoxide Linux Command Cheat Sheet Collection: Linoxide Linux Command Cheat Sheet
 * UNIX Toolbox: UNIX Toolbox
+
+{% endhighlight %}
