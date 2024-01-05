@@ -50,9 +50,9 @@ def pull_repository(destination):
 def main():
     print("Program dimulai")
     # Data utama
-    group_id = "3905"  # ID grup GitLab
+    group_id = "ID_GROUP_PROJECT"  # ID grup GitLab
     gitlab_url = "https://gitlab.com"
-    token = "glpat-SpFUXg7SvZeEbEHPiPQG"  # Token akses GitLab
+    token = "YOUR_GIT_ACCESS_TOKEN"  # Token akses GitLab
 
     # Dapatkan direktori saat ini
     pathtodir = os.getcwd()
