@@ -42,3 +42,8 @@ kode, kumpulan data, metode, dan tabel evaluasi Pembelajaran Mesin.
 arXiv adalah layanan distribusi gratis dan arsip akses terbuka untuk > 2.275.234 artikel ilmiah di bidang fisika, matematika, ilmu komputer, biologi kuantitatif, keuangan kuantitatif, statistik, teknik elektro dan ilmu sistem, serta ekonomi. Materi di situs ini tidak ditinjau sejawat oleh arXiv.
 
 - https://arxiv.org/
+
+# IEEEXPLORE 
+IEEE Xplore adalah portal digital yang menyediakan akses ke sejumlah besar artikel ilmiah, konferensi, dan literatur teknis dalam berbagai bidang teknologi dan ilmu komputer. Situs ini dikelola oleh Institute of Electrical and Electronics Engineers (IEEE), sebuah organisasi profesional yang fokus pada bidang teknik listrik dan ilmu komputer. Jadi, jika kamu mencari informasi atau referensi terkait dengan penelitian atau perkembangan di dunia teknologi, IEEE Xplore bisa menjadi sumber yang kaya.
+
+- https://ieeexplore.ieee.org
