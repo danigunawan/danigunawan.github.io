@@ -64,6 +64,9 @@ docker inspect <container_name_or_id>
 - Docker Inspect (Only Command)
 docker inspect --format="{.Config.Cmd}" <container_name_or_id>
 
+- Docker Scan Vuln
+docker scout quickview <images>
+
 - Check ip range on docker network list
 for name in  $(docker network ls --format '{{.Name}}' ) ; do echo $name ; docker inspect $name --format '{{ .IPAM.Config }}' ; done
 
