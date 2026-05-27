@@ -6,7 +6,7 @@ categories:
 description: "kumpulan link benchmark teknologi"
 tags: [benchmark, comparison]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-21T24:00:00+07:00

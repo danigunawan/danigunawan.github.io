@@ -6,7 +6,7 @@ categories:
 description: "Mengaktifkan Command Line(CLI) Audit Logging Di Linux"
 tags: [audit, logging]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-04-26T17:00:28+07:00
@@ -100,7 +100,7 @@ Optional (simpan env di ~/.bashrc):
     PROMPT_COMMAND='history -a >(tee -a ~/.bash_history | logger -t "$USER[$$] $SSH_CONNECTION")'
 
 
-[METODE 1] – alternative via rsyslog service
+[METODE 1] â€“ alternative via rsyslog service
 
 Untuk menggunakan rsyslog untuk mencatat setiap perintah Shell, cukup ikuti langkah-langkah di bawah ini:
 
@@ -135,7 +135,7 @@ Semua selesai. Lihat contoh format log di bawah ini:
     Apr 9 00:26:11 hostname root: root@x.x.x.x [1643]: date [0]
     Apr 9 00:26:18 hostname root: root@x.x.x.x [1643]: cat /etc/redhat-release [0]
 
-[METODE 2] – via bash shell option
+[METODE 2] â€“ via bash shell option
 
 1. Tambahkan 'shopt -s syslog_history' ke seluruh sistem startup /etc/profile atau file inisialisasi pribadi ~/.bash_profile. Misalnya:
 
@@ -164,7 +164,7 @@ Semua selesai. Lihat contoh format log di bawah ini:
     Apr 9 01:26:46 hostname -bash: HISTORY: PID=1345 UID=0 date
     Apr 9 01:26:52 hostname -bash: HISTORY: PID=1345 UID=0 tail -2 /var/log/messages
 
-[METODE 3] – via script command
+[METODE 3] â€“ via script command
 
 Selain itu, jika Anda hanya ingin mencatat satu sesi terminal, coba saja perintah 'skrip' seperti di bawah ini, juga mudah digunakan dan sangat membantu.
 

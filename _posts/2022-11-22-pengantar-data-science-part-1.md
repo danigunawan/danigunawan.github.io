@@ -6,7 +6,7 @@ categories:
 description: "pengantar data science part 1"
 tags: [data science, pengantar data science, apa itu data science]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-22T11:00:00+07:00

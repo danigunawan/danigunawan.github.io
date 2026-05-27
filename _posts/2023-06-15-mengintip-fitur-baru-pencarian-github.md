@@ -6,7 +6,7 @@ categories:
 description: "Mengintip Fitur Pencarian Terbaru Di Github"
 tags: [github search, github]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-06-06T17:00:28+07:00

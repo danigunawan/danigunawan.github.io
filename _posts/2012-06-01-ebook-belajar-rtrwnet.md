@@ -6,7 +6,7 @@ categories:
 description: "Ebook Belajar RTRWNET"
 tags: [ebook, rtrwnet, networking, wireless, mikrotik, squidproxy]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2012-06-01T17:00:28+07:00

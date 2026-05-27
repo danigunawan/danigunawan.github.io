@@ -6,7 +6,7 @@ categories:
 description: "Mengatasi error Samba share setelah update Windows 11 24H2 yang memblokir guest access."
 tags: [windows 11, samba, smb, networking, powershell]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2026-02-17T12:00:00+07:00
@@ -16,7 +16,7 @@ Setelah melakukan update **Windows 11 versi 24H2**, Samba share yang sebelumnya 
 
 Pesan error yang muncul:
 
-> You can’t access this shared folder because your organization’s security policies block unauthenticated guest access…
+> You canâ€™t access this shared folder because your organizationâ€™s security policies block unauthenticated guest accessâ€¦
 
 Hal ini terjadi karena Windows 11 24H2 menerapkan kebijakan keamanan SMB yang lebih ketat, termasuk memblokir akses guest tanpa autentikasi.
 

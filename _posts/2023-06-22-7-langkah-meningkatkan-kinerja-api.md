@@ -6,7 +6,7 @@ categories:
 description: "7 Langkah Meningkatkan Kinerja API"
 tags: [api tweaking, api performance, api]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-06-22T17:00:28+07:00

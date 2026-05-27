@@ -6,7 +6,7 @@ categories:
 description: "Meningkatkan Optimasi Kinerja Python Asyncio dengan Multithreading"
 tags: [python, asyncio, multithreading]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-05-15T17:00:28+07:00

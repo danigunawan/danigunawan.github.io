@@ -6,7 +6,7 @@ categories:
 description: "Cara Menghitung Akurasi Rata-Rata Sistem Pengenalan Wajah Berdasarkan Confidence Level"
 tags: [ai, ml]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 published: true

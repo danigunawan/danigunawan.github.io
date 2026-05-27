@@ -6,7 +6,7 @@ categories:
 description: "Belajar Linux Firewall Dengan Iptables"
 tags: [cheatsheet, cheatsheet linux, security, linux security]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-7T17:00:28+07:00
@@ -60,31 +60,31 @@ Namun, iptables dengan kernel 2.4/2.6/3.x/4.x/5.x menyediakan fasilitas yang san
 # -------------------------------------------------------------------------------------
 # My system IP/set ip address of server here
 SERVER_IP="65.55.12.13"
- 
+Â 
 # Flushing all rules
 iptables -F
 iptables -X
- 
+Â 
 # Setting default filter policy
 iptables -P INPUT DROP
 iptables -P OUTPUT DROP
 iptables -P FORWARD DROP
- 
+Â 
 # Allow unlimited traffic on loopback
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
- 
+Â 
 # Allow incoming ssh only
 iptables -A INPUT -p tcp -s 0/0 -d $SERVER_IP --sport 513:65535 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A OUTPUT -p tcp -s $SERVER_IP -d 0/0 --sport 22 --dport 513:65535 -m state --state ESTABLISHED -j ACCEPT
- 
+Â 
 # make sure nothing comes or goes out of this box
 iptables -A INPUT -j DROP
 iptables -A OUTPUT -j DROP
 
 {% endhighlight %}
 
-Skrip ini murni firewall yang strict/ketat. Itu memungkinkan ssh masuk. Tidak ada layanan masuk atau permintaan ping lainnya atau tidak ada layanan atau permintaan keluar yang diizinkan. Koneksi ssh yang masuk bisa baru atau sudah ada dan itulah yang ditentukan oleh aturan status '-m state –state NEW, ESTABLISHED'. 
+Skrip ini murni firewall yang strict/ketat. Itu memungkinkan ssh masuk. Tidak ada layanan masuk atau permintaan ping lainnya atau tidak ada layanan atau permintaan keluar yang diizinkan. Koneksi ssh yang masuk bisa baru atau sudah ada dan itulah yang ditentukan oleh aturan status '-m state â€“state NEW, ESTABLISHED'. 
 
 Status koneksi ssh keluar hanya dapat dibuat. Secara default skrip ini memungkinkan semua orang untuk ssh dengan aturan -s 0/0. Jika Anda ingin akses tersebut dibatasi oleh IP atau alamat jaringan, ganti -s 0/0 dengan alamat IP. Misalnya izinkan ssh masuk dari IP 202.54.1.20:
 

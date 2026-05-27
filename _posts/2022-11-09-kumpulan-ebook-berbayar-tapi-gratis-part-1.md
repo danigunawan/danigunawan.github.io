@@ -6,7 +6,7 @@ categories:
 description: "Kumpulan Ebook Berbayar Gratis - Part 1"
 tags: [ebook]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-9T17:00:28+07:00

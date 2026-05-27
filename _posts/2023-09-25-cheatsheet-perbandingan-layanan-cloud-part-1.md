@@ -6,7 +6,7 @@ categories:
 description: "Perbandingan Layanan Cloud Modern Saat Ini (Part 1)"
 tags: [comparison, aws, azure, google, oracle]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-07-29T17:00:28+07:00

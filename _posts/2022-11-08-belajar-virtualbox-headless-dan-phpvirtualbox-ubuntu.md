@@ -6,7 +6,7 @@ categories:
 description: "Belajar VirtualBox Headless dan PHPVirtualBox Ubuntu/Mint"
 tags: [virtualbox, phpvirtualbox, headless]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-8T17:00:28+07:00
@@ -219,12 +219,12 @@ total 8
 -rw-r--r-- 1 root     root     179 Dec 14 01:31 vbox.cfg
 
 Note: Log out and in for it to apply.
-VBoxManage: error: Adding machine ‘Ubuntu-VM’ to the autostart database failed with VERR_ACCESS_DENIED If you this error message, manually create <userid>.start file under /etc/vbox
+VBoxManage: error: Adding machine â€˜Ubuntu-VMâ€™ to the autostart database failed with VERR_ACCESS_DENIED If you this error message, manually create <userid>.start file under /etc/vbox
 
 Choose VMs to automatically start
 Run the on-time command VBoxManage setproperty autostartdbpath /etc/vbox.
 
-Add VM’s!
+Add VMâ€™s!
 VBoxManage list vms
 VBoxManage modifyvm <uuid|vmname> --autostart-enabled <on|off>
 Restart VirtualBox autostart service
@@ -391,8 +391,8 @@ In mine, I have pretty much the same thing as the one from the page I referenced
 
 The script includes two names you need to change:
 
-vm1 — enter the name of your Virtualbox machine (this one appears three times)
-alexis — unless you are also an alexis and your account is name like that, change that name
+vm1 â€” enter the name of your Virtualbox machine (this one appears three times)
+alexis â€” unless you are also an alexis and your account is name like that, change that name
 
 Then save the file under /etc/systemd/system/.
 
@@ -422,7 +422,7 @@ ExecStop=/usr/bin/VBoxManage controlvm vm1 acpipowerbutton
  
 [Install]
 WantedBy=multi-user.target
-Note: the vboxdrv.service comes from a comment (see below) and should help even further (i.e. I have had problems with my services starting once in a while, most of the time, I still had to restart them by hand—I'll have to confirm once I reboot that it works every time).
+Note: the vboxdrv.service comes from a comment (see below) and should help even further (i.e. I have had problems with my services starting once in a while, most of the time, I still had to restart them by handâ€”I'll have to confirm once I reboot that it works every time).
 
 Once the file is ready, you need to tell systemd to reload everything including that new file. It may do so automatically, but just in case here is the command you need:
 
@@ -449,7 +449,7 @@ Now you can start the VM.
 $ sudo systemctl start vm1
 It should return on the very next line unless something goes wrong.
 
-If you have the Virtualbox UI open, you should see that it gets started there. The icon changes with what appears on the screen as normal. However, because we use the headless feature, you don't see the actual GUI part. You can show that window at any time while the machine is running by selecting the "→ Show" menu (it's found in the Machine menu or when you right-click on the VM).
+If you have the Virtualbox UI open, you should see that it gets started there. The icon changes with what appears on the screen as normal. However, because we use the headless feature, you don't see the actual GUI part. You can show that window at any time while the machine is running by selecting the "â†’ Show" menu (it's found in the Machine menu or when you right-click on the VM).
 
 Finally, to make the VM run automatically on a reboot, you need to enable it. This is done using the enable command like so:
 
@@ -457,7 +457,7 @@ $ sudo systemctl enable vm1
 You can verify the current status at any time. Note that the enable state shows on its own. There are two entries in the output. Both should be enabled. Here is an example of the output. I highlighted the enabled you are looking for in red:
 
 $ systemctl status vm1
-● virtualbox_finball2.service - finball2
+â— virtualbox_finball2.service - finball2
    Loaded: loaded (/etc/systemd/system/vm1.service; enabled; vendor preset: enabled)
    Active: active (exited) since Sat 2019-11-23 20:13:36 PST; 34s ago
     Tasks: 0 (limit: 9830)
@@ -484,19 +484,19 @@ The processor (i86x or amd64)
 The sub-name of the computer (i.e. I create clusters that get one VM name + one sub-name such as front end, database, backend...)
 I think such long names are great in the Virtualbox interface, but to type in your service file, it may cause problems (between dashes, spaces, parenthesis... and just the fact that such long names are hard to replicate without a few mistakes into them...)
 
-So on my end, I had to rename the VMs. The cool thing, though, is that we now have grouping capabilities. So I can still keep my crazy naming convention for the group, and name each computer in the group something really simple (i.e. <cluster_name>_<sub-name> — for example wordpress_frontend and wordpress_database).
+So on my end, I had to rename the VMs. The cool thing, though, is that we now have grouping capabilities. So I can still keep my crazy naming convention for the group, and name each computer in the group something really simple (i.e. <cluster_name>_<sub-name> â€” for example wordpress_frontend and wordpress_database).
 
 Where is My VM's Window?
 The script is going to start the VM headless. This is actually important if you were to run the VM on a server without X-Windows. (Yes! It's doable, I'm just not too sure how you do the installation all by hand. It must be somewhat painful!)
 
 Your VMs are going to start alongside the X-Windows environment and because of that, the X-Windows system may not be ready to open a window in the first place. So instead we start VMs headless.
 
-When you are in the Virtualbox GUI, you see the VMs that are running. They have a green arrow. Right-click on those and select "→ Show" to open the window. Now you have full access to the VM's console. To hide the window again, you can of course minimize. However, if you want to actually close the X-Windows but leave the VM running, use the "Detach GUI" option found under the "Machine" menu.
+When you are in the Virtualbox GUI, you see the VMs that are running. They have a green arrow. Right-click on those and select "â†’ Show" to open the window. Now you have full access to the VM's console. To hide the window again, you can of course minimize. However, if you want to actually close the X-Windows but leave the VM running, use the "Detach GUI" option found under the "Machine" menu.
 
 In older versions (before 5.x), detaching the GUI was done in various ways:
 
-Machine » Detach GUI
-View » Close VM
+Machine Â» Detach GUI
+View Â» Close VM
 Close VM (as a button)
 Various Errors
 The virtual machine has terminated unexpectedly during startup with exit code 0 (0x0).

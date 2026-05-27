@@ -6,7 +6,7 @@ categories:
 description: "Proyek - DGMon Service Monitoring Platform"
 tags: [dgmon, project]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 published: false

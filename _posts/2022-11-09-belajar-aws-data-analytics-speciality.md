@@ -6,7 +6,7 @@ categories:
 description: "Belajar AWS Data Analytics Speciality DAS-CO1"
 tags: [certification, aws, certification aws, aws data analytics speciality]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-9T17:00:28+07:00

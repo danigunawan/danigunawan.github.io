@@ -6,7 +6,7 @@ categories:
 description: "Rockchip RK3588M automotive-grade AI SoC dengan kualitas tinggi yang mendukung hingga 16 input kamera"
 tags: [sbc, iot, rockchip]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-05-10T17:00:28+07:00
@@ -25,7 +25,7 @@ Rockchip RK3588M adalah SBC otomotif (Single Board Computer).
 
 Firefly AIO-3588MQ specifications:
 
-    SoC – Rockchip RK3588M octa-core processor with
+    SoC â€“ Rockchip RK3588M octa-core processor with
         CPU 4x Cortex-A76 cores @ up to 2.1 GHz, 4x Cortex-A55 cores @ up to 1.7 GHz
         Arm Mali-G610 MP4 GPU with OpenGL ES 3.2, OpenCL 2.2, Vulkan 1.1 support
         6 TOPS AI accelerator
@@ -34,10 +34,10 @@ Firefly AIO-3588MQ specifications:
              8Kp30 H.264 AVC/MVC
              4Kp60 AV1
             1080p60 MPEG-2/-1/VC-1/VP8
-        Video encoding – 8Kp30 H.265 / H.264
+        Video encoding â€“ 8Kp30 H.265 / H.264
         Up to 32-channel 1080p30 decoding and 16-channel 1080p30 encoding can be achieved.
-    System Memory – 4GB, 8GB, or 16GB (Up to 32GB optional) 64-bit LPDDR4/LPDDR4x/LPDDR5
-    Storage – M.2 SATA3.0 SSD (2242), microSD card slot
+    System Memory â€“ 4GB, 8GB, or 16GB (Up to 32GB optional) 64-bit LPDDR4/LPDDR4x/LPDDR5
+    Storage â€“ M.2 SATA3.0 SSD (2242), microSD card slot
     Video Output
         HDMI 2.1 up to 8Kp60 or 4Kp120
         DisplayPort 1.4 up to 8Kp30fps (via USB-C)
@@ -59,21 +59,21 @@ Firefly AIO-3588MQ specifications:
         2x Gigabit Ethernet RJ45 ports
         2.4GHz/5GHz dual-band WiFi 6 (802.11a/b/g/n/ac/ax), Bluetooth 5.0
         Optional 4G LTE/5G cellular
-    USB – 4x USB 3.1 Gen1, 1x USB Type-C (OTG/DP1.4) port, and 3x USB 2.0 (via pin header)
-    Serial – 2x RS232, RS485, CAN Bus
+    USB â€“ 4x USB 3.1 Gen1, 1x USB Type-C (OTG/DP1.4) port, and 3x USB 2.0 (via pin header)
+    Serial â€“ 2x RS232, RS485, CAN Bus
     Expansion
         4-lane PCIe 3.0 slot
         mPCIe and M.2 sockets for wireless modules
         20-pin 2mm-pitch header with GPIO, ADC, SPI, I2C, LED, REV, PWR, RST
-    Power Supply – 12V DC / 2A recommended via 5.5/2.1mm DC jack or 4-pin header
+    Power Supply â€“ 12V DC / 2A recommended via 5.5/2.1mm DC jack or 4-pin header
     Power Consumption
-        Idle – About 0.72W (12V/60mA)
-        Typical – About 2.4W(12V/200mA)
-        Max – About 14.4W(12V/1200mA)
-    Dimensions – 146 x 102 x 37.5mm
-    Weight – Around 200 grams
-    Temperature Range – Operating: -40°C to 85°C in product page but -20°C to 60°C in the board’s datasheet
-    Humidity – 10%～80 % (storage)
+        Idle â€“ About 0.72W (12V/60mA)
+        Typical â€“ About 2.4W(12V/200mA)
+        Max â€“ About 14.4W(12V/1200mA)
+    Dimensions â€“ 146 x 102 x 37.5mm
+    Weight â€“ Around 200 grams
+    Temperature Range â€“ Operating: -40Â°C to 85Â°C in product page but -20Â°C to 60Â°C in the boardâ€™s datasheet
+    Humidity â€“ 10%ï½ž80 % (storage)
 
 ![Rockchip-RK3588M](/images/2023/Rockchip-RK3588M-sbc-board.png)
 

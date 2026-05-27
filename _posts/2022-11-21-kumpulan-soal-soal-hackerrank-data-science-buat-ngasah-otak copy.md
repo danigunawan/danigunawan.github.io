@@ -6,7 +6,7 @@ categories:
 description: "soal-soal hacker rank data science supaya makin sayentist"
 tags: [hackerrank, data science, hacker rank data science]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-21T24:00:00+07:00

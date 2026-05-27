@@ -6,7 +6,7 @@ categories:
 description: "Mengintip Bagian Dapur Belakang - Arsitektur Netflix"
 tags: [netflix architecture, architecture]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-07-02T17:00:28+07:00

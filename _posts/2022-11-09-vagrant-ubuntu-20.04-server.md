@@ -6,7 +6,7 @@ categories:
 description: "Vagrant + Ubuntu20.04 Server"
 tags: [vagrant, hashicorp, virtualbox, kvm, devops, cloudops]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-9T19:00:30+07:00
@@ -159,7 +159,7 @@ main
 
  3. Start Vagrant 
 {% highlight bash %}
- ⚡ $ vagrant up
+ âš¡ $ vagrant up
 Bringing machine 'ubuntu20.04' up with 'libvirt' provider...
 ==> ubuntu20.04: Box 'generic/ubuntu2004' could not be found. Attempting to find and install...
     ubuntu20.04: Box Provider: libvirt
@@ -175,7 +175,7 @@ Bringing machine 'ubuntu20.04' up with 'libvirt' provider...
 ==> ubuntu2004:  -- Name:              ubuntu20.04_ubuntu2004
 ...
 
-⚡ $ vagrant ssh
+âš¡ $ vagrant ssh
  ___________________________________________________________
 < Welcome to Vagrant Ubuntu Server 20.04 LTS (Focal Fossa) >
  -----------------------------------------------------------

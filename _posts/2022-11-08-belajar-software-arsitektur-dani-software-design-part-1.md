@@ -6,7 +6,7 @@ categories:
 description: "Belajar Software Arsitektur dan Software Design - Part 1"
 tags: [software architecture, software design]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-8T17:00:28+07:00

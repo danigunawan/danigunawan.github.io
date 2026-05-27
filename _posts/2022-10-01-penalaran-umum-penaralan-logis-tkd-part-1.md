@@ -6,7 +6,7 @@ categories:
 description: "Penalaran Umum - Penalaran Logis"
 tags: [tes kemampuan dasar, tkd, penalaran logis, penalaran umum]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-10-01T17:00:28+07:00
@@ -59,8 +59,8 @@ C. Pernyataan Majemuk
 Pernyataan majemuk adalah pernyataan yang terdiri dari dua atau lebih pernyataan tunggal yang terhubung oleh kata penghubung logika, seperti "dan" (conjunction), "atau" (disjunction), "jika... maka" (implication),atau "jika dan hanya jika" (biconditional). Pernyataan majemuk dapat menggabungkan pernyataan tunggal untuk membentuk pernyataan yang lebih kompleks dan memungkinkan analisis logika yang lebih rinci.
 
 1. Disjungsi
-Disjungsi adalah pernyataan majemuk yang dihubungkan oleh kata hubung ‘atau’. 
-Secara matematis, disjungsi ditulis sebagai p v q yang berarti ‘p atau q’.
+Disjungsi adalah pernyataan majemuk yang dihubungkan oleh kata hubung â€˜atauâ€™. 
+Secara matematis, disjungsi ditulis sebagai p v q yang berarti â€˜p atau qâ€™.
 
 Perhatikan contoh berikut.
 
@@ -71,12 +71,12 @@ q = sekolah libur pada hari minggu
 Suatu disjungsi akan bernilai benar jika salah satu pernyataan bernilai benar atau kedua pernyataan (p dan q) bernilai benar. 
 
 1.1 Ingkaran Disjungsi 
-~(p v q) ≡ ~p ˄ ~q 
+~(p v q) â‰¡ ~p Ë„ ~q 
 
 Perhatikan contoh berikut.
 p v q = sekolah libur pada hari sabtu atau minggu 
-~(p v q) ≡ ~p ˄ ~q 
-~p ˄ ~q ingkaran disjungsi = sekolah tidak libur pada hari sabtu dan minggu 
+~(p v q) â‰¡ ~p Ë„ ~q 
+~p Ë„ ~q ingkaran disjungsi = sekolah tidak libur pada hari sabtu dan minggu 
 
 tabel kebenaran disjungsi :
 _________________
@@ -89,8 +89,8 @@ _________________
 
 2. Konjungsi 
 
-Konjungsi adalah kalimat majemuk yang dihubungkan oleh tanda hubung ‘dan’.
-Secara matematis, dilambangkan sebagai p ˄ q. Untuk lebih jelasnya, simak contoh berikut.
+Konjungsi adalah kalimat majemuk yang dihubungkan oleh tanda hubung â€˜danâ€™.
+Secara matematis, dilambangkan sebagai p Ë„ q. Untuk lebih jelasnya, simak contoh berikut.
 
 p = Novi memiliki hewan peliharaan kucing 
 q = Novi memiliki hewan peliharaan kelinci 
@@ -101,11 +101,11 @@ Jika salah satu pernyataan salah, nilai kebenaran konjungsi juga akan salah (S).
 
 2.1 Ingkaran Konjungsi 
 Untuk ingkaran konjungsi, memenuhi persamaan : 
-~(p ˄ q) ≡ ~p v ~q
+~(p Ë„ q) â‰¡ ~p v ~q
 
 Berikut contohnya.
 (p ^ q) Konjungsi = Novi memiliki hewan peliharaan kucing dan kelinci
-~(p ˄ q) ≡ ~p v ~q
+~(p Ë„ q) â‰¡ ~p v ~q
 ~p v ~q ingkaran konjungsi = Novi tidak memiliki hewan poeliharaan kucing atau kelinci 
 
 tabel kebenaran konjungsi :
@@ -118,7 +118,7 @@ _________________
 -----------------
 
 3. Implikasi 
-Implikasi adalah pernyataan majemuk sebab akibat yang dihubungkan oleh ‘jika…, maka…’ atau 
+Implikasi adalah pernyataan majemuk sebab akibat yang dihubungkan oleh â€˜jikaâ€¦, makaâ€¦â€™ atau 
 jika p, maka q. secara matematis, dilambangkan p => q.
 
 Dalam hal ini, p disebut sebagai anteseden (penyebab), sedangkan q disebut konsekuen (akibat). Implikasi akan bernilai benar jika:
@@ -136,13 +136,13 @@ Adapun jenis-jenis implikasi adalah sebagai berikut.
 3.1 Ingkaran/Negasi Implikasi
 
 negasi p => q adalah p ^ ~q atau ditulis
-~(p => q) ≡ p ˄ ~q
+~(p => q) â‰¡ p Ë„ ~q
 
 Untuk lebih jelasnya, simak contoh berikut.
 p = Betty mendapatkan uang di hari jum'at 
 q = Betty pergi ke yogyakarta 
 p => q = Jika Betty mendapatkan uang di hari jum'at maka betty pergi ke yogyakarta 
-~(p => q) ≡ p ˄ ~q ingkaran implikasi = Betty mendapatkan uang di hari jum'at dan Betty tidak pergi ke yogyakarta 
+~(p => q) â‰¡ p Ë„ ~q ingkaran implikasi = Betty mendapatkan uang di hari jum'at dan Betty tidak pergi ke yogyakarta 
 
 Tabel kebenaran implikasi : 
 __________________
@@ -154,8 +154,8 @@ __________________
 ------------------
 
 4. Biimplikasi 
-Biimplikasi merupakan pernyataan majemuk (kalimat terbuka) yang dihubungkan dengan kata hubung ‘jika dan hanya jika …’.
-Secara matematis dilambangkan sebagai p ⬄ q. Untuk lebih jelasnya, simak contoh soal berikut.
+Biimplikasi merupakan pernyataan majemuk (kalimat terbuka) yang dihubungkan dengan kata hubung â€˜jika dan hanya jika â€¦â€™.
+Secara matematis dilambangkan sebagai p â¬„ q. Untuk lebih jelasnya, simak contoh soal berikut.
 
 p = Lisa memberikan uang kepada adiknya 
 q = Lisa lulus ujian 
@@ -173,44 +173,44 @@ ___________________
 D. Kuantor Universal dan Kuantor Eksistensial
 1. Kuantor Universal
 Kuantor universal biasa disebut kuantor umum adalah bentuk ungkapan yang menyatakan 
-keseluruhan dan biasanya ditulis dengan kata ‘semua’ atau ‘setiap’. 
+keseluruhan dan biasanya ditulis dengan kata â€˜semuaâ€™ atau â€˜setiapâ€™. 
 Kedua kata merupakan kuantor universal karena menunjukkan bahwa semua anggota memiliki 
-keadaan yang sama. Secara matematis, dilambangkan sebagai  ‘∀’. 
+keadaan yang sama. Secara matematis, dilambangkan sebagai  â€˜âˆ€â€™. 
 
 Perhatikan contoh berikut.
 
-“Semua gajah memiliki belalai”
+â€œSemua gajah memiliki belalaiâ€
 
-Pada kalimat di atas, ‘memiliki belalai’ berperan sebagai predikat.
+Pada kalimat di atas, â€˜memiliki belalaiâ€™ berperan sebagai predikat.
 
-Jika predikatnya kamu simbolkan sebagai B, maka penulisannya menjadi G(x) ⇒ B(x).
+Jika predikatnya kamu simbolkan sebagai B, maka penulisannya menjadi G(x) â‡’ B(x).
 
 Artinya, jika x adalah gajah maka x mempunyai belalai.
 
 Eitss, kamu harus paham bahwa kalimat tersebut bukan kalimat kuantor universal karena belum 
-memuat kata ‘semua’. Agar menjadi kalimat kuantor universal,
-kamu perlu menambahkan lambang kuantornya (∀), sehingga menjadi 
+memuat kata â€˜semuaâ€™. Agar menjadi kalimat kuantor universal,
+kamu perlu menambahkan lambang kuantornya (âˆ€), sehingga menjadi 
 
-(∀x)(G(x)) ⇒  B(x) 
+(âˆ€x)(G(x)) â‡’  B(x) 
 
 Setelah kamu tambah tanda kuantor universal, kalimatnya menjadi 
 
-“untuk semua x, jika x adalah gajah maka x memiliki belalai.”
+â€œuntuk semua x, jika x adalah gajah maka x memiliki belalai.â€
 
 2. Kuantor Eksistensial
-Jika kuantor universal ditandai dengan kata ‘semua’, maka kuantor eksistensial ditandai dengan kata ‘beberapa’ atau ‘ada’. 
+Jika kuantor universal ditandai dengan kata â€˜semuaâ€™, maka kuantor eksistensial ditandai dengan kata â€˜beberapaâ€™ atau â€˜adaâ€™. 
 Itulah mengapa kuantor eksistensial menunjukkan sesuatu yang bersifat khusus atau beberapa anggota yang memiliki 
-keadaan berbeda dengan lainnya. Secara matematis, disimbolkan sebagai ‘∃’. 
+keadaan berbeda dengan lainnya. Secara matematis, disimbolkan sebagai â€˜âˆƒâ€™. 
 
 Untuk lebih jelasnya, simak contoh berikut :
 
-“Beberapa orang rajin beribadah”
+â€œBeberapa orang rajin beribadahâ€
 
 Penulisan logika predikat untuk pernyataan di atas adalah 
 
-“ada x yang adalah orang dan x rajin beribadah” 
+â€œada x yang adalah orang dan x rajin beribadahâ€ 
 
-(∃x)(Orang(x)) ∧ rajin beribadah atau menjadi (∃x)(O(x)) ∧  I(x)
+(âˆƒx)(Orang(x)) âˆ§ rajin beribadah atau menjadi (âˆƒx)(O(x)) âˆ§  I(x)
 
 E. Penarikan Kesimpulan
 Kamu bisa melakukan penarikan kesimpulan dengan tiga metode, yaitu : 
@@ -261,7 +261,7 @@ Jika bahan kaus yang digunakan adalah katun maka penjualan kaus meningkat.
 Jika penjualan kaus meningkat maka penjualan kemeja akan meningkat.
 Penjualan kemeja mengalami penurunan.
 
-Simpulan yang tepat adalah…
+Simpulan yang tepat adalahâ€¦
 
 a. Penjualan kaus menurun.
 b. Penjualan kemeja meningkat.
@@ -289,9 +289,9 @@ Jawaban benar adalah (C)
 
 Contoh Soal (Bonus 2) : 
 
-Negasi dari invers pernyataan “Jika limbah
+Negasi dari invers pernyataan â€œJika limbah
 dibuang ke sungai maka populasi ikan
-terancam” adalah …
+terancamâ€ adalah â€¦
 
 A. Limbah dibuang ke sungai dan populasi ikan
 tidak terancam
@@ -386,16 +386,16 @@ Bernilai benar hanya jika kedua pernyataan benar
 
 Bernilai salah hanya jika kedua pernyataan salah
 
-- Implikasi (⇒) : pernyataan majemuk dengan kata hubung "jika... maka..."
+- Implikasi (â‡’) : pernyataan majemuk dengan kata hubung "jika... maka..."
 
 Bernilai salah jika anteseden benar dan konsequen salah
 
-Misal p ⇒ q, bernilai salah ketika p benar dan q salah
+Misal p â‡’ q, bernilai salah ketika p benar dan q salah
 
 {% endhighlight %}
 
 
-contoh membuat Tabel kebenaran dari (r ∧ p) ⇒ (q∨r) 
+contoh membuat Tabel kebenaran dari (r âˆ§ p) â‡’ (qâˆ¨r) 
 
 adalah:
 

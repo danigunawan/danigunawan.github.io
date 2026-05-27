@@ -6,7 +6,7 @@ categories:
 description: "Gambaran Umum Algoritma Machine Learning"
 tags: [machine learning, data science, deep learning]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-07-02T17:00:28+07:00

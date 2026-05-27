@@ -6,7 +6,7 @@ categories:
 description: "Security Information And Event Management (SIEM) - Part 1"
 tags: [siem, security]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 published: true

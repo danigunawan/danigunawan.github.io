@@ -6,7 +6,7 @@ categories:
 description: "install ssl berbayar di vps"
 tags: [ssl]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-23T08:00:00+07:00

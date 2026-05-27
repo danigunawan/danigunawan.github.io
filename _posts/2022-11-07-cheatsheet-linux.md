@@ -6,7 +6,7 @@ categories:
 description: "Kumpulan Cheatsheet Linux"
 tags: [cheatsheet, cheatsheet linux]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-7T17:00:28+07:00
@@ -63,7 +63,7 @@ find * -mtime +60
 rm -f `find /backup/ -mtime +60`
 
 * Search for a string inside files
-grep -H -r “search me” /var/www
+grep -H -r â€œsearch meâ€ /var/www
 
 * Find files owned by apache user
 find /var/www/ -user apache
@@ -132,7 +132,7 @@ sudo apt-get autoremove --purge
 uname -a
 cat /proc/version
 
-* Cannot delete oversized directories: /bin/rm: Argument list too long If you’re trying to delete files inside a directory and the following command is not working
+* Cannot delete oversized directories: /bin/rm: Argument list too long If youâ€™re trying to delete files inside a directory and the following command is not working
 
 /bin/rm -rf *
 /bin/rm: Argument list too long. Try this instead: find . -type f -delete
@@ -156,7 +156,7 @@ ls -lShr *.rar
 du | less
 
 * Delete 10000 of files using rm command
-find . -name ‘*.mbox’ -print0 | xargs -0 rm
+find . -name â€˜*.mboxâ€™ -print0 | xargs -0 rm
 
 * Mount an ISO File Temporary
 mount -t iso9660 -o loop /home/HsPS/disc/security.iso /mnt/cdrom
@@ -228,9 +228,9 @@ lsb_release -ircd
 uname -mrs
 
 Where:
-Linux – Kernel name
-3.2.0-24-generic – Kernel version
-x86_64 – Kernel is 64-bit
+Linux â€“ Kernel name
+3.2.0-24-generic â€“ Kernel version
+x86_64 â€“ Kernel is 64-bit
 
 * Port Scanning
 nmap -sT -O localhost
@@ -255,14 +255,14 @@ tcpdump -w /tmp/0001.pcap -i eth0
 
 ## or
 tcpdump -w 0001.pcap -i eth0 port 80
-TCPDump Capture Packets from source IP
+TCPDumpÂ Capture Packets from source IP
 tcpdump -i eth0 src 192.168.0.2
-TCPDump Capture Packets from destination IP
+TCPDumpÂ Capture Packets from destination IP
 tcpdump -i eth0 dst 50.116.66.139
-TCPDump Capture IP address Packets
+TCPDumpÂ Capture IP address Packets
 tcpdump -n -i eth0
 
-* TCPDump Capture Only N Number of Packets
+* TCPDumpÂ Capture Only N Number of Packets
 tcpdump -c 5 -i eth0
 
 * ARP Scan (Find Connected Systems in the network)
@@ -281,22 +281,22 @@ sudo dmidecode | egrep -i 'manufacturer|product|vendor'
 ## or
 sudo egrep -i 'virtual|vbox' /var/log/dmesg
 
-* How to Find a Specific String or Word in Files and Directories The command below will list all files containing a line with the text “check_root”, by recursively and aggressively searching the ~/bin directory.
+* How to Find a Specific String or Word in Files and Directories The command below will list all files containing a line with the text â€œcheck_rootâ€, by recursively and aggressively searching theÂ ~/binÂ directory.
 
 grep -Rw ~/bin/ -e 'check_root'
 
-* You should use the sudo command when searching certain directories or files that require root permissions (unless you are managing your system with the root account).
+* You should use theÂ sudo commandÂ when searching certain directories or files that require root permissions (unless you are managing your system with the root account).
 
 sudo grep -Rw / -e 'check_root'
 
-* To ignore case distinctions employ the -i option as shown:
+* To ignore case distinctions employ theÂ -iÂ option as shown:
 grep -Riw ~/bin/ -e 'check_root'
 
-* If you want to know the exact line where the string of text exist, include the -n option.
+* If you want to know the exact line where the string of text exist, include theÂ -nÂ option.
 grep -Rinw ~/bin/ -e 'check_root'
 grep -Rnw --include=\*.sh ~/bin/ -e 'check_root'
 
-* If you want to know the exact line where the string of text exist, include the -n option.
+* If you want to know the exact line where the string of text exist, include theÂ -nÂ option.
 grep -Rinw ~/bin/ -e 'check_root' -e 'netstat'
 
 * View Bash History and delete it permanently! To view histroy just type-
@@ -357,7 +357,7 @@ Speed: 1000Mb/s
 * Remount /etc/fstab Without Reboot in Linux
 mount -a
 
-* View file as uncommented 
+* View file as uncommentedÂ 
 grep -v "^#" your_file | grep -v "^$" | less
 
 * Make scp copy hidden files
@@ -427,7 +427,7 @@ ifconfig -a
 ip addr (ip a)
 hostname -I | awk '{print $1}'
 ip route get 1.2.3.4 | awk '{print $7}'
-(Fedora) Wifi-Settings→ click the setting icon next to the Wifi name that you are connected to → Ipv4 and Ipv6 both can be seen
+(Fedora) Wifi-Settingsâ†’ click the setting icon next to the Wifi name that you are connected to â†’ Ipv4 and Ipv6 both can be seen
 nmcli -p device show
 
 * Hide command line history
@@ -438,7 +438,7 @@ export HISTCONTROL = ignorespace
 2. Disable the entire history for the current session
 export HISTFILE=0
 
-3. Erase the entire history after you’re done
+3. Erase the entire history after youâ€™re done
 history -cw
 
 4. Turn off history only for the work you do
@@ -648,7 +648,7 @@ Linux Command Cheat Sheet For 2022 :
 * Sed Stream Editor: Download Sed Stream Editor
 * Archlinux Cheat Sheet: Archlinux Cheat Sheet
 * Linux/Unix Command Line Cheat Sheet: Linux/Unix Command Line Cheat Sheet
-* Unix/Linux Command Reference – FOSSwire: Unix/Linux Command Reference
+* Unix/Linux Command Reference â€“ FOSSwire: Unix/Linux Command Reference
 * Set Operations In The Unix: Set Operations In The Unix
 * Linux Quick Reference GuideDownload Linux Quick Reference Guide
 * Linux Bash Shell Cheat Sheet: Download Linux Bash Shell Cheat Sheet
@@ -660,7 +660,7 @@ Linux Command Cheat Sheet For 2022 :
 * Bash History Cheat Sheet: Bash History Cheat Sheet
 * Bash Redirections Cheat Sheet: Bash Redirections Cheat Sheet
 * FreeBSD Command Reference: FreeBSD Command Reference
-* Linux Administrator’s Quick Reference Card: Quick Reference Card
+* Linux Administratorâ€™s Quick Reference Card: Quick Reference Card
 * Linux & LPIC Quick Reference Guide: LPIC Quick Reference Guide
 * Linux Networking Commands: Linux Networking Commands
 * Linux Command Cheat Sheet By Loggly: Linux Command Cheat Sheet By Loggly
@@ -671,7 +671,7 @@ Linux Command Cheat Sheet For 2022 :
 * Linux Server Step-by-Step Configuration Guide Cheat Sheet: Server Cheat Sheet
 * Raspberry Pi Commands Cheat Sheet: Raspberry Pi commands cheat sheet
 * Unix Command Cheat Sheets: Unix Command Cheat Sheets
-* The Linux® Command-Line: The Linux Command Line
+* The LinuxÂ® Command-Line: The Linux Command Line
 * Cheat Sheet: Advanced Linux Commands: Cheat Sheet: Advanced Linux Commands
 * Set Operations in the Unix Shell: Set Operations in the Unix Shell
 * MakeUseOf Linux Commands Reference: MakeUseOf Linux Commands Reference

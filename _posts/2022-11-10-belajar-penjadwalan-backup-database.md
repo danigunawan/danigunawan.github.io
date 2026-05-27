@@ -6,7 +6,7 @@ categories:
 description: "Belajar penjadwalan backup database"
 tags: [cheatsheet, cronjobs, backup database]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-10T17:00:28+07:00

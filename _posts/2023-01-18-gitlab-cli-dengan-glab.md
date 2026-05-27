@@ -6,7 +6,7 @@ categories:
 description: "Gitlab CLI dengan GLAB"
 tags: [gitlab, cli, glab, gitlab cli, git cli]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-01-18T17:00:28+07:00

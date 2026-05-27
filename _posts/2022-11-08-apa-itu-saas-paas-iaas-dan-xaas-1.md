@@ -6,24 +6,24 @@ categories:
 description: "Apa Itu SaaS, PaaS, IaaS dan XaaS - Part 1"
 tags: [saas, ias, paas, iaas, xaas]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-8T17:00:28+07:00
 ---
-## Apa itu IaaS — infrastructure as a service ?
+## Apa itu IaaS â€” infrastructure as a service ?
 
 <div style="text-align: justify">
 Soon
 </div>
 
-## Apa itu PaaS — platform as a service ?
+## Apa itu PaaS â€” platform as a service ?
 
 <div style="text-align: justify">
 Soon
 </div>
 
-## Apa itu SaaS — software as a service
+## Apa itu SaaS â€” software as a service
 
 <div style="text-align: justify">
 Soon

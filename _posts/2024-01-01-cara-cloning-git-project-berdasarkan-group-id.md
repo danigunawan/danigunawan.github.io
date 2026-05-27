@@ -6,7 +6,7 @@ categories:
 description: "Cara Cloning Git Projet Berdasarkan Group ID"
 tags: [git, gitlab, github]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2024-01-01T17:00:28+07:00

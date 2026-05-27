@@ -6,7 +6,7 @@ categories:
 description: "Meningkatkan Performa Python dengan Cython"
 tags: [cython, python, c++]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-05-10T17:00:28+07:00
@@ -176,7 +176,7 @@ Yang perlu Anda lakukan di file ini adalah menambahkan potongan kode berikut:
     from Cython.Build import cythonize
 
 setup (
-ext_modules = cythonize ( ‘main.pyx’ )
+ext_modules = cythonize ( â€˜main.pyxâ€™ )
 )
 
 Setelah itu, Anda tidak hanya menjalankannya di IDE Anda; Anda harus menjalankannya dari terminal. Buka direktori tersebut di terminal dan jalankan perintah berikut:
@@ -191,7 +191,7 @@ Anda dapat memberi nama file .py baru apa pun yang Anda inginkan; untuk tujuan c
 
 Di file test.py, Anda perlu mengimpor main, yang merupakan file biner, dan time, yang akan Anda gunakan untuk membandingkan waktu eksekusi.
 
-Jangan khawatir — Anda hampir selesai.
+Jangan khawatir â€” Anda hampir selesai.
 
 Setelah mengimpor main dan time, Anda dapat mulai memanggil fungsi dengan melihat impor main, seperti ini:
 
@@ -217,18 +217,18 @@ Untuk menentukan waktu yang dibutuhkan oleh fungsi-fungsi, Anda perlu menambahka
     print( main.prime_finder_py(x) )
     end_py = time.time() '''records time after function has run'''
 
-    time_py = end_py – start_py
+    time_py = end_py â€“ start_py
 
     start_cy = time.time() '''records time before function runs'''
     print( main.prime_finder_cy(x) )
     end_cy = time.time() '''records time after function has run'''
 
-    time_cy = end_cy – start_cy
+    time_cy = end_cy â€“ start_cy
 
     if time_cy < time_py:
-    print ( ‘ The Cython implementation is faster ’)
+    print ( â€˜ The Cython implementation is faster â€™)
     else:
-    print ( ‘The Python implementation is faster ’ )
+    print ( â€˜The Python implementation is faster â€™ )
 
 Sebagian besar kode ini cukup sederhana. Pada dasarnya, jika Anda menjalankan file test.py ini di IDE Anda, bagian pertama akan mencatat waktu yang dibutuhkan oleh fungsi Python untuk berjalan. Bagian kedua melakukan hal yang sama untuk fungsi Cython. Pernyataan if membandingkan dua nilai waktu eksekusi yang dihitung dan mengevaluasi fungsi mana yang lebih cepat dari yang lain.
 

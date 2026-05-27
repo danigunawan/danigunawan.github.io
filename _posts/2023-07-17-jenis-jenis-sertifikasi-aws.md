@@ -6,7 +6,7 @@ categories:
 description: "Jenis-Jenis Sertifikasi AWS"
 tags: [aws certification, sertifikasi aws, aws]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-07-17T17:00:28+07:00

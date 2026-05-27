@@ -6,7 +6,7 @@ categories:
 description: "Kumpulan Cheatsheet Mysql"
 tags: [mysql, sql, cheatsheet, cheatsheet mysql]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-7T17:00:28+07:00
@@ -45,15 +45,15 @@ mysqldump -u root -p --no-data dbname > schema.sql
 
 # Backup Multiple Database
 
-mysqldump –u[user name] –p[password] [database name 1] [database name 2] .. > [dump file]
+mysqldump â€“u[user name] â€“p[password] [database name 1] [database name 2] .. > [dump file]
 
 # Backup ALL Database
 
-shell> mysqldump –u[user name] –p[password] –all-databases > [dump file]
+shell> mysqldump â€“u[user name] â€“p[password] â€“all-databases > [dump file]
 
 # Backup Specific Table in a Database
 
-shell> mysqldump --user [username] --password=[password] [database name] [table name] > /tmp/sugarcrm_accounts_contacts.sql
+shell> mysqldump --user [username] --password=[password] [database name] [table name]Â > /tmp/sugarcrm_accounts_contacts.sql
 
 # Restoring MySQL Database
 
@@ -139,17 +139,17 @@ FLUSH PRIVILEGES;
 
 # Untuk memberikan izin kepada pengguna tertentu, Anda dapat menggunakan kerangka kerja ini :
 
-GRANT [type of permission] ON [database name].[table name] TO ‘[username]’@'localhost’;
+GRANT [type of permission] ON [database name].[table name] TO â€˜[username]â€™@'localhostâ€™;
 
 # Jika Anda ingin memberi akses ke database atau tabel apa pun, pastikan untuk meletakkan tanda bintang (*) di tempat nama database atau nama tabel. Setiap kali Anda memperbarui atau mengubah izin, pastikan untuk menggunakan perintah Flush Privileges.
 
 # Jika Anda perlu mencabut izin, strukturnya hampir sama dengan pemberiannya:
 
-REVOKE [type of permission] ON [database name].[table name] FROM ‘[username]’@‘localhost’;
+REVOKE [type of permission] ON [database name].[table name] FROM â€˜[username]â€™@â€˜localhostâ€™;
 
 # Sama seperti Anda dapat menghapus database dengan DROP, Anda dapat menggunakan DROP untuk menghapus pengguna juga:
 
-DROP USER ‘demo’@‘localhost’;
+DROP USER â€˜demoâ€™@â€˜localhostâ€™;
 
 # Jalankan OPTIMIZE TABLE untuk mendefrag tabel untuk kinerja yang lebih baik
 

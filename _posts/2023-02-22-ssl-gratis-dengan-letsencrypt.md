@@ -6,7 +6,7 @@ categories:
 description: "SSL Gratis Dengan Letsencrypt"
 tags: [ssl, free ssl]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-02-22T17:00:28+07:00

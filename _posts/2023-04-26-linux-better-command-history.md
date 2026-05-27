@@ -6,7 +6,7 @@ categories:
 description: "Linux Better Command History"
 tags: [audit, logging]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-04-26T17:00:28+07:00

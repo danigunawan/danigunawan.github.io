@@ -6,7 +6,7 @@ categories:
 description: "Belajar Vagrant - Part 1"
 tags: [vagrant, hashicorp, virtualbox]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-9T19:00:28+07:00
@@ -335,7 +335,7 @@ export KERN_DIR
 
 # lihat list pid vbox yang berjalan : 
 
-sudo ps aux | grep -i "vbox”
+sudo ps aux | grep -i "vboxâ€
 
 vbox       865  0.0  0.0 365264  7488 ?        Sl   10:46   0:00 /usr/lib/virtualbox/VBoxSVC --auto-shutdown
 vbox       868  0.0  0.0 212472  6268 ?        S    10:46   0:00 /usr/lib/virtualbox/VBoxXPCOMIPCD

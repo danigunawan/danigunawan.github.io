@@ -6,7 +6,7 @@ categories:
 description: "Mengatasi Error DPKG Di Ubuntu"
 tags: [ubuntu, dpkg]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-03-30T17:00:28+07:00

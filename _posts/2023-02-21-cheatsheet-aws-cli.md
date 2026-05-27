@@ -6,7 +6,7 @@ categories:
 description: "Cheatsheet AWS CLI"
 tags: [cheatsheet aws, aws, cheatsheet, cli]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2023-02-17T17:00:28+07:00

@@ -6,7 +6,7 @@ categories:
 description: "kumpulan link Tools Teknologi Favorit"
 tags: [link, tools]
 image:
-  background: triangular.png
+  path: /images/posts/default.png
 comments: true
 share: true
 date: 2022-11-21T24:00:00+07:00
@@ -16,7 +16,7 @@ date: 2022-11-21T24:00:00+07:00
 - https://temp-mail.org
 
 # Grammarly
-Compose bold, clear, mistake-free writing with Grammarly’s new AI-powered desktop app.
+Compose bold, clear, mistake-free writing with Grammarlyâ€™s new AI-powered desktop app.
 
 - https://www.grammarly.com/
 
