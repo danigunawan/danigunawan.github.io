@@ -1,0 +1,16 @@
+<header>
+  <div class="menu">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      {%- for link in site.data.navigation -%}
+        <li>
+          {% if link.url contains 'http' %}
+            <a href="{{ link.url }}" target="_blank">{{ link.title | escape }}</a>
+          {% else %}
+            <a href="{{ link.url | relative_url }}">{{ link.title | escape }}</a>
+          {% endif %}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</header>
