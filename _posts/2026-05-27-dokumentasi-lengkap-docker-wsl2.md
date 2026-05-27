@@ -5,6 +5,9 @@ description: "Panduan lengkap mengenai backup, recovery, pemindahan Docker WSL2 
 date: 2026-05-27T14:11:32+07:00
 categories: [DevOps, Docker]
 tags: [docker, wsl2, windows, backup, optimasi]
+pin: true
+math: false
+mermaid: false
 ---
 
 Dokumentasi ini mencakup:
