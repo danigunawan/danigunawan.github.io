@@ -1,43 +1,38 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-{% include head.html %}
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+  <meta name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 </head>
 
-<body id="post-index" {% if page.image.feature %}class="feature"{% endif %}>
+<body id="post-index">
+  <div id="wrapper">
+    <header id="header">
+      <div class="header-inner">
+        <h1><a href="{{ site.url }}/">{{ site.title }}</a></h1>
+        <p>{{ site.description }}</p>
+      </div>
+    </header>
 
-{% include browser-upgrade.html %}
-{% include navigation.html %}
+    <div id="container">
+      <aside id="sidebar">
+        {% include sidebar.html %}
+      </aside>
 
-<div class="entry-header">
-  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-  {% if page.image.feature %}
-    <div class="entry-image">
-      <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-    </div><!-- /.entry-image -->
-  {% endif %}
-  <div class="header-title">
-    <div class="header-title-wrap">
-      <h1>{{ site.title }}</h1>
-      <h2>{{ page.title }}</h2>
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+      <main id="main-content">
+        {{ content }}
+      </main>
+    </div>
 
-<div id="main" role="main">
-  {{ content }}
-</div><!-- /#main -->
-
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
-
-{% include scripts.html %}          
-
+    <footer id="footer">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}</p>
+    </footer>
+  </div>
 </body>
+
 </html>

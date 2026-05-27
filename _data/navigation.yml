@@ -1,5 +1,7 @@
 # Menu navigation links
 
+- title: Bookmarks
+  url: /bookmarks/
 - title: Lab
   url: https://ai.application.my.id
 - title: Lab-healthchecks

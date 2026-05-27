@@ -1,0 +1,25 @@
+<div class="sidebar-section">
+  <h3>Menu</h3>
+  <ul>
+    <li><a href="{{ site.url }}/">Home</a></li>
+    <li><a href="{{ site.url }}/about/">About</a></li>
+    <li><a href="{{ site.url }}/bookmarks/">Bookmarks</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <h3>Categories</h3>
+  <ul>
+    <li><a href="{{ site.url }}/posts/">All Posts</a></li>
+    <li><a href="{{ site.url }}/tags/">Tags</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <h3>Links</h3>
+  <ul>
+    {% for link in site.data.navigation %}
+    <li><a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
