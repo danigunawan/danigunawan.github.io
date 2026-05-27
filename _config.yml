@@ -6,8 +6,9 @@ share: true
 reading_time:     true
 words_per_minute: 200
 url: "https://danigunawan.github.io"
-remote_theme: b2a3e8/jekyll-theme-console
-style: hacker
+remote_theme: cotes2020/jekyll-theme-chirpy
+lang: id-ID
+theme_mode: dark
 # Owner/author information
 owner:
   name:           Dani Gunawan
@@ -41,15 +42,12 @@ future:      true  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
 plugins:
-  - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
   - jekyll-remote-theme
-sass:
-  sass_dir: _sass
-  style: compressed
-
+  - jekyll-feed
+  - jekyll-sitemap
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
 

@@ -1,0 +1,72 @@
+<!-- The Side Bar -->
+
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+      {%- if site.owner.avatar != empty and site.owner.avatar -%}
+        {%- capture avatar_url -%}
+          {{ site.url }}/images/{{ site.owner.avatar }}
+        {%- endcapture -%}
+        <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+      {%- endif -%}
+    </a>
+
+    <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+      
+      <!-- Hardcoded pages -->
+      <li class="nav-item">
+        <a href="{{ '/about/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-info-circle"></i>
+          <span>ABOUT</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/posts/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-archive"></i>
+          <span>ALL POSTS</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/tags/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-tags"></i>
+          <span>ALL TAGS</span>
+        </a>
+      </li>
+
+      <!-- Custom navigation from site.data.navigation -->
+      {% for link in site.data.navigation %}
+        <li class="nav-item">
+          {% if link.url contains 'http' %}
+            <a href="{{ link.url }}" class="nav-link" target="_blank">
+          {% else %}
+            <a href="{{ link.url | relative_url }}" class="nav-link">
+          {% endif %}
+            <i class="fa-fw fas fa-link"></i>
+            <span>{{ link.title | upcase }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+    <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+      <i class="fas fa-adjust"></i>
+    </button>
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->
