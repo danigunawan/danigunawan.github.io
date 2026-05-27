@@ -5,8 +5,9 @@ comments: true
 share: true
 reading_time:     true
 words_per_minute: 200
-url:
-
+url: "https://danigunawan.github.io"
+remote_theme: mivinci/jekyll-theme-console
+style: hacker
 # Owner/author information
 owner:
   name:           Dani Gunawan
@@ -44,6 +45,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
+  - jekyll-remote-theme
 sass:
   sass_dir: _sass
   style: compressed
