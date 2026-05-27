@@ -1,70 +1,96 @@
 title:            Dani Gunawan
+subtitle:         "sedikit-sedikit berbagi menjadi bukit"
 description:      blog catatan untuk berbagi
-disqus_shortname: danigunawan-github-io
-comments: true
-share: true
-reading_time:     true
-words_per_minute: 200
 url: "https://danigunawan.github.io"
-remote_theme: cotes2020/jekyll-theme-chirpy
-lang: id-ID
-theme_mode: dark
-# Owner/author information
-owner:
-  name:           Dani Gunawan
-  avatar:         avatar.jpg
+remote_theme: mmistakes/minimal-mistakes
+
+# Skin (dark modern look)
+minimal_mistakes_skin: "dark"
+
+# Site Author
+author:
+  name:           "Dani Gunawan"
+  avatar:         "/images/avatar.jpg"
   bio:            "sedikit-sedikit berbagi menjadi bukit"
   email:          danigunawan.elektroug@gmail.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:     
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/danigunawan"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=c3FE9bkAAAAJ&hl=en"
+    - label: "Portofolio"
+      icon: "fas fa-fw fa-link"
+      url: "https://linktr.ee/danigunawan"
 
-# Background image to be tiled on all pages
-background: 
+# Reading
+reading_time:     true
+words_per_minute: 200
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+# Comments
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "danigunawan-github-io"
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Jakarta
-future:      true  # publish future dated posts --  true, false (default) 
+# Timezone
+timezone: Asia/Jakarta
+future: true
+
+# Build settings
 highlighter: rouge
-markdown:    kramdown
-plugins:
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-sitemap
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
-
-# Amount of post to show on home page
-paginate: 5
-
+markdown: kramdown
 kramdown:
   input: GFM
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  enable_coderay: false
 
-include: 
-  - .htaccess
-exclude: 
+# Plugins (GitHub Pages whitelisted only)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Pagination
+paginate: 10
+paginate_path: /page:num/
+
+# Permalink
+permalink: /:categories/:title/
+
+# Defaults - apply layout automatically
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+include:
+  - _pages
+
+exclude:
   - "*.less"
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -88,5 +114,4 @@ exclude:
   - spec
   - tmp
 
-# excerpt_length: 100
 excerpt_separator: <!--more-->

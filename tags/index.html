@@ -1,4 +1,30 @@
 ---
-layout: tags
-title: All Tags
+layout: single
+title: "All Tags"
+permalink: /tags/
+author_profile: true
 ---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+
+<div>
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+    <a href="#{{ this_word }}" style="display:inline-block; margin:4px 6px; padding:4px 10px; border:1px solid #555; border-radius:4px; text-decoration:none;">
+      {{ this_word }} <sup>{{ site.tags[this_word].size }}</sup>
+    </a>
+  {% endunless %}{% endfor %}
+</div>
+
+<hr>
+
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+  <h2 id="{{ this_word }}">{{ this_word }}</h2>
+  <ul>
+    {% for post in site.tags[this_word] %}{% if post.title != null %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endif %}{% endfor %}
+  </ul>
+{% endunless %}{% endfor %}
