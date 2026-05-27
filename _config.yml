@@ -37,6 +37,9 @@ theme_mode: dark
 # Avatar on sidebar
 avatar: "/images/avatar.jpg"
 
+# Default preview image for posts without their own image
+social_preview_image: "/images/posts/default.png"
+
 # Table of Contents in posts
 toc: true
 

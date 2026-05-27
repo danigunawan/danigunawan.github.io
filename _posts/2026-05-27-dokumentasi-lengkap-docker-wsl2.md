@@ -8,6 +8,9 @@ tags: [docker, wsl2, windows, backup, optimasi]
 pin: true
 math: false
 mermaid: false
+image:
+  path: /images/posts/devops-docker.png
+  alt: "Dokumentasi Docker WSL2"
 ---
 
 Dokumentasi ini mencakup:
