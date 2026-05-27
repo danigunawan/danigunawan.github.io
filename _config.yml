@@ -6,7 +6,7 @@ share: true
 reading_time:     true
 words_per_minute: 200
 url: "https://danigunawan.github.io"
-remote_theme: mivinci/jekyll-theme-console
+remote_theme: b2a3e8/jekyll-theme-console
 style: hacker
 # Owner/author information
 owner:
