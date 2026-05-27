@@ -1,117 +1,141 @@
-title:            Dani Gunawan
-subtitle:         "sedikit-sedikit berbagi menjadi bukit"
-description:      blog catatan untuk berbagi
-url: "https://danigunawan.github.io"
-remote_theme: mmistakes/minimal-mistakes
+# Import the theme
+theme: jekyll-theme-chirpy
 
-# Skin (dark modern look)
-minimal_mistakes_skin: "dark"
-
-# Site Author
-author:
-  name:           "Dani Gunawan"
-  avatar:         "/images/avatar.jpg"
-  bio:            "sedikit-sedikit berbagi menjadi bukit"
-  email:          danigunawan.elektroug@gmail.com
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/danigunawan"
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=c3FE9bkAAAAJ&hl=en"
-    - label: "Portofolio"
-      icon: "fas fa-fw fa-link"
-      url: "https://linktr.ee/danigunawan"
-
-# Reading
-reading_time:     true
-words_per_minute: 200
-
-# Comments
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "danigunawan-github-io"
+# Site language
+lang: id-ID
 
 # Timezone
 timezone: Asia/Jakarta
-future: true
 
-# Build settings
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
+# Site title
+title: Dani Gunawan
 
-# Plugins (GitHub Pages whitelisted only)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-include-cache
-  - jekyll-remote-theme
+# Subtitle
+tagline: "sedikit-sedikit berbagi menjadi bukit"
+
+# SEO description
+description: >-
+  Blog catatan untuk berbagi pengalaman seputar teknologi, DevOps, AI, dan programming.
+
+# Site URL
+url: "https://danigunawan.github.io"
+
+github:
+  username: danigunawan
+
+social:
+  name: Dani Gunawan
+  email: danigunawan.elektroug@gmail.com
+  links:
+    - https://github.com/danigunawan
+    - https://scholar.google.com/citations?user=c3FE9bkAAAAJ&hl=en
+    - https://linktr.ee/danigunawan
+
+# Theme mode: dark
+theme_mode: dark
+
+# Avatar on sidebar
+avatar: "/images/avatar.jpg"
+
+# Table of Contents in posts
+toc: true
+
+# Comments
+comments:
+  provider: disqus
+  disqus:
+    shortname: danigunawan-github-io
+
+# PWA
+pwa:
+  enabled: true
+  cache:
+    enabled: true
 
 # Pagination
 paginate: 10
-paginate_path: /page:num/
 
-# Permalink
-permalink: /:categories/:title/
+# Base URL
+baseurl: ""
 
-# Defaults - apply layout automatically
+# Kramdown
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# Collections (Chirpy tabs)
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+# Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
+      layout: post
       comments: true
-      share: true
-      related: true
-      show_date: true
-  # _pages
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
   - scope:
       path: ""
-      type: pages
+      type: tabs
     values:
-      layout: single
-      author_profile: true
+      layout: page
+      permalink: /:title/
 
-include:
-  - _pages
+# Sass
+sass:
+  style: compressed
 
+# Compress HTML
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+# Exclude
 exclude:
-  - "*.less"
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
   - LICENSE
-  - README
-  - Rakefile
-  - config
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+  - Gruntfile.js
   - gulpfile.js
-  - lib
-  - log
   - node_modules
-  - package.json
-  - spec
-  - tmp
+  - "*.less"
 
-excerpt_separator: <!--more-->
+# Archives
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
+# Future posts
+future: true

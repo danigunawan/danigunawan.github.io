@@ -1,15 +1,14 @@
-source "https://rubygems.org"
-gem "base64"
-gem "bigdecimal"
-gem "kramdown-parser-gfm"
-gem "jekyll", "~> 3.7"
-gem "jekyll-sitemap"
-gem "jekyll-feed"
-gem "jekyll-paginate"
-gem "jekyll-gist"
-gem "jekyll-remote-theme"
-gem "jekyll-seo-tag"
-gem "jekyll-include-cache"
+# frozen_string_literal: true
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+source "https://rubygems.org"
+
+gem "jekyll-theme-chirpy", "~> 7.5"
+
+gem "html-proofer", "~> 5.0", group: :test
+
+platforms :windows, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
+end
+
+gem "wdm", "~> 0.2.0", :platforms => [:windows]

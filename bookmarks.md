@@ -1,9 +1,7 @@
 ---
-layout: single
+layout: page
 title: Bookmarks
-description: Kumpulan situs-situs penting
 permalink: /bookmarks/
-author_profile: true
 ---
 
 Daftar situs-situs yang sering saya kunjungi dan referensi penting.

@@ -1,15 +1,10 @@
 ---
 layout: post
-title: Dokumentasi Lengkap Docker WSL2 ke G:\WSL
-modified: 2026-05-27T14:11:32+07:00
-categories:
+title: "Dokumentasi Lengkap Docker WSL2 ke G:\\WSL"
 description: "Panduan lengkap mengenai backup, recovery, pemindahan Docker WSL2 ke drive lain, cleanup, dan optimasi agar disk C tidak penuh."
-tags: [docker, wsl2, windows, backup, optimasi]
-image:
-  background: triangular.png
-comments: true
-share: true
 date: 2026-05-27T14:11:32+07:00
+categories: [DevOps, Docker]
+tags: [docker, wsl2, windows, backup, optimasi]
 ---
 
 Dokumentasi ini mencakup:
